@@ -48,7 +48,7 @@ export default function Header() {
           {/* Instagram Button */}
           <div className="flex items-center space-x-4">
             <a 
-              href={`https://instagram.com/${process.env.VITE_INSTAGRAM_USERNAME || 'monvlog'}`} 
+              href={`https://instagram.com/${import.meta.env.VITE_INSTAGRAM_USERNAME || 'monvlog'}`} 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full hover:shadow-lg transition-all duration-300 flex items-center space-x-2"

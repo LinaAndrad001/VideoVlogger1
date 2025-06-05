@@ -3,33 +3,32 @@
 @tailwind utilities;
 
 :root {
-  --background: 0 0% 100%;
-  --foreground: 20 14.3% 4.1%;
-  --muted: 60 4.8% 95.9%;
-  --muted-foreground: 25 5.3% 44.7%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 20 14.3% 4.1%;
-  --card: 0 0% 100%;
-  --card-foreground: 20 14.3% 4.1%;
-  --border: 20 5.9% 90%;
-  --input: 20 5.9% 90%;
-  --primary: 207 90% 54%;
-  --primary-foreground: 211 100% 99%;
-  --secondary: 60 4.8% 95.9%;
-  --secondary-foreground: 24 9.8% 10%;
-  --accent: 60 4.8% 95.9%;
-  --accent-foreground: 24 9.8% 10%;
+  --background: 0 0% 0%; /* Black background */
+  --foreground: 180 100% 50%; /* Cyan text */
+  --muted: 0 0% 10%;
+  --muted-foreground: 180 100% 50%;
+  --popover: 0 0% 0%;
+  --popover-foreground: 180 100% 50%;
+  --card: 0 0% 0%;
+  --card-foreground: 180 100% 50%;
+  --border: 180 100% 50%;
+  --input: 0 0% 5%;
+  --primary: 180 100% 50%;
+  --primary-foreground: 0 0% 0%;
+  --secondary: 0 0% 5%;
+  --secondary-foreground: 180 100% 50%;
+  --accent: 0 0% 5%;
+  --accent-foreground: 180 100% 50%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 60 9.1% 97.8%;
-  --ring: 20 14.3% 4.1%;
+  --ring: 180 100% 50%;
   --radius: 0.5rem;
   
-  /* Custom travel theme colors */
-  --ocean-blue: 211 100% 22%; /* #0C4A6E */
-  --sunset-orange: 22 92% 48%; /* #EA580C */
-  --forest-green: 123 61% 36%; /* #16A34A */
-  --warm-sand: 38 92% 50%; /* #F59E0B */
-  --charcoal: 220 13% 28%; /* #374151 */
+  /* Neon theme colors */
+  --neon-cyan: 180 100% 50%; /* #00FFFF */
+  --neon-purple: 280 100% 70%; /* #CC66FF */
+  --pure-black: 0 0% 0%; /* #000000 */
+  --dark-gray: 0 0% 10%; /* #1A1A1A */
 }
 
 .dark {
@@ -66,63 +65,71 @@
 }
 
 @layer utilities {
-  .text-ocean-blue {
-    color: hsl(var(--ocean-blue));
+  /* Neon color utilities */
+  .text-neon-cyan {
+    color: hsl(var(--neon-cyan));
   }
   
-  .text-sunset-orange {
-    color: hsl(var(--sunset-orange));
+  .text-neon-purple {
+    color: hsl(var(--neon-purple));
   }
   
-  .text-forest-green {
-    color: hsl(var(--forest-green));
+  .bg-pure-black {
+    background-color: hsl(var(--pure-black));
   }
   
-  .text-warm-sand {
-    color: hsl(var(--warm-sand));
+  .bg-dark-gray {
+    background-color: hsl(var(--dark-gray));
   }
   
-  .text-charcoal {
-    color: hsl(var(--charcoal));
+  .border-neon-cyan {
+    border-color: hsl(var(--neon-cyan));
   }
   
-  .bg-ocean-blue {
-    background-color: hsl(var(--ocean-blue));
+  /* Neon glow effects */
+  .neon-glow {
+    box-shadow: 0 0 8px hsl(var(--neon-cyan)), 0 0 16px hsl(var(--neon-cyan));
   }
   
-  .bg-sunset-orange {
-    background-color: hsl(var(--sunset-orange));
+  .neon-glow-hover:hover {
+    box-shadow: 0 0 15px hsl(var(--neon-cyan)), 0 0 30px hsl(var(--neon-cyan));
   }
   
-  .bg-forest-green {
-    background-color: hsl(var(--forest-green));
+  /* Neon text shimmer animation */
+  .neon-shimmer {
+    animation: neonShimmer 3s infinite ease-in-out;
   }
   
-  .bg-warm-sand {
-    background-color: hsl(var(--warm-sand));
+  @keyframes neonShimmer {
+    0%   { color: hsl(var(--neon-cyan)); }
+    50%  { color: hsl(var(--neon-purple)); }
+    100% { color: hsl(var(--neon-cyan)); }
   }
   
-  .bg-charcoal {
-    background-color: hsl(var(--charcoal));
+  /* Marquee animation */
+  .marquee {
+    animation: marquee 15s linear infinite;
   }
   
-  .hover\:bg-sunset-orange:hover {
-    background-color: hsl(var(--sunset-orange));
+  @keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
   }
   
-  .hover\:text-ocean-blue:hover {
-    color: hsl(var(--ocean-blue));
+  /* Neon button styles */
+  .neon-button {
+    color: hsl(var(--neon-cyan));
+    background-color: transparent;
+    border: 2px solid hsl(var(--neon-cyan));
+    border-radius: 30px;
+    font-family: 'Courier New', monospace;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 0 8px hsl(var(--neon-cyan));
   }
   
-  .hover\:text-sunset-orange:hover {
-    color: hsl(var(--sunset-orange));
-  }
-  
-  .hover\:text-forest-green:hover {
-    color: hsl(var(--forest-green));
-  }
-  
-  .border-sunset-orange {
-    border-color: hsl(var(--sunset-orange));
+  .neon-button:hover {
+    background-color: hsl(var(--neon-cyan));
+    color: hsl(var(--pure-black));
+    box-shadow: 0 0 15px hsl(var(--neon-cyan)), 0 0 30px hsl(var(--neon-cyan));
   }
 }

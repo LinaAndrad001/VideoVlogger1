@@ -18,7 +18,7 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <a 
-                href={`https://instagram.com/${process.env.VITE_INSTAGRAM_USERNAME || 'monvlog'}`} 
+                href={`https://instagram.com/${import.meta.env.VITE_INSTAGRAM_USERNAME || 'monvlog'}`} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-sunset-orange transition-colors"
@@ -26,7 +26,7 @@ export default function Footer() {
                 <Instagram className="h-6 w-6" />
               </a>
               <a 
-                href={`https://youtube.com/@${process.env.VITE_YOUTUBE_USERNAME || 'monvlog'}`} 
+                href={`https://youtube.com/@${import.meta.env.VITE_YOUTUBE_USERNAME || 'monvlog'}`} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-sunset-orange transition-colors"
@@ -34,7 +34,7 @@ export default function Footer() {
                 <Youtube className="h-6 w-6" />
               </a>
               <a 
-                href={`https://facebook.com/${process.env.VITE_FACEBOOK_USERNAME || 'monvlog'}`} 
+                href={`https://facebook.com/${import.meta.env.VITE_FACEBOOK_USERNAME || 'monvlog'}`} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-sunset-orange transition-colors"
@@ -92,15 +92,15 @@ export default function Footer() {
             <div className="space-y-2 text-gray-300">
               <p className="flex items-center">
                 <Mail className="h-4 w-4 mr-2" />
-                {process.env.VITE_CONTACT_EMAIL || 'contact@monvlog.com'}
+                {import.meta.env.VITE_CONTACT_EMAIL || 'contact@monvlog.com'}
               </p>
               <p className="flex items-center">
                 <Phone className="h-4 w-4 mr-2" />
-                {process.env.VITE_CONTACT_PHONE || '+33 1 23 45 67 89'}
+                {import.meta.env.VITE_CONTACT_PHONE || '+33 1 23 45 67 89'}
               </p>
               <p className="flex items-center">
                 <MapPin className="h-4 w-4 mr-2" />
-                {process.env.VITE_CONTACT_LOCATION || 'Paris, France'}
+                {import.meta.env.VITE_CONTACT_LOCATION || 'Paris, France'}
               </p>
             </div>
           </div>

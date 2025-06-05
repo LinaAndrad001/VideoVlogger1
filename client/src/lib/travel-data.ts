@@ -14,22 +14,22 @@ export const travelStats: TravelStats = {
 };
 
 export const socialLinks = {
-  instagram: process.env.VITE_INSTAGRAM_USERNAME || 'monvlog',
-  youtube: process.env.VITE_YOUTUBE_USERNAME || 'monvlog',
-  facebook: process.env.VITE_FACEBOOK_USERNAME || 'monvlog',
+  instagram: import.meta.env.VITE_INSTAGRAM_USERNAME || 'monvlog',
+  youtube: import.meta.env.VITE_YOUTUBE_USERNAME || 'monvlog',
+  facebook: import.meta.env.VITE_FACEBOOK_USERNAME || 'monvlog',
 };
 
 export const contactInfo = {
-  email: process.env.VITE_CONTACT_EMAIL || 'contact@monvlog.com',
-  phone: process.env.VITE_CONTACT_PHONE || '+33 1 23 45 67 89',
-  location: process.env.VITE_CONTACT_LOCATION || 'Paris, France',
+  email: import.meta.env.VITE_CONTACT_EMAIL || 'contact@monvlog.com',
+  phone: import.meta.env.VITE_CONTACT_PHONE || '+33 1 23 45 67 89',
+  location: import.meta.env.VITE_CONTACT_LOCATION || 'Paris, France',
 };
 
 export const travelerInfo = {
-  name: process.env.VITE_TRAVELER_NAME || 'Alex',
-  bio: 'Passionné de voyage depuis mon plus jeune âge, j\'ai décidé de transformer ma passion en aventure permanente. À travers ce vlog, je partage mes découvertes, mes rencontres et les moments magiques que j\'ai la chance de vivre aux quatre coins du monde.',
-  profileImage: process.env.VITE_PROFILE_IMAGE || 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300',
-  aboutImage: process.env.VITE_ABOUT_IMAGE || 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600',
+  name: import.meta.env.VITE_TRAVELER_NAME || 'Lina',
+  bio: 'Moi, c\'est Lina. Voyager, c\'est plus qu\'un loisir — c\'est ma passion. Depuis toute petite, je parcours le monde avec ma famille. Chaque pays visité m\'a offert des cultures uniques, des expériences inoubliables.',
+  profileImage: import.meta.env.VITE_PROFILE_IMAGE || 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300',
+  aboutImage: import.meta.env.VITE_ABOUT_IMAGE || 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600',
 };
 
 export function formatDate(date: Date | string | null, format: 'relative' | 'full' = 'relative'): string {
