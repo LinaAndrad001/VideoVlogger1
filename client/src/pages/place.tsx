@@ -1,13 +1,8 @@
-import { useQuery } from "@tanstack/react-query";
 import { useParams, Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
-import { Skeleton } from "@/components/ui/skeleton";
-import { Calendar, MapPin } from "lucide-react";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
-import BreadcrumbNav from "@/components/breadcrumb-nav";
-import AdventureCard from "@/components/adventure-card";
-import type { Continent, Country, City, Place, Adventure } from "@shared/schema";
+import { Calendar, MapPin, Play } from "lucide-react";
+import { getContinentBySlug, getCountryBySlug, getCityBySlug, getPlaceBySlug, getAdventuresByPlace, formatDate } from "@/lib/static-data";
+import type { Continent, Country, City, Place, Adventure } from "@/lib/static-data";
 
 export default function PlacePage() {
   const { continentSlug, countrySlug, citySlug, placeSlug } = useParams<{ 
@@ -17,50 +12,33 @@ export default function PlacePage() {
     placeSlug: string; 
   }>();
 
-  const { data: continent } = useQuery<Continent>({
-    queryKey: [`/api/continents/${continentSlug}`],
-  });
+  if (!continentSlug || !countrySlug || !citySlug || !placeSlug) {
+    return (
+      <div className="min-h-screen bg-pure-black flex items-center justify-center">
+        <div className="text-red-400 text-xl">Lieu non trouvé</div>
+      </div>
+    );
+  }
 
-  const { data: country } = useQuery<Country>({
-    queryKey: [`/api/countries/${countrySlug}`],
-  });
+  const continent = getContinentBySlug(continentSlug);
+  const country = getCountryBySlug(countrySlug);
+  const city = getCityBySlug(citySlug);
+  const place = getPlaceBySlug(placeSlug);
+  const adventures = place ? getAdventuresByPlace(place.id) : [];
 
-  const { data: city } = useQuery<City>({
-    queryKey: [`/api/cities/${citySlug}`],
-  });
-
-  const { data: place, isLoading: placeLoading } = useQuery<Place>({
-    queryKey: [`/api/places/${placeSlug}`],
-  });
-
-  const { data: adventures, isLoading: adventuresLoading } = useQuery<Adventure[]>({
-    queryKey: [`/api/places/${placeSlug}/adventures`],
-    enabled: !!placeSlug,
-  });
-
-  const breadcrumbs = [
-    { label: "Accueil", href: "/" },
-    { label: continent?.name || continentSlug || "", href: `/continent/${continentSlug}` },
-    { label: country?.name || countrySlug || "", href: `/continent/${continentSlug}/country/${countrySlug}` },
-    { label: city?.name || citySlug || "", href: `/continent/${continentSlug}/country/${countrySlug}/city/${citySlug}` },
-    { label: place?.name || placeSlug || "", href: `/continent/${continentSlug}/country/${countrySlug}/city/${citySlug}/place/${placeSlug}` }
-  ];
-
-  const formatDate = (date: Date | string | null) => {
-    if (!date) return "";
-    const d = new Date(date);
-    return d.toLocaleDateString('fr-FR', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
-  };
+  if (!continent || !country || !city || !place) {
+    return (
+      <div className="min-h-screen bg-pure-black flex items-center justify-center">
+        <div className="text-red-400 text-xl">Lieu non trouvé</div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-pure-black text-neon-cyan font-mono">
       {/* Simple navigation */}
       <div className="p-4 border-b border-neon-cyan">
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-4 flex-wrap text-sm">
           <Link href="/">
             <button className="text-neon-cyan hover:text-neon-purple transition-colors">
               🏠 Accueil
@@ -69,19 +47,19 @@ export default function PlacePage() {
           <span className="text-neon-cyan opacity-50">→</span>
           <Link href={`/continent/${continentSlug}`}>
             <button className="text-neon-cyan hover:text-neon-purple transition-colors">
-              {continent?.name}
+              {continent.name}
             </button>
           </Link>
           <span className="text-neon-cyan opacity-50">→</span>
           <Link href={`/continent/${continentSlug}/country/${countrySlug}`}>
             <button className="text-neon-cyan hover:text-neon-purple transition-colors">
-              {country?.name}
+              {country.name}
             </button>
           </Link>
           <span className="text-neon-cyan opacity-50">→</span>
           <Link href={`/continent/${continentSlug}/country/${countrySlug}/city/${citySlug}`}>
             <button className="text-neon-cyan hover:text-neon-purple transition-colors">
-              {city?.name}
+              {city.name}
             </button>
           </Link>
         </div>
@@ -90,90 +68,117 @@ export default function PlacePage() {
       {/* Hero Section */}
       <section className="py-16 text-center">
         <div className="container mx-auto px-4">
-          {placeLoading ? (
-            <div className="neon-shimmer text-4xl mb-8">
-              Chargement...
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 neon-shimmer">{place.name}</h1>
+          <p className="text-lg md:text-xl max-w-3xl mx-auto font-light mb-12">
+            {place.description}
+          </p>
+
+          {/* Place Hero Image */}
+          <div className="mb-16">
+            <div className="w-full max-w-4xl mx-auto h-64 md:h-96 overflow-hidden border-2 border-neon-cyan rounded-xl neon-glow">
+              <img 
+                src={place.imageUrl}
+                alt={place.name}
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              />
             </div>
-          ) : (
-            <>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 neon-shimmer">{place?.name}</h1>
-              <p className="text-xl md:text-2xl max-w-3xl mx-auto font-light mb-4">
-                {place?.description}
-              </p>
-              {place?.visitDate && (
-                <div className="flex items-center justify-center text-lg text-neon-cyan opacity-80">
-                  <Calendar className="h-5 w-5 mr-2" />
-                  Visité le {formatDate(place.visitDate)}
-                </div>
-              )}
-            </>
+          </div>
+
+          {/* Place Details Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
+            {place.bestTime && (
+              <div className="text-center p-4 border border-neon-cyan rounded-lg neon-glow">
+                <Calendar className="w-6 h-6 mx-auto mb-2 text-neon-purple" />
+                <div className="text-lg font-bold text-neon-purple">{place.bestTime}</div>
+                <div className="text-sm text-gray-400">Meilleur moment</div>
+              </div>
+            )}
+            {place.coordinates && (
+              <div className="text-center p-4 border border-neon-cyan rounded-lg neon-glow">
+                <MapPin className="w-6 h-6 mx-auto mb-2 text-neon-purple" />
+                <div className="text-lg font-bold text-neon-purple">{place.coordinates}</div>
+                <div className="text-sm text-gray-400">Coordonnées</div>
+              </div>
+            )}
+            {place.activities && place.activities.length > 0 && (
+              <div className="text-center p-4 border border-neon-cyan rounded-lg neon-glow">
+                <Play className="w-6 h-6 mx-auto mb-2 text-neon-purple" />
+                <div className="text-lg font-bold text-neon-purple">{place.activities.length}</div>
+                <div className="text-sm text-gray-400">Activités</div>
+              </div>
+            )}
+          </div>
+
+          {/* Activities */}
+          {place.activities && place.activities.length > 0 && (
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold mb-6 neon-shimmer">Activités disponibles</h3>
+              <div className="flex flex-wrap justify-center gap-3">
+                {place.activities.map((activity, index) => (
+                  <span key={index} className="px-4 py-2 bg-neon-cyan bg-opacity-10 text-neon-cyan rounded-lg border border-neon-cyan neon-glow">
+                    {activity}
+                  </span>
+                ))}
+              </div>
+            </div>
           )}
         </div>
       </section>
 
-      {/* Content Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            {placeLoading ? (
-              <div className="space-y-4">
-                <div className="h-6 bg-neon-cyan opacity-20 rounded"></div>
-                <div className="h-6 bg-neon-cyan opacity-20 rounded w-5/6"></div>
-                <div className="h-6 bg-neon-cyan opacity-20 rounded w-4/5"></div>
-                <div className="h-6 bg-neon-cyan opacity-20 rounded"></div>
-                <div className="h-6 bg-neon-cyan opacity-20 rounded w-3/4"></div>
-              </div>
-            ) : (
-              <div className="text-center">
-                <p className="text-lg text-neon-cyan leading-relaxed mb-8">
-                  {place?.content}
-                </p>
-                
-                {place?.videoUrl && (
-                  <div className="mt-12">
-                    <h3 className="text-2xl font-bold text-neon-cyan mb-6 neon-shimmer">Vidéo</h3>
-                    <div className="aspect-video border border-neon-cyan rounded-lg flex items-center justify-center neon-glow">
-                      <p className="text-neon-cyan">Vidéo : {place.videoUrl}</p>
-                    </div>
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
-        </div>
-      </section>
-
       {/* Adventures Section */}
-      {adventures && adventures.length > 0 && (
-        <section className="py-16 border-t border-neon-cyan">
+      {adventures.length > 0 && (
+        <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-neon-cyan mb-4 neon-shimmer">Mes Aventures Ici</h2>
-              <p className="text-xl text-neon-cyan">
-                Découvrez mes expériences à {place?.name}
-              </p>
-            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 neon-shimmer">
+              Mes aventures ici
+            </h2>
             
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {adventuresLoading ? (
-                Array.from({ length: 3 }).map((_, i) => (
-                  <div key={i} className="p-6 border border-neon-cyan rounded-xl neon-glow">
-                    <div className="text-neon-cyan">Chargement...</div>
-                  </div>
-                ))
-              ) : (
-                adventures?.map((adventure) => (
-                  <div key={adventure.id} className="bg-pure-black border border-neon-cyan rounded-xl p-6 neon-glow">
-                    <h3 className="text-xl font-semibold text-neon-cyan mb-2">{adventure.title}</h3>
-                    <p className="text-neon-cyan text-sm mb-4 opacity-80">
-                      {adventure.description}
-                    </p>
-                    <div className="text-xs text-neon-cyan opacity-60">
-                      {formatDate(adventure.publishedAt)}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {adventures.map((adventure: Adventure) => (
+                <Card key={adventure.id} className="bg-transparent border-2 border-neon-cyan neon-glow group hover:border-neon-purple transition-all duration-300">
+                  <CardContent className="p-0">
+                    {/* Adventure Image */}
+                    <div className="h-48 overflow-hidden">
+                      <img 
+                        src={adventure.imageUrl}
+                        alt={adventure.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
                     </div>
-                  </div>
-                ))
-              )}
+                    
+                    {/* Adventure Info */}
+                    <div className="p-6">
+                      <h3 className="text-xl font-bold mb-3 text-neon-cyan group-hover:text-neon-purple transition-colors">
+                        {adventure.title}
+                      </h3>
+                      <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                        {adventure.description}
+                      </p>
+                      
+                      {/* Adventure Date */}
+                      <div className="flex items-center space-x-2 text-xs text-gray-400">
+                        <Calendar className="w-3 h-3" />
+                        <span>{formatDate(adventure.date, 'full')}</span>
+                      </div>
+                      
+                      {/* Video Button (if video available) */}
+                      {adventure.videoUrl && (
+                        <div className="mt-4">
+                          <a 
+                            href={adventure.videoUrl} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center space-x-2 neon-button py-2 px-4 text-sm neon-glow-hover"
+                          >
+                            <Play className="w-4 h-4" />
+                            <span>Voir la vidéo</span>
+                          </a>
+                        </div>
+                      )}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </section>

@@ -1,12 +1,8 @@
-import { useQuery } from "@tanstack/react-query";
 import { useParams, Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
-import { Skeleton } from "@/components/ui/skeleton";
 import { ChevronDown, MapPin, Calendar } from "lucide-react";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
-import BreadcrumbNav from "@/components/breadcrumb-nav";
-import type { Continent, Country, City, Place } from "@shared/schema";
+import { getContinentBySlug, getCountryBySlug, getCityBySlug, getPlacesByCity } from "@/lib/static-data";
+import type { Continent, Country, City, Place } from "@/lib/static-data";
 
 export default function CityPage() {
   const { continentSlug, countrySlug, citySlug } = useParams<{ 
@@ -15,45 +11,32 @@ export default function CityPage() {
     citySlug: string; 
   }>();
 
-  const { data: continent } = useQuery<Continent>({
-    queryKey: [`/api/continents/${continentSlug}`],
-  });
+  if (!continentSlug || !countrySlug || !citySlug) {
+    return (
+      <div className="min-h-screen bg-pure-black flex items-center justify-center">
+        <div className="text-red-400 text-xl">Ville non trouvée</div>
+      </div>
+    );
+  }
 
-  const { data: country } = useQuery<Country>({
-    queryKey: [`/api/countries/${countrySlug}`],
-  });
+  const continent = getContinentBySlug(continentSlug);
+  const country = getCountryBySlug(countrySlug);
+  const city = getCityBySlug(citySlug);
+  const places = city ? getPlacesByCity(city.id) : [];
 
-  const { data: city, isLoading: cityLoading } = useQuery<City>({
-    queryKey: [`/api/cities/${citySlug}`],
-  });
-
-  const { data: places, isLoading: placesLoading } = useQuery<Place[]>({
-    queryKey: [`/api/cities/${citySlug}/places`],
-    enabled: !!citySlug,
-  });
-
-  const breadcrumbs = [
-    { label: "Accueil", href: "/" },
-    { label: continent?.name || continentSlug || "", href: `/continent/${continentSlug}` },
-    { label: country?.name || countrySlug || "", href: `/continent/${continentSlug}/country/${countrySlug}` },
-    { label: city?.name || citySlug || "", href: `/continent/${continentSlug}/country/${countrySlug}/city/${citySlug}` }
-  ];
-
-  const formatDate = (date: Date | string | null) => {
-    if (!date) return "";
-    const d = new Date(date);
-    return d.toLocaleDateString('fr-FR', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
-  };
+  if (!continent || !country || !city) {
+    return (
+      <div className="min-h-screen bg-pure-black flex items-center justify-center">
+        <div className="text-red-400 text-xl">Ville non trouvée</div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-pure-black text-neon-cyan font-mono">
       {/* Simple navigation */}
       <div className="p-4 border-b border-neon-cyan">
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-4 flex-wrap">
           <Link href="/">
             <button className="text-neon-cyan hover:text-neon-purple transition-colors">
               🏠 Accueil
@@ -62,13 +45,13 @@ export default function CityPage() {
           <span className="text-neon-cyan opacity-50">→</span>
           <Link href={`/continent/${continentSlug}`}>
             <button className="text-neon-cyan hover:text-neon-purple transition-colors">
-              {continent?.name}
+              {continent.name}
             </button>
           </Link>
           <span className="text-neon-cyan opacity-50">→</span>
           <Link href={`/continent/${continentSlug}/country/${countrySlug}`}>
             <button className="text-neon-cyan hover:text-neon-purple transition-colors">
-              {country?.name}
+              {country.name}
             </button>
           </Link>
         </div>
@@ -77,84 +60,116 @@ export default function CityPage() {
       {/* Hero Section */}
       <section className="py-16 text-center">
         <div className="container mx-auto px-4">
-          {cityLoading ? (
-            <div className="neon-shimmer text-4xl mb-8">
-              Chargement...
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 neon-shimmer">{city.name}</h1>
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto font-light mb-12">
+            {city.description}
+          </p>
+
+          {/* City Hero Image */}
+          <div className="mb-16">
+            <div className="w-full max-w-4xl mx-auto h-64 md:h-80 overflow-hidden border-2 border-neon-cyan rounded-xl neon-glow">
+              <img 
+                src={city.imageUrl}
+                alt={`Vue panoramique de ${city.name}`}
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              />
             </div>
-          ) : (
-            <>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 neon-shimmer">{city?.name}</h1>
-              <p className="text-xl md:text-2xl max-w-3xl mx-auto font-light mb-12">
-                {city?.description}
-              </p>
-            </>
-          )}
+          </div>
+
+          {/* City Stats */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto mb-12">
+            {city.population && (
+              <div className="text-center p-4 border border-neon-cyan rounded-lg neon-glow">
+                <div className="text-2xl font-bold text-neon-purple">{city.population.toLocaleString()}</div>
+                <div className="text-sm text-gray-400">Habitants</div>
+              </div>
+            )}
+            {city.founded && (
+              <div className="text-center p-4 border border-neon-cyan rounded-lg neon-glow">
+                <div className="text-2xl font-bold text-neon-purple">{city.founded}</div>
+                <div className="text-sm text-gray-400">Fondée en</div>
+              </div>
+            )}
+            {city.climate && (
+              <div className="text-center p-4 border border-neon-cyan rounded-lg neon-glow">
+                <div className="text-2xl font-bold text-neon-purple">{city.climate}</div>
+                <div className="text-sm text-gray-400">Climat</div>
+              </div>
+            )}
+          </div>
+
+          {/* Scroll indicator */}
+          <div className="animate-bounce">
+            <ChevronDown className="w-8 h-8 mx-auto text-neon-cyan opacity-70" />
+          </div>
         </div>
       </section>
 
-      {/* Places Grid */}
+      {/* Places Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-neon-cyan mb-4">Lieux d'Intérêt</h2>
-            <p className="text-xl text-neon-cyan">
-              Découvrez les trésors cachés de {city?.name}
-            </p>
-          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 neon-shimmer">
+            Lieux à visiter
+          </h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {placesLoading ? (
-              Array.from({ length: 6 }).map((_, i) => (
-                <div key={i} className="p-6 border border-neon-cyan rounded-xl neon-glow">
-                  <div className="text-neon-cyan">Chargement...</div>
-                </div>
-              ))
-            ) : (
-              places?.map((place) => (
-                <Link 
-                  key={place.id} 
-                  href={`/continent/${continentSlug}/country/${countrySlug}/city/${citySlug}/place/${place.slug}`}
-                >
-                  <div className="group cursor-pointer bg-pure-black border border-neon-cyan rounded-xl overflow-hidden neon-glow hover:neon-glow-hover transition-all duration-300">
-                    {/* Image du lieu */}
-                    <div className="h-48 overflow-hidden">
-                      <img 
-                        src={place.imageUrl}
-                        alt={place.name}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                      />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {places.map((place: Place) => (
+              <Card key={place.id} className="bg-transparent border-2 border-neon-cyan neon-glow group hover:border-neon-purple transition-all duration-300">
+                <CardContent className="p-0">
+                  {/* Place Image */}
+                  <div className="h-48 overflow-hidden">
+                    <img 
+                      src={place.imageUrl}
+                      alt={place.name}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  
+                  {/* Place Info */}
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold mb-3 text-neon-cyan group-hover:text-neon-purple transition-colors">
+                      {place.name}
+                    </h3>
+                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                      {place.description}
+                    </p>
+                    
+                    {/* Place Details */}
+                    <div className="space-y-2 mb-4 text-xs">
+                      {place.bestTime && (
+                        <div className="flex items-center space-x-2">
+                          <Calendar className="w-3 h-3 text-neon-cyan" />
+                          <span className="text-gray-300">Meilleur moment: {place.bestTime}</span>
+                        </div>
+                      )}
+                      {place.coordinates && (
+                        <div className="flex items-center space-x-2">
+                          <MapPin className="w-3 h-3 text-neon-cyan" />
+                          <span className="text-gray-300">{place.coordinates}</span>
+                        </div>
+                      )}
+                      {place.activities && place.activities.length > 0 && (
+                        <div className="flex flex-wrap gap-1 mt-2">
+                          {place.activities.map((activity, index) => (
+                            <span key={index} className="px-2 py-1 bg-neon-cyan bg-opacity-10 text-neon-cyan text-xs rounded border border-neon-cyan">
+                              {activity}
+                            </span>
+                          ))}
+                        </div>
+                      )}
                     </div>
                     
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold text-neon-cyan mb-3 group-hover:text-neon-purple transition-colors">
-                        {place.name}
-                      </h3>
-                      <p className="text-neon-cyan mb-4 text-sm opacity-80">
-                        {place.description}
-                      </p>
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center text-sm text-neon-cyan opacity-60">
-                          <Calendar className="h-4 w-4 mr-1" />
-                          {place.visitDate ? formatDate(place.visitDate) : 'À venir'}
-                        </div>
-                        <div className="flex items-center text-neon-cyan group-hover:text-neon-purple transition-colors">
-                          <span className="mr-2 text-sm">Visiter →</span>
-                        </div>
-                      </div>
-                    </div>
+                    {/* Visit Button */}
+                    <Link href={`/continent/${continentSlug}/country/${countrySlug}/city/${citySlug}/place/${place.slug}`}>
+                      <button className="w-full neon-button py-2 text-sm neon-glow-hover">
+                        Visiter {place.name}
+                      </button>
+                    </Link>
                   </div>
-                </Link>
-              ))
-            )}
+                </CardContent>
+              </Card>
+            ))}
           </div>
-          
-          {places && places.length === 0 && !placesLoading && (
-            <div className="text-center py-12">
-              <p className="text-neon-cyan text-lg opacity-60">
-                Aucun lieu disponible pour le moment dans cette ville.
-              </p>
-            </div>
-          )}
         </div>
       </section>
     </div>

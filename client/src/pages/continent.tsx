@@ -43,74 +43,88 @@ export default function ContinentPage() {
           <h1 className="text-5xl md:text-6xl font-bold mb-6 neon-shimmer">{continent.name}</h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto font-light mb-12">
             {continent.description}
-              </p>
-            </>
-          )}
+          </p>
+
+          {/* Continent Hero Image */}
+          <div className="mb-16">
+            <div className="w-full max-w-4xl mx-auto h-64 md:h-80 overflow-hidden border-2 border-neon-cyan rounded-xl neon-glow">
+              <img 
+                src={continent.imageUrl}
+                alt={`Paysage représentatif de ${continent.name}`}
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+          </div>
+
+          {/* Scroll indicator */}
+          <div className="animate-bounce">
+            <ChevronDown className="w-8 h-8 mx-auto text-neon-cyan opacity-70" />
+          </div>
         </div>
       </section>
 
-      {/* Countries Grid */}
+      {/* Countries Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-neon-cyan mb-4">Pays à Explorer</h2>
-            <p className="text-xl text-neon-cyan">
-              Découvrez les destinations fascinantes de {continent?.name}
-            </p>
-          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 neon-shimmer">
+            Pays à découvrir
+          </h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {countriesLoading ? (
-              Array.from({ length: 6 }).map((_, i) => (
-                <div key={i} className="p-6 border border-neon-cyan rounded-xl neon-glow">
-                  <div className="text-neon-cyan">Chargement...</div>
-                </div>
-              ))
-            ) : (
-              countries?.map((country) => (
-                <Link 
-                  key={country.id} 
-                  href={`/continent/${continentSlug}/country/${country.slug}`}
-                >
-                  <div className="group cursor-pointer bg-pure-black border border-neon-cyan rounded-xl overflow-hidden neon-glow hover:neon-glow-hover transition-all duration-300">
-                    {/* Image du pays */}
-                    <div className="h-48 overflow-hidden">
-                      <img 
-                        src={country.imageUrl}
-                        alt={country.name}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                      />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {countries.map((country: Country) => (
+              <Card key={country.id} className="bg-transparent border-2 border-neon-cyan neon-glow group hover:border-neon-purple transition-all duration-300">
+                <CardContent className="p-0">
+                  {/* Country Image */}
+                  <div className="h-48 overflow-hidden">
+                    <img 
+                      src={country.imageUrl}
+                      alt={`Paysage de ${country.name}`}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  
+                  {/* Country Info */}
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold mb-3 text-neon-cyan group-hover:text-neon-purple transition-colors">
+                      {country.name}
+                    </h3>
+                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                      {country.description}
+                    </p>
+                    
+                    {/* Country Details */}
+                    <div className="space-y-2 mb-4 text-xs">
+                      {country.capital && (
+                        <div className="flex justify-between">
+                          <span className="text-neon-cyan opacity-70">Capitale:</span>
+                          <span className="text-gray-300">{country.capital}</span>
+                        </div>
+                      )}
+                      {country.language && (
+                        <div className="flex justify-between">
+                          <span className="text-neon-cyan opacity-70">Langue:</span>
+                          <span className="text-gray-300">{country.language}</span>
+                        </div>
+                      )}
+                      {country.currency && (
+                        <div className="flex justify-between">
+                          <span className="text-neon-cyan opacity-70">Monnaie:</span>
+                          <span className="text-gray-300">{country.currency}</span>
+                        </div>
+                      )}
                     </div>
                     
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold text-neon-cyan mb-3 group-hover:text-neon-purple transition-colors">
-                        {country.name}
-                      </h3>
-                      <p className="text-neon-cyan mb-4 text-sm opacity-80">
-                        {country.description}
-                      </p>
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-neon-cyan opacity-60">
-                          {country.cityCount} {country.cityCount === 1 ? 'Ville' : 'Villes'}
-                        </span>
-                        <div className="flex items-center text-neon-cyan group-hover:text-neon-purple transition-colors">
-                          <span className="mr-2 text-sm">Découvrir →</span>
-                        </div>
-                      </div>
-                    </div>
+                    {/* Visit Button */}
+                    <Link href={`/continent/${continentSlug}/country/${country.slug}`}>
+                      <button className="w-full neon-button py-2 text-sm neon-glow-hover">
+                        Explorer {country.name}
+                      </button>
+                    </Link>
                   </div>
-                </Link>
-              ))
-            )}
+                </CardContent>
+              </Card>
+            ))}
           </div>
-          
-          {countries && countries.length === 0 && !countriesLoading && (
-            <div className="text-center py-12">
-              <p className="text-neon-cyan text-lg opacity-60">
-                Aucun pays disponible pour le moment dans cette région.
-              </p>
-            </div>
-          )}
         </div>
       </section>
     </div>
