@@ -1,29 +1,30 @@
-import { useQuery } from "@tanstack/react-query";
 import { useParams, Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
-import { Skeleton } from "@/components/ui/skeleton";
 import { ChevronDown } from "lucide-react";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
-import BreadcrumbNav from "@/components/breadcrumb-nav";
-import type { Continent, Country } from "@shared/schema";
+import { getContinentBySlug, getCountriesByContinent } from "@/lib/static-data";
+import type { Continent, Country } from "@/lib/static-data";
 
 export default function ContinentPage() {
   const { continentSlug } = useParams<{ continentSlug: string }>();
 
-  const { data: continent, isLoading: continentLoading } = useQuery<Continent>({
-    queryKey: [`/api/continents/${continentSlug}`],
-  });
+  if (!continentSlug) {
+    return (
+      <div className="min-h-screen bg-pure-black flex items-center justify-center">
+        <div className="text-red-400 text-xl">Continent non trouvé</div>
+      </div>
+    );
+  }
 
-  const { data: countries, isLoading: countriesLoading } = useQuery<Country[]>({
-    queryKey: [`/api/continents/${continentSlug}/countries`],
-    enabled: !!continentSlug,
-  });
+  const continent = getContinentBySlug(continentSlug);
+  const countries = continent ? getCountriesByContinent(continent.id) : [];
 
-  const breadcrumbs = [
-    { label: "Accueil", href: "/" },
-    { label: continent?.name || continentSlug || "", href: `/continent/${continentSlug}` }
-  ];
+  if (!continent) {
+    return (
+      <div className="min-h-screen bg-pure-black flex items-center justify-center">
+        <div className="text-red-400 text-xl">Continent non trouvé</div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-pure-black text-neon-cyan font-mono">
@@ -39,15 +40,9 @@ export default function ContinentPage() {
       {/* Hero Section */}
       <section className="py-16 text-center">
         <div className="container mx-auto px-4">
-          {continentLoading ? (
-            <div className="neon-shimmer text-4xl mb-8">
-              Chargement...
-            </div>
-          ) : (
-            <>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 neon-shimmer">{continent?.name}</h1>
-              <p className="text-xl md:text-2xl max-w-3xl mx-auto font-light mb-12">
-                {continent?.description}
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 neon-shimmer">{continent.name}</h1>
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto font-light mb-12">
+            {continent.description}
               </p>
             </>
           )}
