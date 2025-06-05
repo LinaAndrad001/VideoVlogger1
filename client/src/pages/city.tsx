@@ -50,31 +50,41 @@ export default function CityPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Header />
-      <BreadcrumbNav items={breadcrumbs} />
+    <div className="min-h-screen bg-pure-black text-neon-cyan font-mono">
+      {/* Simple navigation */}
+      <div className="p-4 border-b border-neon-cyan">
+        <div className="flex items-center space-x-4">
+          <Link href="/">
+            <button className="text-neon-cyan hover:text-neon-purple transition-colors">
+              🏠 Accueil
+            </button>
+          </Link>
+          <span className="text-neon-cyan opacity-50">→</span>
+          <Link href={`/continent/${continentSlug}`}>
+            <button className="text-neon-cyan hover:text-neon-purple transition-colors">
+              {continent?.name}
+            </button>
+          </Link>
+          <span className="text-neon-cyan opacity-50">→</span>
+          <Link href={`/continent/${continentSlug}/country/${countrySlug}`}>
+            <button className="text-neon-cyan hover:text-neon-purple transition-colors">
+              {country?.name}
+            </button>
+          </Link>
+        </div>
+      </div>
       
       {/* Hero Section */}
-      <section className="relative py-24">
-        {city && (
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: `url('${city.imageUrl}')` }}
-          >
-            <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-          </div>
-        )}
-        
-        <div className="relative z-10 container mx-auto px-4 text-center text-white">
+      <section className="py-16 text-center">
+        <div className="container mx-auto px-4">
           {cityLoading ? (
-            <div className="space-y-4">
-              <Skeleton className="h-12 w-3/4 mx-auto bg-white/20" />
-              <Skeleton className="h-6 w-full max-w-2xl mx-auto bg-white/20" />
+            <div className="neon-shimmer text-4xl mb-8">
+              Chargement...
             </div>
           ) : (
             <>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">{city?.name}</h1>
-              <p className="text-xl md:text-2xl max-w-3xl mx-auto font-light">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 neon-shimmer">{city?.name}</h1>
+              <p className="text-xl md:text-2xl max-w-3xl mx-auto font-light mb-12">
                 {city?.description}
               </p>
             </>
@@ -83,30 +93,21 @@ export default function CityPage() {
       </section>
 
       {/* Places Grid */}
-      <section className="py-16 bg-white">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-charcoal mb-4">Lieux d'Intérêt</h2>
-            <p className="text-xl text-gray-600">
+            <h2 className="text-4xl font-bold text-neon-cyan mb-4">Lieux d'Intérêt</h2>
+            <p className="text-xl text-neon-cyan">
               Découvrez les trésors cachés de {city?.name}
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {placesLoading ? (
               Array.from({ length: 6 }).map((_, i) => (
-                <Card key={i}>
-                  <Skeleton className="w-full h-48" />
-                  <CardContent className="p-6">
-                    <Skeleton className="h-6 w-3/4 mb-4" />
-                    <Skeleton className="h-4 w-full mb-2" />
-                    <Skeleton className="h-4 w-5/6 mb-4" />
-                    <div className="flex justify-between">
-                      <Skeleton className="h-4 w-20" />
-                      <Skeleton className="h-4 w-16" />
-                    </div>
-                  </CardContent>
-                </Card>
+                <div key={i} className="p-6 border border-neon-cyan rounded-xl neon-glow">
+                  <div className="text-neon-cyan">Chargement...</div>
+                </div>
               ))
             ) : (
               places?.map((place) => (
@@ -114,30 +115,23 @@ export default function CityPage() {
                   key={place.id} 
                   href={`/continent/${continentSlug}/country/${countrySlug}/city/${citySlug}/place/${place.slug}`}
                 >
-                  <Card className="group cursor-pointer bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                    <img 
-                      src={place.imageUrl}
-                      alt={place.name}
-                      className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
-                    />
-                    
-                    <CardContent className="p-6">
-                      <h3 className="text-xl font-bold text-charcoal mb-3">{place.name}</h3>
-                      <p className="text-gray-600 mb-4 text-sm">
-                        {place.description}
-                      </p>
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center text-sm text-gray-500">
-                          <Calendar className="h-4 w-4 mr-1" />
-                          {place.visitDate ? formatDate(place.visitDate) : 'À venir'}
-                        </div>
-                        <div className="flex items-center text-warm-sand">
-                          <span className="mr-2 text-sm">Visiter</span>
-                          <ChevronDown className="h-4 w-4 rotate-[-90deg]" />
-                        </div>
+                  <div className="group cursor-pointer bg-pure-black border border-neon-cyan rounded-xl p-6 neon-glow hover:neon-glow-hover transition-all duration-300">
+                    <h3 className="text-xl font-bold text-neon-cyan mb-3 group-hover:text-neon-purple transition-colors">
+                      {place.name}
+                    </h3>
+                    <p className="text-neon-cyan mb-4 text-sm opacity-80">
+                      {place.description}
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center text-sm text-neon-cyan opacity-60">
+                        <Calendar className="h-4 w-4 mr-1" />
+                        {place.visitDate ? formatDate(place.visitDate) : 'À venir'}
                       </div>
-                    </CardContent>
-                  </Card>
+                      <div className="flex items-center text-neon-cyan group-hover:text-neon-purple transition-colors">
+                        <span className="mr-2 text-sm">Visiter →</span>
+                      </div>
+                    </div>
+                  </div>
                 </Link>
               ))
             )}
@@ -145,15 +139,13 @@ export default function CityPage() {
           
           {places && places.length === 0 && !placesLoading && (
             <div className="text-center py-12">
-              <p className="text-gray-500 text-lg">
+              <p className="text-neon-cyan text-lg opacity-60">
                 Aucun lieu disponible pour le moment dans cette ville.
               </p>
             </div>
           )}
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }
