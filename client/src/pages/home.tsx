@@ -1,13 +1,9 @@
-import { useQuery } from "@tanstack/react-query";
-import { Instagram } from "lucide-react";
 import { Link } from "wouter";
-import { travelerInfo } from "@/lib/travel-data";
-import type { Continent } from "@shared/schema";
+import { travelerInfo, getContinents } from "@/lib/static-data";
+import type { Continent } from "@/lib/static-data";
 
 export default function Home() {
-  const { data: continents } = useQuery<Continent[]>({
-    queryKey: ["/api/continents"],
-  });
+  const continents = getContinents();
 
   return (
     <div className="min-h-screen bg-pure-black text-neon-cyan font-mono">
@@ -76,7 +72,7 @@ export default function Home() {
           </p>
           
           <div className="flex flex-col lg:flex-row gap-12 justify-center items-center max-w-4xl mx-auto">
-            {continents?.map((continent) => (
+            {continents.map((continent: Continent) => (
               <div key={continent.id} className="flex flex-col items-center space-y-6">
                 {/* Image représentative du continent */}
                 <div className="w-64 h-48 border-2 border-neon-cyan rounded-xl overflow-hidden neon-glow">
