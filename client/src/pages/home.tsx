@@ -18,8 +18,20 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Hero Image Section */}
+      <div className="relative mb-16">
+        <div className="h-64 md:h-80 overflow-hidden border-y-2 border-neon-cyan">
+          <img 
+            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=400"
+            alt="Voyage et aventure"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-pure-black via-transparent to-transparent"></div>
+        </div>
+      </div>
+
       {/* Main Content */}
-      <div className="text-center px-8 py-16">
+      <div className="text-center px-8 py-8">
         
         {/* Instagram Section */}
         <div className="mb-16">
@@ -36,7 +48,7 @@ export default function Home() {
             <img 
               src="https://www.cmonsite.fr/creer-un-site/wp-content/uploads/2021/06/new-instagram-logo-png-transparent-300x300.png" 
               alt="Logo Instagram" 
-              className="w-16 h-16 border-2 border-neon-cyan rounded-xl p-1 hover:opacity-80 transition-opacity"
+              className="w-16 h-16 border-2 border-neon-cyan rounded-xl p-1 hover:opacity-80 transition-opacity neon-glow"
             />
           </a>
         </div>
@@ -63,13 +75,25 @@ export default function Home() {
             <strong>Veuillez cliquer sur le continent de votre choix :</strong>
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
+          <div className="flex flex-col lg:flex-row gap-12 justify-center items-center max-w-4xl mx-auto">
             {continents?.map((continent) => (
-              <Link key={continent.id} href={`/continent/${continent.slug}`}>
-                <button className="neon-button px-8 py-4 text-lg neon-glow-hover">
-                  {continent.name}
-                </button>
-              </Link>
+              <div key={continent.id} className="flex flex-col items-center space-y-6">
+                {/* Image représentative du continent */}
+                <div className="w-64 h-48 border-2 border-neon-cyan rounded-xl overflow-hidden neon-glow">
+                  <img 
+                    src={continent.imageUrl}
+                    alt={`Ville représentative de ${continent.name}`}
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+                
+                {/* Bouton continent */}
+                <Link href={`/continent/${continent.slug}`}>
+                  <button className="neon-button px-8 py-4 text-lg neon-glow-hover min-w-[200px]">
+                    {continent.name}
+                  </button>
+                </Link>
+              </div>
             ))}
           </div>
         </div>

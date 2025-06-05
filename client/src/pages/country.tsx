@@ -93,19 +93,30 @@ export default function CountryPage() {
                   key={city.id} 
                   href={`/continent/${continentSlug}/country/${countrySlug}/city/${city.slug}`}
                 >
-                  <div className="group cursor-pointer bg-pure-black border border-neon-cyan rounded-xl p-6 neon-glow hover:neon-glow-hover transition-all duration-300">
-                    <h3 className="text-xl font-bold text-neon-cyan mb-3 group-hover:text-neon-purple transition-colors">
-                      {city.name}
-                    </h3>
-                    <p className="text-neon-cyan mb-4 text-sm opacity-80">
-                      {city.description}
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-neon-cyan opacity-60">
-                        {city.placeCount} {city.placeCount === 1 ? 'Lieu' : 'Lieux'}
-                      </span>
-                      <div className="flex items-center text-neon-cyan group-hover:text-neon-purple transition-colors">
-                        <span className="mr-2 text-sm">Explorer →</span>
+                  <div className="group cursor-pointer bg-pure-black border border-neon-cyan rounded-xl overflow-hidden neon-glow hover:neon-glow-hover transition-all duration-300">
+                    {/* Image de la ville */}
+                    <div className="h-48 overflow-hidden">
+                      <img 
+                        src={city.imageUrl}
+                        alt={city.name}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+                    
+                    <div className="p-6">
+                      <h3 className="text-xl font-bold text-neon-cyan mb-3 group-hover:text-neon-purple transition-colors">
+                        {city.name}
+                      </h3>
+                      <p className="text-neon-cyan mb-4 text-sm opacity-80">
+                        {city.description}
+                      </p>
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-neon-cyan opacity-60">
+                          {city.placeCount} {city.placeCount === 1 ? 'Lieu' : 'Lieux'}
+                        </span>
+                        <div className="flex items-center text-neon-cyan group-hover:text-neon-purple transition-colors">
+                          <span className="mr-2 text-sm">Explorer →</span>
+                        </div>
                       </div>
                     </div>
                   </div>
