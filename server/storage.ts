@@ -189,7 +189,7 @@ export class MemStorage implements IStorage {
       slug: "paris",
       description: "La Ville Lumière et ses monuments emblématiques.",
       imageUrl: "/images/IMG_20250228_175111.jpg",
-      placeCount: 3
+      placeCount: 5
     };
 
     const bordeaux: City = {
@@ -375,30 +375,54 @@ export class MemStorage implements IStorage {
       visitDate: new Date('2024-01-17')
     };
 
-    // Lyon place
-    const vieuxLyon: Place = {
+    const tourDuo: Place = {
       id: this.currentPlaceId++,
-      cityId: lyon.id,
-      name: "Vieux Lyon",
-      slug: "vieux-lyon",
-      description: "Quartier Renaissance au patrimoine exceptionnel.",
-      imageUrl: "https://images.unsplash.com/photo-1524305533606-0c6cc2bdc1ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      content: "Le Vieux Lyon, inscrit au patrimoine mondial de l'UNESCO, révèle l'architecture Renaissance.",
+      cityId: paris.id,
+      name: "Tour Duo",
+      slug: "tour-duo",
+      description: "Gratte-ciel moderne symbolisant le Paris contemporain.",
+      imageUrl: "/images/IMG_20231114_002800_619.jpg",
+      content: "Les Tours Duo représentent l'architecture moderne de Paris, illuminées dans la nuit urbaine.",
       videoUrl: null,
-      visitDate: new Date('2024-02-01')
+      visitDate: new Date('2024-01-20')
     };
 
-    // Nice place
-    const promenadeAnglais: Place = {
+    const bordSeine: Place = {
       id: this.currentPlaceId++,
-      cityId: nice.id,
-      name: "Promenade des Anglais",
-      slug: "promenade-anglais",
-      description: "Célèbre promenade en bord de mer.",
-      imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      content: "La Promenade des Anglais offre une vue magnifique sur la Baie des Anges.",
+      cityId: paris.id,
+      name: "Bord de Seine",
+      slug: "bord-seine",
+      description: "Promenade paisible le long des quais de Seine.",
+      imageUrl: "/images/IMG_20240901_172738.jpg",
+      content: "Les quais de Seine offrent une perspective unique sur les monuments parisiens.",
       videoUrl: null,
-      visitDate: new Date('2024-02-15')
+      visitDate: new Date('2024-01-21')
+    };
+
+    // Bordeaux place
+    const placeComedieBordeaux: Place = {
+      id: this.currentPlaceId++,
+      cityId: bordeaux.id,
+      name: "Place de la Comédie",
+      slug: "place-comedie-bordeaux",
+      description: "Cœur historique de Bordeaux et son grand théâtre.",
+      imageUrl: "/images/bordeauxrue02.jpg",
+      content: "La Place de la Comédie, avec son Grand Théâtre néoclassique, représente l'élégance bordelaise.",
+      videoUrl: null,
+      visitDate: new Date('2024-01-18')
+    };
+
+    // Ecluzelles place
+    const bordEure: Place = {
+      id: this.currentPlaceId++,
+      cityId: ecluzelles.id,
+      name: "Bord de l'Eure",
+      slug: "bord-eure",
+      description: "Promenade paisible au bord de la rivière.",
+      imageUrl: "/images/IMG_20240721_134557.jpg",
+      content: "Les rives de l'Eure offrent un cadre paisible pour une promenade en pleine nature.",
+      videoUrl: null,
+      visitDate: new Date('2024-01-19')
     };
 
     // Rome places
@@ -619,8 +643,10 @@ export class MemStorage implements IStorage {
     this.places.set(eiffelTower.id, eiffelTower);
     this.places.set(louvre.id, louvre);
     this.places.set(sacreCoeur.id, sacreCoeur);
-    this.places.set(vieuxLyon.id, vieuxLyon);
-    this.places.set(promenadeAnglais.id, promenadeAnglais);
+    this.places.set(tourDuo.id, tourDuo);
+    this.places.set(bordSeine.id, bordSeine);
+    this.places.set(placeComedieBordeaux.id, placeComedieBordeaux);
+    this.places.set(bordEure.id, bordEure);
     this.places.set(colosseum.id, colosseum);
     this.places.set(vatican.id, vatican);
     this.places.set(stMarks.id, stMarks);
