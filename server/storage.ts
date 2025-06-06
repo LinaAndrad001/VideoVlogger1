@@ -94,7 +94,7 @@ export class MemStorage implements IStorage {
       name: "Asie",
       slug: "asie",
       description: "Plongez dans la spiritualité, la modernité et les traditions millénaires du Japon, de la Thaïlande, du Vietnam et d'autres perles asiatiques.",
-      imageUrl: "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+      imageUrl: "@assets/IMG_20231228_141336.jpg",
       countryCount: 3,
       cityCount: 6
     };

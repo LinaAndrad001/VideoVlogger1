@@ -109,15 +109,15 @@ export const continents: Continent[] = [
     name: "Europe",
     slug: "europe",
     description: "Continent riche en histoire, culture et diversité architecturale",
-    imageUrl: "@assets/IMG_20240721_142441.jpg",
-    countries: 3
+    imageUrl: "/images/IMG_20240721_142441.jpg",
+    countries: 4
   },
   {
     id: 2,
     name: "Asie",
     slug: "asie",
     description: "Terre de contrastes entre tradition ancestrale et modernité",
-    imageUrl: "@assets/IMG_20231228_141336.jpg",
+    imageUrl: "/images/IMG_20231228_141336.jpg",
     countries: 3
   }
 ];
@@ -130,7 +130,7 @@ export const countries: Country[] = [
     name: "France",
     slug: "france",
     description: "Pays de l'art de vivre, de la gastronomie et du patrimoine",
-    imageUrl: "@assets/IMG_20250125_132103.jpg",
+    imageUrl: "/images/IMG_20250125_132103.jpg",
     capital: "Paris",
     language: "Français",
     currency: "Euro"
@@ -163,7 +163,7 @@ export const countries: Country[] = [
     name: "Portugal",
     slug: "portugal",
     description: "Pays des navigateurs aux paysages authentiques et à l'hospitalité légendaire",
-    imageUrl: "@assets/IMG_20240804_111629.jpg",
+    imageUrl: "/images/IMG_20240804_111629.jpg",
     capital: "Lisbonne",
     language: "Portugais",
     currency: "Euro"
@@ -212,7 +212,7 @@ export const cities: City[] = [
     name: "Paris",
     slug: "paris",
     description: "Ville Lumière, capitale de l'amour et des arts",
-    imageUrl: "@assets/IMG_20250228_175111.jpg",
+    imageUrl: "/images/IMG_20250228_175111.jpg",
     population: 2161000,
     founded: "IIIe siècle av. J.-C.",
     climate: "Océanique"
@@ -386,7 +386,7 @@ export const places: Place[] = [
     name: "Musée du Louvre",
     slug: "musee-du-louvre",
     description: "Plus grand musée du monde et palais historique",
-    imageUrl: "@assets/IMG_20250603_151423.jpg",
+    imageUrl: "/images/IMG_20250603_151423.jpg",
     coordinates: "48.8606, 2.3376",
     bestTime: "Matinée",
     activities: ["Visite culturelle", "Art", "Histoire"]
@@ -397,7 +397,7 @@ export const places: Place[] = [
     name: "Sacré-Cœur",
     slug: "sacre-coeur",
     description: "Basilique emblématique de Montmartre offrant une vue panoramique sur Paris",
-    imageUrl: "@assets/IMG_20250516_164453.jpg",
+    imageUrl: "/images/IMG_20250516_164453.jpg",
     coordinates: "48.8867, 2.3431",
     bestTime: "Fin d'après-midi",
     activities: ["Visite religieuse", "Vue panoramique", "Montmartre"]

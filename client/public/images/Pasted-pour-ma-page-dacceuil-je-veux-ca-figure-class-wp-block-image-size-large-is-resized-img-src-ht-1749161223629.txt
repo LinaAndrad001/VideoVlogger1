@@ -1,0 +1,216 @@
+pour ma page dacceuil je veux ca ; <figure class="wp-block-image size-large is-resized"><img src="https://linablogvoyages.files.wordpress.com/2022/02/mouche-gif.gif?w=240" alt="" class="wp-image-90" style="width:40px;height:54px"/></figure><!DOCTYPE html>
+<html>
+  <head>
+    <title>Suivez-moi sur Instagram</title>
+  </head>
+  <body>
+
+    <div align="center">
+      <p><b>Suivez mes aventures en images :</b></p>
+      <a href="https://www.instagram.com/fpt.smlal.fpt/" target="_blank" title="Voir mon compte Instagram">
+        <img 
+          src="https://www.cmonsite.fr/creer-un-site/wp-content/uploads/2021/06/new-instagram-logo-png-transparent-300x300.png" 
+          alt="Logo Instagram" 
+          width="60" 
+          height="60"
+          style="border: 2px solid #2BFAFA; border-radius: 12px; padding: 4px;">
+      </a>
+    </div>
+
+  </body>
+</html><!DOCTYPE html>
+<html>
+  <head>
+    <title>Mon Vlog</title>
+    <style>
+      body {
+        background-color: black;
+        margin: 0;
+        padding: 0;
+        font-family: 'Courier New', monospace;
+        text-align: center;
+      }
+
+      .scintille {
+        font-size: 18px;
+        animation: couleurScintille 3s infinite ease-in-out;
+        margin-top: 60px;
+        line-height: 1.6em;
+      }
+
+      @keyframes couleurScintille {
+        0%   { color: #00FFFF; } /* Cyan */
+        50%  { color: #CC66FF; } /* Violet doux */
+        100% { color: #00FFFF; } /* Retour cyan */
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Marquee -->
+    <marquee behavior="alternate" scrollamount="3" style="color:#00FFFF;">
+      ✈️ Voyager, c'est vivre mille vies en une seule ✈️
+    </marquee>
+
+    <!-- Texte animé couleur -->
+    <div class="scintille">
+      Voyager est quelque chose d’indescriptible.<br>
+      Je vais tenter de partager avec vous<br>
+      les expériences que j’ai vécues dans différents pays.<br>
+      Découvrir de nouveaux endroits, de nouvelles cultures...<br>
+      C’est quelque chose qui compte beaucoup pour moi.<br>
+      On apprend tellement en voyageant… et j’adore ça !
+    </div>
+
+  </body>
+</html><!DOCTYPE html>
+<html>
+  <head>
+    <title>Mon Vlog</title>
+    <style>
+      body {
+        background-color: black;
+        margin: 0;
+        padding: 0;
+        font-family: 'Courier New', monospace;
+        text-align: center;
+      }
+
+      .scintille {
+        font-size: 18px;
+        animation: couleurScintille 3s infinite ease-in-out;
+        margin-top: 60px;
+        line-height: 1.6em;
+      }
+
+      @keyframes couleurScintille {
+        0%   { color: #00FFFF; } /* Cyan */
+        50%  { color: #CC66FF; } /* Violet doux */
+        100% { color: #00FFFF; } /* Retour cyan */
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Ton texte avec effet de scintillement -->
+    <div class="scintille">
+      Moi, c’est Lina. Voyager, c’est plus qu’un loisir — c’est ma passion.<br><br>
+      Depuis toute petite, je parcours le monde avec ma famille. Chaque pays visité m’a offert des cultures uniques, des expériences inoubliables.<br><br>
+      J’ai rencontré des personnes incroyables que je ne reverrai peut-être jamais, mais chaque moment partagé m’a appris quelque chose de précieux.<br><br>
+      Ce que j’aime, c’est m’immerger dans de nouveaux milieux, observer, écouter et apprendre.<br><br>
+      Voyager, ce n’est pas juste partir — c’est grandir, s’ouvrir, comprendre. Et ça, j’adore.
+    </div>
+
+  </body>
+</html><p class="has-text-align-center">Pour en savoir plus cliquer <a href="https://linablogvoyages.wordpress.com/2022/02/11/qui-suis-je/" target="_blank" rel="noreferrer noopener">ici</a></p><!DOCTYPE html>
+<html>
+  <head>
+    <title>Mon blog de voyages</title>
+    <style>
+      body {
+        background-color: black;
+        font-family: 'Courier New', monospace;
+        text-align: center;
+        margin-top: 100px;
+      }
+
+      .scintille {
+        font-size: 18px;
+        animation: couleurScintille 3s infinite ease-in-out;
+        line-height: 1.6;
+      }
+
+      @keyframes couleurScintille {
+        0%   { color: #00FFFF; }   /* Cyan */
+        50%  { color: #CC66FF; }   /* Violet doux */
+        100% { color: #00FFFF; }   /* Retour cyan */
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="scintille">
+      Sur ce blog, je partage mes coups de cœur, mes avis, et quelques conseils<br>
+      sur les endroits qui m’ont marquée... ou pas.<br>
+      Les lieux à voir absolument — et ceux qu’on peut éviter aussi ! 😉
+    </div>
+
+  </body>
+</html><p><strong style="color:#2BFAFA">Veuillez cliquer sur le continent de votre choix : <strong></strong></strong></p><!DOCTYPE html>
+<html>
+  <head>
+    <title>Bouton Europe</title>
+    <style>
+      body {
+        background-color: black;
+        text-align: center;
+        padding-top: 100px;
+        font-family: 'Courier New', monospace;
+      }
+
+      .neon-button {
+        color: #00FFFF;
+        background-color: transparent;
+        border: 2px solid #00FFFF;
+        padding: 10px 30px;
+        font-size: 18px;
+        border-radius: 30px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.4s ease-in-out;
+        box-shadow: 0 0 8px #00FFFF;
+        display: inline-block;
+      }
+
+      .neon-button:hover {
+        background-color: #00FFFF;
+        color: black;
+        box-shadow: 0 0 15px #00FFFF, 0 0 30px #00FFFF;
+      }
+    </style>
+  </head>
+  <body>
+
+    <a href="#europe" class="neon-button">Europe</a>
+
+  </body>
+</html><!DOCTYPE html>
+<html>
+  <head>
+    <title>Bouton Asie</title>
+    <style>
+      body {
+        background-color: black;
+        text-align: center;
+        padding-top: 100px;
+        font-family: 'Courier New', monospace;
+      }
+
+      .neon-button {
+        color: #00FFFF;
+        background-color: transparent;
+        border: 2px solid #00FFFF;
+        padding: 10px 30px;
+        font-size: 18px;
+        border-radius: 30px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.4s ease-in-out;
+        box-shadow: 0 0 8px #00FFFF;
+        display: inline-block;
+      }
+
+      .neon-button:hover {
+        background-color: #00FFFF;
+        color: black;
+        box-shadow: 0 0 15px #00FFFF, 0 0 30px #00FFFF;
+      }
+    </style>
+  </head>
+  <body>
+
+    <a href="#asie" class="neon-button">Asie</a>
+
+  </body>
+</html>
+
