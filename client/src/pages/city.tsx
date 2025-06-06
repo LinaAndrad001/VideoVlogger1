@@ -1,8 +1,8 @@
 import { useParams, Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
-import { ChevronDown, MapPin, Calendar } from "lucide-react";
+import { MapPin, Calendar } from "lucide-react";
 import { getContinentBySlug, getCountryBySlug, getCityBySlug, getPlacesByCity } from "@/lib/static-data";
-import type { Continent, Country, City, Place } from "@/lib/static-data";
+import type { Place } from "@/lib/static-data";
 
 export default function CityPage() {
   const { continentSlug, countrySlug, citySlug } = useParams<{ 
@@ -57,51 +57,13 @@ export default function CityPage() {
         </div>
       </div>
       
-      {/* Hero Section */}
-      <section className="py-16 text-center">
+      {/* Simple Header */}
+      <section className="py-8">
         <div className="container mx-auto px-4">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 neon-shimmer">{city.name}</h1>
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto font-light mb-12">
+          <h1 className="text-3xl md:text-4xl font-bold text-center mb-2 neon-shimmer">{city.name}</h1>
+          <p className="text-lg text-center max-w-2xl mx-auto text-gray-300 mb-8">
             {city.description}
           </p>
-
-          {/* City Hero Image */}
-          <div className="mb-16">
-            <div className="w-full max-w-4xl mx-auto h-64 md:h-80 overflow-hidden border-2 border-neon-cyan rounded-xl neon-glow">
-              <img 
-                src={city.imageUrl}
-                alt={`Vue panoramique de ${city.name}`}
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-          </div>
-
-          {/* City Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto mb-12">
-            {city.population && (
-              <div className="text-center p-4 border border-neon-cyan rounded-lg neon-glow">
-                <div className="text-2xl font-bold text-neon-purple">{city.population.toLocaleString()}</div>
-                <div className="text-sm text-gray-400">Habitants</div>
-              </div>
-            )}
-            {city.founded && (
-              <div className="text-center p-4 border border-neon-cyan rounded-lg neon-glow">
-                <div className="text-2xl font-bold text-neon-purple">{city.founded}</div>
-                <div className="text-sm text-gray-400">Fondée en</div>
-              </div>
-            )}
-            {city.climate && (
-              <div className="text-center p-4 border border-neon-cyan rounded-lg neon-glow">
-                <div className="text-2xl font-bold text-neon-purple">{city.climate}</div>
-                <div className="text-sm text-gray-400">Climat</div>
-              </div>
-            )}
-          </div>
-
-          {/* Scroll indicator */}
-          <div className="animate-bounce">
-            <ChevronDown className="w-8 h-8 mx-auto text-neon-cyan opacity-70" />
-          </div>
         </div>
       </section>
 
