@@ -1,8 +1,8 @@
 import { useParams, Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
-import { Calendar, MapPin, Play } from "lucide-react";
+import { Calendar, Play } from "lucide-react";
 import { getContinentBySlug, getCountryBySlug, getCityBySlug, getPlaceBySlug, getAdventuresByPlace, formatDate } from "@/lib/static-data";
-import type { Continent, Country, City, Place, Adventure } from "@/lib/static-data";
+import type { Adventure } from "@/lib/static-data";
 
 export default function PlacePage() {
   const { continentSlug, countrySlug, citySlug, placeSlug } = useParams<{ 
@@ -73,55 +73,94 @@ export default function PlacePage() {
             {place.description}
           </p>
 
-          {/* Place Hero Image */}
-          <div className="mb-16">
-            <div className="w-full max-w-4xl mx-auto h-64 md:h-96 overflow-hidden border-2 border-neon-cyan rounded-xl neon-glow">
+          {/* Photo Gallery */}
+          <div className="mb-12">
+            {/* Main Photo */}
+            <div className="w-full max-w-4xl mx-auto h-64 md:h-96 overflow-hidden border-2 border-neon-cyan rounded-xl neon-glow mb-6">
               <img 
                 src={place.imageUrl}
                 alt={place.name}
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
               />
             </div>
-          </div>
-
-          {/* Place Details Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
-            {place.bestTime && (
-              <div className="text-center p-4 border border-neon-cyan rounded-lg neon-glow">
-                <Calendar className="w-6 h-6 mx-auto mb-2 text-neon-purple" />
-                <div className="text-lg font-bold text-neon-purple">{place.bestTime}</div>
-                <div className="text-sm text-gray-400">Meilleur moment</div>
+            
+            {/* Additional Photos Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+              <div className="h-32 md:h-48 overflow-hidden border border-neon-cyan rounded-lg neon-glow">
+                <img 
+                  src={place.imageUrl}
+                  alt={`${place.name} - Vue 2`}
+                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                />
               </div>
-            )}
-            {place.coordinates && (
-              <div className="text-center p-4 border border-neon-cyan rounded-lg neon-glow">
-                <MapPin className="w-6 h-6 mx-auto mb-2 text-neon-purple" />
-                <div className="text-lg font-bold text-neon-purple">{place.coordinates}</div>
-                <div className="text-sm text-gray-400">Coordonnées</div>
+              <div className="h-32 md:h-48 overflow-hidden border border-neon-cyan rounded-lg neon-glow">
+                <img 
+                  src={place.imageUrl}
+                  alt={`${place.name} - Vue 3`}
+                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                />
               </div>
-            )}
-            {place.activities && place.activities.length > 0 && (
-              <div className="text-center p-4 border border-neon-cyan rounded-lg neon-glow">
-                <Play className="w-6 h-6 mx-auto mb-2 text-neon-purple" />
-                <div className="text-lg font-bold text-neon-purple">{place.activities.length}</div>
-                <div className="text-sm text-gray-400">Activités</div>
+              <div className="h-32 md:h-48 overflow-hidden border border-neon-cyan rounded-lg neon-glow">
+                <img 
+                  src={place.imageUrl}
+                  alt={`${place.name} - Vue 4`}
+                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                />
               </div>
-            )}
-          </div>
-
-          {/* Activities */}
-          {place.activities && place.activities.length > 0 && (
-            <div className="mb-12">
-              <h3 className="text-2xl font-bold mb-6 neon-shimmer">Activités disponibles</h3>
-              <div className="flex flex-wrap justify-center gap-3">
-                {place.activities.map((activity, index) => (
-                  <span key={index} className="px-4 py-2 bg-neon-cyan bg-opacity-10 text-neon-cyan rounded-lg border border-neon-cyan neon-glow">
-                    {activity}
-                  </span>
-                ))}
+              <div className="h-32 md:h-48 overflow-hidden border border-neon-cyan rounded-lg neon-glow">
+                <img 
+                  src={place.imageUrl}
+                  alt={`${place.name} - Vue 5`}
+                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <div className="h-32 md:h-48 overflow-hidden border border-neon-cyan rounded-lg neon-glow">
+                <img 
+                  src={place.imageUrl}
+                  alt={`${place.name} - Vue 6`}
+                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <div className="h-32 md:h-48 overflow-hidden border border-neon-cyan rounded-lg neon-glow">
+                <img 
+                  src={place.imageUrl}
+                  alt={`${place.name} - Vue 7`}
+                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                />
               </div>
             </div>
-          )}
+          </div>
+
+          {/* Detailed Information */}
+          <div className="max-w-3xl mx-auto mb-12">
+            <div className="text-left space-y-6 text-gray-300 leading-relaxed">
+              {place.bestTime && (
+                <p className="text-lg">
+                  <span className="text-neon-cyan font-semibold">Meilleur moment pour visiter :</span> {place.bestTime}. 
+                  C'est la période idéale pour profiter pleinement de votre visite et découvrir ce lieu dans les meilleures conditions.
+                </p>
+              )}
+              
+              {place.coordinates && (
+                <p className="text-lg">
+                  <span className="text-neon-cyan font-semibold">Localisation :</span> Vous trouverez ce magnifique lieu aux coordonnées {place.coordinates}. 
+                  Un endroit facilement accessible qui vous permettra de vivre une expérience inoubliable.
+                </p>
+              )}
+              
+              {place.activities && place.activities.length > 0 && (
+                <p className="text-lg">
+                  <span className="text-neon-cyan font-semibold">Activités recommandées :</span> Ce lieu offre de nombreuses possibilités d'exploration. 
+                  Parmi les activités les plus populaires, vous pourrez profiter de {place.activities.join(', ')}. 
+                  Chaque activité vous permettra de découvrir une facette unique de cet endroit extraordinaire.
+                </p>
+              )}
+              
+              <p className="text-lg text-neon-purple font-medium">
+                Un lieu d'exception qui mérite d'être découvert et qui vous laissera des souvenirs mémorables de votre voyage.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
