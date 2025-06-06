@@ -1,47 +1,65 @@
-# Vlog de Voyage - Déploiement Gratuit
+# Travel Blog
 
-Un vlog de voyage interactif avec navigation hiérarchique par continents, pays et villes.
-
-## Déploiement sur Vercel (Gratuit)
-
-### Étapes simples :
-
-1. **Créer un compte Vercel gratuit :**
-   - Allez sur [vercel.com](https://vercel.com)
-   - Connectez-vous avec GitHub/GitLab/Bitbucket
-
-2. **Importer votre projet :**
-   - Cliquez sur "New Project"
-   - Importez depuis votre repository Git ou uploadez le dossier
-
-3. **Configuration automatique :**
-   - Vercel détecte automatiquement la configuration
-   - Build command : `npm run build`
-   - Output directory : `client/dist`
-
-4. **Déployer :**
-   - Cliquez sur "Deploy"
-   - Votre site sera en ligne en quelques minutes
-
-### URL de votre site :
-Après déploiement, vous obtiendrez une URL permanente comme :
-`https://votre-nom-projet.vercel.app`
+Un blog de voyage interactif construit avec React, Express et TypeScript.
 
 ## Fonctionnalités
 
-- ✅ Style noir avec effets néon cyan/violet
-- ✅ Navigation hiérarchique : Europe/Asie → Pays → Villes → Lieux
-- ✅ 6 pays, 14 villes, 21 destinations touristiques
-- ✅ Images représentatives partout
-- ✅ Optimisé pour mobile et desktop
-- ✅ Hébergement gratuit permanent
+- Navigation par continents, pays, villes et lieux
+- Interface moderne avec design néon cyberpunk
+- Galeries de photos pour chaque lieu
+- Informations détaillées sur les destinations
+- Responsive design
 
-## Technologies
+## Technologies utilisées
 
-- React + TypeScript
-- Tailwind CSS avec thème néon
-- Wouter pour le routing
-- Données statiques (pas de serveur requis)
-- Déploiement statique sur Vercel
+- **Frontend**: React, TypeScript, Vite, Tailwind CSS
+- **Backend**: Express.js, TypeScript
+- **UI Components**: Radix UI, Shadcn/ui
+- **Routing**: Wouter
+- **State Management**: TanStack Query
 
-Votre vlog sera accessible 24h/24 gratuitement !
+## Installation
+
+1. Clonez le repository
+```bash
+git clone https://github.com/LinaAndrad001/travel-blog.git
+cd travel-blog
+```
+
+2. Installez les dépendances
+```bash
+npm install
+```
+
+3. Lancez l'application
+```bash
+npm run dev
+```
+
+L'application sera disponible sur `http://localhost:5000`
+
+## Structure du projet
+
+- `client/` - Application React frontend
+- `server/` - API Express backend
+- `shared/` - Types et schémas partagés
+- `client/src/components/` - Composants React réutilisables
+- `client/src/pages/` - Pages de l'application
+- `client/src/lib/` - Utilitaires et données statiques
+
+## Développement
+
+Le projet utilise:
+- Hot reloading avec Vite
+- TypeScript pour la sécurité des types
+- Tailwind CSS pour le styling
+- ESLint pour la qualité du code
+
+## Déploiement
+
+Pour construire le projet pour la production:
+
+```bash
+npm run build
+npm start
+```
