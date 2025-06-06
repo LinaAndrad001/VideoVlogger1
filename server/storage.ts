@@ -189,7 +189,7 @@ export class MemStorage implements IStorage {
       slug: "paris",
       description: "La Ville Lumière et ses monuments emblématiques.",
       imageUrl: "/images/IMG_20250228_175111.jpg",
-      placeCount: 5
+      placeCount: 8
     };
 
     const bordeaux: City = {
@@ -387,6 +387,63 @@ export class MemStorage implements IStorage {
       visitDate: new Date('2024-01-20')
     };
 
+    const citesSciences: Place = {
+      id: this.currentPlaceId++,
+      cityId: paris.id,
+      name: "Cité des Sciences",
+      slug: "cite-sciences",
+      description: "Centre de découverte scientifique et technologique de Paris.",
+      imageUrl: "/images/IMG_20241224_100259.jpg",
+      content: "La Cité des Sciences offre une expérience immersive dans le monde de la science et de la technologie.",
+      videoUrl: null,
+      visitDate: new Date('2024-12-24'),
+      gallery: [
+        "/images/IMG_20241224_100259.jpg",
+        "/images/IMG_20241224_100657.jpg", 
+        "/images/IMG_20241224_101709.jpg",
+        "/images/IMG_20241224_105300.jpg",
+        "/images/IMG_20241224_105939.jpg",
+        "/images/IMG_20241224_111050.jpg",
+        "/images/IMG_20241224_095722.jpg"
+      ]
+    };
+
+    const ruesParis: Place = {
+      id: this.currentPlaceId++,
+      cityId: paris.id,
+      name: "Rues de Paris",
+      slug: "rues-paris",
+      description: "Découverte des rues authentiques et de l'ambiance parisienne.",
+      imageUrl: "/images/IMG_20231202_081038.jpg",
+      content: "Les rues de Paris révèlent l'âme de la capitale, entre architecture historique et vie quotidienne.",
+      videoUrl: null,
+      visitDate: new Date('2023-12-02'),
+      gallery: [
+        "/images/IMG_20231202_081038.jpg",
+        "/images/IMG_20231202_090529.jpg",
+        "/images/AirBrush_20231202225028.jpg",
+        "/images/IMG_20231126_101926.jpg",
+        "/images/Screenshot_2024-12-22-12-24-17-367_com.whatsapp.jpg"
+      ]
+    };
+
+    const hippodromeParis: Place = {
+      id: this.currentPlaceId++,
+      cityId: paris.id,
+      name: "Hippodrome de Paris",
+      slug: "hippodrome-paris",
+      description: "Lieu emblématique des courses hippiques parisiennes.",
+      imageUrl: "/images/hippodrome1.jpg",
+      content: "L'Hippodrome de Paris, temple des courses de chevaux et de l'élégance française.",
+      videoUrl: null,
+      visitDate: new Date('2024-02-15'),
+      gallery: [
+        "/images/hippodrome1.jpg",
+        "/images/hippodrome2.jpg",
+        "/images/hippodrome3.jpg"
+      ]
+    };
+
     const bordSeine: Place = {
       id: this.currentPlaceId++,
       cityId: paris.id,
@@ -396,7 +453,12 @@ export class MemStorage implements IStorage {
       imageUrl: "/images/IMG_20240901_172738.jpg",
       content: "Les quais de Seine offrent une perspective unique sur les monuments parisiens.",
       videoUrl: null,
-      visitDate: new Date('2024-01-21')
+      visitDate: new Date('2024-01-21'),
+      gallery: [
+        "/images/IMG_20240901_172738.jpg",
+        "/images/bord_seine2.jpg",
+        "/images/bord_seine3.jpg"
+      ]
     };
 
     // Bordeaux place

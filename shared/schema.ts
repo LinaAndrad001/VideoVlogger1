@@ -48,6 +48,7 @@ export const places = pgTable("places", {
   content: text("content").notNull(),
   videoUrl: text("video_url"),
   visitDate: timestamp("visit_date"),
+  gallery: text("gallery").array(),
 });
 
 export const adventures = pgTable("adventures", {
