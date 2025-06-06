@@ -18,7 +18,7 @@ export default function Home() {
       <div className="relative mb-16">
         <div className="h-64 md:h-80 overflow-hidden border-y-2 border-neon-cyan">
           <img 
-            src="@assets/IMG_20231231_150357.jpg"
+            src="/images/hero-image.jpg"
             alt="Vue panoramique sur la mer depuis les hauteurs"
             className="w-full h-full object-cover"
           />
