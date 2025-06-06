@@ -348,7 +348,7 @@ export class MemStorage implements IStorage {
       imageUrl: "https://images.unsplash.com/photo-1502602898536-47ad22581b52?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
       content: "La Tour Eiffel, monument emblématique de Paris, offre une vue spectaculaire sur la ville lumière.",
       videoUrl: null,
-      visitDate: new Date('2024-01-15')
+      visitDate: new Date('2024-01-15'),
     };
 
     const louvre: Place = {
@@ -360,7 +360,7 @@ export class MemStorage implements IStorage {
       imageUrl: "/images/IMG_20250603_151423.jpg",
       content: "Le Louvre abrite des œuvres d'art inestimables, dont la Joconde et la Vénus de Milo.",
       videoUrl: null,
-      visitDate: new Date('2024-01-16')
+      visitDate: new Date('2024-01-16'),
     };
 
     const sacreCoeur: Place = {
@@ -372,7 +372,7 @@ export class MemStorage implements IStorage {
       imageUrl: "/images/IMG_20250516_164453.jpg",
       content: "La basilique du Sacré-Cœur domine Paris depuis la butte Montmartre, offrant une vue exceptionnelle sur la capitale.",
       videoUrl: null,
-      visitDate: new Date('2024-01-17')
+      visitDate: new Date('2024-01-17'),
     };
 
     const tourDuo: Place = {
@@ -384,7 +384,7 @@ export class MemStorage implements IStorage {
       imageUrl: "/images/IMG_20231114_002800_619.jpg",
       content: "Les Tours Duo représentent l'architecture moderne de Paris, illuminées dans la nuit urbaine.",
       videoUrl: null,
-      visitDate: new Date('2024-01-20')
+      visitDate: new Date('2024-01-20'),
     };
 
     const citesSciences: Place = {
@@ -706,6 +706,9 @@ export class MemStorage implements IStorage {
     this.places.set(louvre.id, louvre);
     this.places.set(sacreCoeur.id, sacreCoeur);
     this.places.set(tourDuo.id, tourDuo);
+    this.places.set(citesSciences.id, citesSciences);
+    this.places.set(ruesParis.id, ruesParis);
+    this.places.set(hippodromeParis.id, hippodromeParis);
     this.places.set(bordSeine.id, bordSeine);
     this.places.set(placeComedieBordeaux.id, placeComedieBordeaux);
     this.places.set(bordEure.id, bordEure);
