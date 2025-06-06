@@ -13,9 +13,6 @@ export const continents = pgTable("continents", {
   name: text("name").notNull(),
   slug: text("slug").notNull().unique(),
   description: text("description").notNull(),
-  imageUrl: text("image_url").notNull(),
-  countryCount: integer("country_count").notNull().default(0),
-  cityCount: integer("city_count").notNull().default(0),
 });
 
 export const countries = pgTable("countries", {
@@ -24,8 +21,6 @@ export const countries = pgTable("countries", {
   name: text("name").notNull(),
   slug: text("slug").notNull().unique(),
   description: text("description").notNull(),
-  imageUrl: text("image_url").notNull(),
-  cityCount: integer("city_count").notNull().default(0),
 });
 
 export const cities = pgTable("cities", {
@@ -34,8 +29,6 @@ export const cities = pgTable("cities", {
   name: text("name").notNull(),
   slug: text("slug").notNull().unique(),
   description: text("description").notNull(),
-  imageUrl: text("image_url").notNull(),
-  placeCount: integer("place_count").notNull().default(0),
 });
 
 export const places = pgTable("places", {
@@ -55,9 +48,9 @@ export const adventures = pgTable("adventures", {
   id: serial("id").primaryKey(),
   placeId: integer("place_id").notNull(),
   title: text("title").notNull(),
-  description: text("description").notNull(),
-  imageUrl: text("image_url").notNull(),
   content: text("content").notNull(),
+  imageUrl: text("image_url").notNull(),
+  slug: text("slug").notNull().unique(),
   publishedAt: timestamp("published_at").notNull(),
 });
 

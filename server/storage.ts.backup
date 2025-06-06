@@ -1,4 +1,23 @@
-import { User, InsertUser, Continent, Country, City, Place, Adventure } from "@shared/schema";
+import { 
+  users, 
+  continents, 
+  countries, 
+  cities, 
+  places, 
+  adventures,
+  type User, 
+  type InsertUser,
+  type Continent,
+  type InsertContinent,
+  type Country,
+  type InsertCountry,
+  type City,
+  type InsertCity,
+  type Place,
+  type InsertPlace,
+  type Adventure,
+  type InsertAdventure
+} from "@shared/schema";
 
 export interface IStorage {
   // Users
@@ -54,7 +73,7 @@ export class MemStorage implements IStorage {
     this.currentCityId = 1;
     this.currentPlaceId = 1;
     this.currentAdventureId = 1;
-
+    
     this.seedData();
   }
 
@@ -64,16 +83,22 @@ export class MemStorage implements IStorage {
       id: this.currentContinentId++,
       name: "Europe",
       slug: "europe",
-      description: "Le continent européen avec sa riche histoire et ses cultures diverses."
+      description: "Découvrez l'histoire, l'art et la culture européenne à travers mes voyages en France, Italie, Portugal et bien d'autres destinations magiques.",
+      imageUrl: "/images/IMG_20240721_142441.jpg",
+      countryCount: 4,
+      cityCount: 8
     };
-
+    
     const asia: Continent = {
       id: this.currentContinentId++,
       name: "Asie",
       slug: "asie",
-      description: "Le plus grand continent du monde, riche en diversité culturelle."
+      description: "Plongez dans la spiritualité, la modernité et les traditions millénaires du Japon, de la Thaïlande, du Vietnam et d'autres perles asiatiques.",
+      imageUrl: "/images/IMG_20231228_141336.jpg",
+      countryCount: 3,
+      cityCount: 6
     };
-
+    
     this.continents.set(europe.id, europe);
     this.continents.set(asia.id, asia);
 
@@ -83,7 +108,9 @@ export class MemStorage implements IStorage {
       continentId: europe.id,
       name: "France",
       slug: "france",
-      description: "Le pays de l'art de vivre et de la gastronomie."
+      description: "De Paris romantique aux châteaux de la Loire, découvrez la richesse culturelle française.",
+      imageUrl: "/images/IMG_20250125_132103.jpg",
+      cityCount: 3
     };
 
     const italy: Country = {
@@ -91,7 +118,9 @@ export class MemStorage implements IStorage {
       continentId: europe.id,
       name: "Italie",
       slug: "italie",
-      description: "Le berceau de la Renaissance et de la cuisine méditerranéenne."
+      description: "Art, gastronomie et histoire dans la péninsule italienne.",
+      imageUrl: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+      cityCount: 2
     };
 
     const greece: Country = {
@@ -99,7 +128,9 @@ export class MemStorage implements IStorage {
       continentId: europe.id,
       name: "Grèce",
       slug: "grece",
-      description: "Le berceau de la démocratie et de la philosophie occidentale."
+      description: "Îles paradisiaques et berceau de la civilisation occidentale.",
+      imageUrl: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+      cityCount: 3
     };
 
     const japan: Country = {
@@ -107,7 +138,9 @@ export class MemStorage implements IStorage {
       continentId: asia.id,
       name: "Japon",
       slug: "japon",
-      description: "L'harmonie entre tradition et modernité."
+      description: "Tradition et modernité dans l'archipel du soleil levant.",
+      imageUrl: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+      cityCount: 2
     };
 
     const thailand: Country = {
@@ -115,7 +148,9 @@ export class MemStorage implements IStorage {
       continentId: asia.id,
       name: "Thaïlande",
       slug: "thailande",
-      description: "Le pays du sourire aux temples dorés."
+      description: "Temples dorés, plages paradisiaques et cuisine savoureuse.",
+      imageUrl: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+      cityCount: 2
     };
 
     const indonesia: Country = {
@@ -123,7 +158,9 @@ export class MemStorage implements IStorage {
       continentId: asia.id,
       name: "Indonésie",
       slug: "indonesie",
-      description: "L'archipel aux mille îles tropicales."
+      description: "Archipel aux mille îles, entre volcans et cultures diverses.",
+      imageUrl: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+      cityCount: 2
     };
 
     const portugal: Country = {
@@ -131,16 +168,18 @@ export class MemStorage implements IStorage {
       continentId: europe.id,
       name: "Portugal",
       slug: "portugal",
-      description: "Le pays des navigateurs et des azulejos."
+      description: "Pays des navigateurs aux paysages authentiques et à l'hospitalité légendaire.",
+      imageUrl: "/images/IMG_20240804_111629.jpg",
+      cityCount: 1
     };
 
     this.countries.set(france.id, france);
     this.countries.set(italy.id, italy);
     this.countries.set(greece.id, greece);
+    this.countries.set(portugal.id, portugal);
     this.countries.set(japan.id, japan);
     this.countries.set(thailand.id, thailand);
     this.countries.set(indonesia.id, indonesia);
-    this.countries.set(portugal.id, portugal);
 
     // Seed cities
     const paris: City = {
@@ -148,7 +187,9 @@ export class MemStorage implements IStorage {
       countryId: france.id,
       name: "Paris",
       slug: "paris",
-      description: "La Ville Lumière, capitale de l'amour et des arts."
+      description: "La Ville Lumière et ses monuments emblématiques.",
+      imageUrl: "/images/IMG_20250228_175111.jpg",
+      placeCount: 8
     };
 
     const bordeaux: City = {
@@ -156,7 +197,9 @@ export class MemStorage implements IStorage {
       countryId: france.id,
       name: "Bordeaux",
       slug: "bordeaux",
-      description: "La perle d'Aquitaine, capitale mondiale du vin."
+      description: "Capitale mondiale du vin et joyau architectural.",
+      imageUrl: "/images/bordeauxrue02.jpg",
+      placeCount: 1
     };
 
     const ecluzelles: City = {
@@ -164,7 +207,9 @@ export class MemStorage implements IStorage {
       countryId: france.id,
       name: "Ecluzelles",
       slug: "ecluzelles",
-      description: "Charmant village français au bord de l'Eure."
+      description: "Charmant village au bord de l'eau et nature préservée.",
+      imageUrl: "/images/IMG_20240721_134557.jpg",
+      placeCount: 1
     };
 
     const rome: City = {
@@ -172,7 +217,9 @@ export class MemStorage implements IStorage {
       countryId: italy.id,
       name: "Rome",
       slug: "rome",
-      description: "La Ville Éternelle, cœur de l'Empire romain."
+      description: "La Ville Éternelle et ses trésors antiques.",
+      imageUrl: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      placeCount: 2
     };
 
     const venice: City = {
@@ -180,7 +227,9 @@ export class MemStorage implements IStorage {
       countryId: italy.id,
       name: "Venise",
       slug: "venise",
-      description: "La Sérénissime, cité des canaux et des gondoles."
+      description: "La Sérénissime aux canaux enchanteurs.",
+      imageUrl: "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      placeCount: 1
     };
 
     const athens: City = {
@@ -188,7 +237,9 @@ export class MemStorage implements IStorage {
       countryId: greece.id,
       name: "Athènes",
       slug: "athenes",
-      description: "Le berceau de la démocratie et de la philosophie."
+      description: "Berceau de la démocratie et de la philosophie.",
+      imageUrl: "https://images.unsplash.com/photo-1555993539-1732b0258235?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      placeCount: 1
     };
 
     const santorini: City = {
@@ -196,7 +247,9 @@ export class MemStorage implements IStorage {
       countryId: greece.id,
       name: "Santorin",
       slug: "santorin",
-      description: "L'île volcanique aux couchers de soleil légendaires."
+      description: "Île volcanique aux couchers de soleil légendaires.",
+      imageUrl: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      placeCount: 2
     };
 
     const mykonos: City = {
@@ -204,7 +257,9 @@ export class MemStorage implements IStorage {
       countryId: greece.id,
       name: "Mykonos",
       slug: "mykonos",
-      description: "L'île cosmopolite aux moulins à vent."
+      description: "Île festive aux maisons blanches.",
+      imageUrl: "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      placeCount: 1
     };
 
     const tokyo: City = {
@@ -212,7 +267,9 @@ export class MemStorage implements IStorage {
       countryId: japan.id,
       name: "Tokyo",
       slug: "tokyo",
-      description: "La mégalopole futuriste aux traditions millénaires."
+      description: "Métropole futuriste entre tradition et modernité.",
+      imageUrl: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      placeCount: 2
     };
 
     const kyoto: City = {
@@ -220,7 +277,9 @@ export class MemStorage implements IStorage {
       countryId: japan.id,
       name: "Kyoto",
       slug: "kyoto",
-      description: "L'ancienne capitale impériale aux temples sacrés."
+      description: "Ancienne capitale impériale aux mille temples.",
+      imageUrl: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      placeCount: 2
     };
 
     const bangkok: City = {
@@ -228,7 +287,9 @@ export class MemStorage implements IStorage {
       countryId: thailand.id,
       name: "Bangkok",
       slug: "bangkok",
-      description: "La capitale vibrante aux temples dorés."
+      description: "Capitale dynamique aux temples dorés.",
+      imageUrl: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      placeCount: 2
     };
 
     const phuket: City = {
@@ -236,7 +297,9 @@ export class MemStorage implements IStorage {
       countryId: thailand.id,
       name: "Phuket",
       slug: "phuket",
-      description: "L'île paradisiaque aux plages de rêve."
+      description: "Île paradisiaque aux plages de rêve.",
+      imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      placeCount: 1
     };
 
     const ubud: City = {
@@ -244,7 +307,9 @@ export class MemStorage implements IStorage {
       countryId: indonesia.id,
       name: "Ubud",
       slug: "ubud",
-      description: "Le cœur spirituel de Bali entouré de rizières."
+      description: "Centre spirituel et culturel de Bali.",
+      imageUrl: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      placeCount: 2
     };
 
     const jakarta: City = {
@@ -252,7 +317,9 @@ export class MemStorage implements IStorage {
       countryId: indonesia.id,
       name: "Jakarta",
       slug: "jakarta",
-      description: "La capitale dynamique de l'archipel indonésien."
+      description: "Capitale cosmopolite de l'archipel.",
+      imageUrl: "https://images.unsplash.com/photo-1555993539-670cf1666ab7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      placeCount: 1
     };
 
     this.cities.set(paris.id, paris);
@@ -334,6 +401,7 @@ export class MemStorage implements IStorage {
       content: "La Cité des Sciences offre une expérience immersive dans le monde de la science et de la technologie.",
       videoUrl: null,
       visitDate: new Date('2024-12-24'),
+      gallery: null
       gallery: [
         "/images/IMG_20241224_100259.jpg",
         "/images/IMG_20241224_100657.jpg", 
@@ -355,19 +423,13 @@ export class MemStorage implements IStorage {
       content: "Les rues de Paris révèlent l'âme de la capitale, entre architecture historique et vie quotidienne.",
       videoUrl: null,
       visitDate: new Date('2023-12-02'),
+      gallery: null
       gallery: [
         "/images/IMG_20231202_081038.jpg",
         "/images/IMG_20231202_090529.jpg",
-        "/images/IMG_20231202_091844.jpg",
-        "/images/IMG_20231202_120332.jpg",
-        "/images/IMG_20231202_120339.jpg",
-        "/images/IMG_20231202_175052.jpg",
+        "/images/AirBrush_20231202225028.jpg",
         "/images/IMG_20231126_101926.jpg",
-        "/images/IMG_20240804_111629.jpg",
-        "/images/IMG_20240901_174257.jpg",
-        "/images/IMG_20240919_150619.jpg",
-        "/images/IMG_20241117_200216.jpg",
-        "/images/bordeauxrue02.jpg"
+        "/images/Screenshot_2024-12-22-12-24-17-367_com.whatsapp.jpg"
       ]
     };
 
@@ -377,14 +439,15 @@ export class MemStorage implements IStorage {
       name: "Hippodrome de Paris",
       slug: "hippodrome-paris",
       description: "Lieu emblématique des courses hippiques parisiennes.",
-      imageUrl: "/images/IMG_20231202_180547.jpg",
-      content: "L'hippodrome de Paris offre le spectacle des courses de chevaux dans un cadre prestigieux.",
+      imageUrl: "/images/hippodrome1.jpg",
+      content: "L'Hippodrome de Paris, temple des courses de chevaux et de l'élégance française.",
       videoUrl: null,
       visitDate: new Date('2024-02-15'),
+      gallery: null
       gallery: [
-        "/images/IMG_20231202_180547.jpg",
-        "/images/IMG_20231202_180851.jpg",
-        "/images/IMG_20231228_141336.jpg"
+        "/images/hippodrome1.jpg",
+        "/images/hippodrome2.jpg",
+        "/images/hippodrome3.jpg"
       ]
     };
 
@@ -393,18 +456,16 @@ export class MemStorage implements IStorage {
       cityId: paris.id,
       name: "Bord de Seine",
       slug: "bord-seine",
-      description: "Promenades romantiques le long des quais de Seine.",
-      imageUrl: "/images/IMG_20231231_150357.jpg",
-      content: "Les berges de la Seine offrent une perspective unique sur les monuments parisiens et l'architecture de la ville.",
+      description: "Promenade paisible le long des quais de Seine.",
+      imageUrl: "/images/IMG_20240901_172738.jpg",
+      content: "Les quais de Seine offrent une perspective unique sur les monuments parisiens.",
       videoUrl: null,
       visitDate: new Date('2024-01-21'),
+      gallery: null
       gallery: [
-        "/images/IMG_20231231_150357.jpg",
-        "/images/IMG_20240721_134557.jpg",
-        "/images/IMG_20240721_142441.jpg",
-        "/images/IMG_20250125_132103.jpg",
-        "/images/IMG_20250228_175111.jpg",
-        "/images/IMG_20250330_163612.jpg"
+        "/images/IMG_20240901_172738.jpg",
+        "/images/bord_seine2.jpg",
+        "/images/bord_seine3.jpg"
       ]
     };
 
@@ -414,26 +475,24 @@ export class MemStorage implements IStorage {
       cityId: bordeaux.id,
       name: "Place de la Comédie",
       slug: "place-comedie-bordeaux",
-      description: "Le cœur culturel de Bordeaux avec son Grand Théâtre.",
-      imageUrl: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      content: "La Place de la Comédie est le centre névralgique de Bordeaux, dominée par son magnifique Grand Théâtre.",
+      description: "Cœur historique de Bordeaux et son grand théâtre.",
+      imageUrl: "/images/bordeauxrue02.jpg",
+      content: "La Place de la Comédie, avec son Grand Théâtre néoclassique, représente l'élégance bordelaise.",
       videoUrl: null,
-      visitDate: new Date('2024-01-18'),
-      gallery: null
+      visitDate: new Date('2024-01-18')
     };
 
     // Ecluzelles place
     const bordEure: Place = {
       id: this.currentPlaceId++,
       cityId: ecluzelles.id,
-      name: "Bords de l'Eure",
-      slug: "bords-eure",
-      description: "Paisibles rives de l'Eure dans le charmant village d'Ecluzelles.",
-      imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      content: "Les bords de l'Eure offrent un cadre bucolique parfait pour une promenade contemplative.",
+      name: "Bord de l'Eure",
+      slug: "bord-eure",
+      description: "Promenade paisible au bord de la rivière.",
+      imageUrl: "/images/IMG_20240721_134557.jpg",
+      content: "Les rives de l'Eure offrent un cadre paisible pour une promenade en pleine nature.",
       videoUrl: null,
-      visitDate: new Date('2024-01-19'),
-      gallery: null
+      visitDate: new Date('2024-01-19')
     };
 
     // Rome places
@@ -442,12 +501,11 @@ export class MemStorage implements IStorage {
       cityId: rome.id,
       name: "Colisée",
       slug: "colisee",
-      description: "L'amphithéâtre le plus célèbre de l'Empire romain.",
-      imageUrl: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      content: "Le Colisée de Rome, symbole de la grandeur de l'Empire romain, témoigne de l'ingéniosité architecturale antique.",
+      description: "Amphithéâtre antique emblématique de Rome.",
+      imageUrl: "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      content: "Le Colisée, symbole de l'Empire romain, témoigne de la grandeur antique.",
       videoUrl: null,
-      visitDate: new Date('2024-03-01'),
-      gallery: null
+      visitDate: new Date('2024-03-01')
     };
 
     const vatican: Place = {
@@ -455,12 +513,11 @@ export class MemStorage implements IStorage {
       cityId: rome.id,
       name: "Vatican",
       slug: "vatican",
-      description: "Le plus petit État du monde, siège de l'Église catholique.",
-      imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      content: "Le Vatican abrite la Chapelle Sixtine et les Musées du Vatican, trésors inestimables de l'art religieux.",
+      description: "État souverain et centre spirituel catholique.",
+      imageUrl: "https://images.unsplash.com/photo-1578836537282-3171d77f8632?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      content: "Le Vatican abrite la Chapelle Sixtine et les merveilles artistiques de Michel-Ange.",
       videoUrl: null,
-      visitDate: new Date('2024-03-02'),
-      gallery: null
+      visitDate: new Date('2024-03-02')
     };
 
     // Venice place
@@ -469,12 +526,11 @@ export class MemStorage implements IStorage {
       cityId: venice.id,
       name: "Place Saint-Marc",
       slug: "place-saint-marc",
-      description: "Le salon de l'Europe selon Napoléon.",
+      description: "Cœur historique de Venise.",
       imageUrl: "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      content: "La Place Saint-Marc est le cœur battant de Venise, entourée de merveilles architecturales byzantines.",
+      content: "La Place Saint-Marc, avec sa basilique et son campanile, incarne l'élégance vénitienne.",
       videoUrl: null,
-      visitDate: new Date('2024-03-10'),
-      gallery: null
+      visitDate: new Date('2024-03-10')
     };
 
     // Athens place
@@ -483,12 +539,11 @@ export class MemStorage implements IStorage {
       cityId: athens.id,
       name: "Acropole",
       slug: "acropole",
-      description: "La citadelle sacrée dominant Athènes.",
-      imageUrl: "https://images.unsplash.com/photo-1555993539-1732b0258c11?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      content: "L'Acropole d'Athènes, couronnée par le Parthénon, est le symbole de la civilisation grecque antique.",
+      description: "Citadelle antique dominant Athènes.",
+      imageUrl: "https://images.unsplash.com/photo-1555993539-1732b0258235?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      content: "L'Acropole et le Parthénon représentent l'apogée de l'art grec classique.",
       videoUrl: null,
-      visitDate: new Date('2024-03-15'),
-      gallery: null
+      visitDate: new Date('2024-03-15')
     };
 
     // Santorini places
@@ -497,12 +552,11 @@ export class MemStorage implements IStorage {
       cityId: santorini.id,
       name: "Oia",
       slug: "oia",
-      description: "Village aux maisons blanches et bleues face au coucher de soleil.",
+      description: "Village aux maisons blanches et couchers de soleil magiques.",
       imageUrl: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      content: "Oia offre les plus beaux couchers de soleil de la Méditerranée avec ses maisons cycladiques emblématiques.",
+      content: "Oia est un village pittoresque perché sur les falaises de Santorin, célèbre pour ses couchers de soleil.",
       videoUrl: null,
-      visitDate: new Date('2024-03-05'),
-      gallery: null
+      visitDate: new Date('2024-03-05')
     };
 
     const fira: Place = {
@@ -510,53 +564,49 @@ export class MemStorage implements IStorage {
       cityId: santorini.id,
       name: "Fira",
       slug: "fira",
-      description: "Capitale de Santorin perchée sur la caldeira.",
-      imageUrl: "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      content: "Fira, capitale de Santorin, offre une vue spectaculaire sur la caldeira volcanique.",
+      description: "Capitale de Santorin aux vues spectaculaires.",
+      imageUrl: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      content: "Fira offre des panoramas époustouflants sur la caldeira volcanique.",
       videoUrl: null,
-      visitDate: new Date('2024-03-06'),
-      gallery: null
+      visitDate: new Date('2024-03-06')
     };
 
     // Mykonos place
     const mykonosBeach: Place = {
       id: this.currentPlaceId++,
       cityId: mykonos.id,
-      name: "Plages de Mykonos",
-      slug: "plages-mykonos",
-      description: "Plages dorées de l'île cosmopolite.",
-      imageUrl: "https://images.unsplash.com/photo-1601581875039-89ceb8c1b611?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      content: "Les plages de Mykonos combinent détente méditerranéenne et ambiance festive internationale.",
+      name: "Paradise Beach",
+      slug: "paradise-beach",
+      description: "Plage paradisiaque de Mykonos.",
+      imageUrl: "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      content: "Paradise Beach, avec ses eaux cristallines, est l'une des plus belles plages de Mykonos.",
       videoUrl: null,
-      visitDate: new Date('2024-03-18'),
-      gallery: null
+      visitDate: new Date('2024-03-18')
     };
 
     // Tokyo places
     const sensoji: Place = {
       id: this.currentPlaceId++,
       cityId: tokyo.id,
-      name: "Temple Sensoji",
-      slug: "temple-sensoji",
-      description: "Le plus ancien temple bouddhiste de Tokyo.",
-      imageUrl: "https://images.unsplash.com/photo-1542051841857-5f90071e7989?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      content: "Le temple Sensoji, dans le quartier d'Asakusa, est un havre de paix traditionnel au cœur de Tokyo moderne.",
+      name: "Temple Sensō-ji",
+      slug: "sensoji",
+      description: "Temple bouddhiste le plus ancien de Tokyo.",
+      imageUrl: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      content: "Le temple Sensō-ji, dans le quartier d'Asakusa, est un lieu de spiritualité au cœur de Tokyo.",
       videoUrl: null,
-      visitDate: new Date('2024-02-08'),
-      gallery: null
+      visitDate: new Date('2024-02-08')
     };
 
     const shibuya: Place = {
       id: this.currentPlaceId++,
       cityId: tokyo.id,
       name: "Carrefour de Shibuya",
-      slug: "carrefour-shibuya",
-      description: "Le carrefour le plus fréquenté au monde.",
+      slug: "shibuya",
+      description: "Croisement le plus fréquenté au monde.",
       imageUrl: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      content: "Le carrefour de Shibuya symbolise l'énergie frénétique de Tokyo avec ses milliers de piétons.",
+      content: "Le carrefour de Shibuya symbolise l'énergie et le dynamisme de Tokyo moderne.",
       videoUrl: null,
-      visitDate: new Date('2024-02-09'),
-      gallery: null
+      visitDate: new Date('2024-02-09')
     };
 
     // Kyoto places
@@ -565,25 +615,23 @@ export class MemStorage implements IStorage {
       cityId: kyoto.id,
       name: "Kinkaku-ji",
       slug: "kinkaku-ji",
-      description: "Le Pavillon d'Or, temple zen recouvert de feuilles d'or.",
-      imageUrl: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      content: "Kinkaku-ji, le Pavillon d'Or, est l'un des temples les plus photographiés du Japon.",
+      description: "Le Pavillon d'Or, temple zen emblématique.",
+      imageUrl: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      content: "Le Kinkaku-ji ou Pavillon d'Or est l'un des temples les plus célèbres du Japon, reflet parfait de l'art zen.",
       videoUrl: null,
-      visitDate: new Date('2024-02-10'),
-      gallery: null
+      visitDate: new Date('2024-02-10')
     };
 
     const bambooGrove: Place = {
       id: this.currentPlaceId++,
       cityId: kyoto.id,
       name: "Forêt de Bambous d'Arashiyama",
-      slug: "foret-bambous-arashiyama",
-      description: "Sentier mystique à travers une forêt de bambous géants.",
-      imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      content: "La forêt de bambous d'Arashiyama offre une expérience zen unique dans un tunnel naturel.",
+      slug: "foret-bambous",
+      description: "Forêt enchantée de bambous géants.",
+      imageUrl: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      content: "La forêt de bambous d'Arashiyama offre une expérience mystique unique au Japon.",
       videoUrl: null,
-      visitDate: new Date('2024-02-11'),
-      gallery: null
+      visitDate: new Date('2024-02-11')
     };
 
     // Bangkok places
@@ -592,12 +640,11 @@ export class MemStorage implements IStorage {
       cityId: bangkok.id,
       name: "Grand Palais",
       slug: "grand-palais",
-      description: "Complexe royal somptueux au cœur de Bangkok.",
-      imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      content: "Le Grand Palais de Bangkok éblouit par ses toits dorés et son architecture thaïlandaise traditionnelle.",
+      description: "Complexe royal somptueux de Bangkok.",
+      imageUrl: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      content: "Le Grand Palais de Bangkok éblouit par ses temples dorés et son architecture traditionnelle thaïe.",
       videoUrl: null,
-      visitDate: new Date('2024-04-01'),
-      gallery: null
+      visitDate: new Date('2024-04-01')
     };
 
     const watPho: Place = {
@@ -605,26 +652,24 @@ export class MemStorage implements IStorage {
       cityId: bangkok.id,
       name: "Wat Pho",
       slug: "wat-pho",
-      description: "Temple du Bouddha couché et école de massage traditionnel.",
-      imageUrl: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      content: "Wat Pho abrite le plus grand Bouddha couché de Thaïlande et l'école de massage la plus réputée.",
+      description: "Temple du Bouddha couché.",
+      imageUrl: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      content: "Wat Pho abrite l'impressionnant Bouddha couché et est le berceau du massage thaï traditionnel.",
       videoUrl: null,
-      visitDate: new Date('2024-04-02'),
-      gallery: null
+      visitDate: new Date('2024-04-02')
     };
 
     // Phuket place
     const phuketBeach: Place = {
       id: this.currentPlaceId++,
       cityId: phuket.id,
-      name: "Plages de Phuket",
-      slug: "plages-phuket",
-      description: "Plages paradisiaques aux eaux cristallines.",
-      imageUrl: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      content: "Les plages de Phuket offrent un paradis tropical avec leurs eaux turquoise et leur sable blanc.",
+      name: "Plage de Patong",
+      slug: "patong-beach",
+      description: "Plage animée et populaire de Phuket.",
+      imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      content: "Patong Beach offre des eaux turquoise et une ambiance tropicale authentique.",
       videoUrl: null,
-      visitDate: new Date('2024-04-10'),
-      gallery: null
+      visitDate: new Date('2024-04-10')
     };
 
     // Ubud places
@@ -633,12 +678,11 @@ export class MemStorage implements IStorage {
       cityId: ubud.id,
       name: "Rizières de Tegallalang",
       slug: "rizieres-tegallalang",
-      description: "Terrasses de riz verdoyantes sculptées dans les collines.",
-      imageUrl: "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      content: "Les rizières en terrasses de Tegallalang offrent un paysage agricole d'une beauté époustouflante.",
+      description: "Terrasses de riz spectaculaires au cœur de Bali.",
+      imageUrl: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      content: "Les rizières en terrasses de Tegallalang offrent un paysage à couper le souffle, témoin de l'agriculture balinaise.",
       videoUrl: null,
-      visitDate: new Date('2024-03-20'),
-      gallery: null
+      visitDate: new Date('2024-03-20')
     };
 
     const monkeyForest: Place = {
@@ -647,28 +691,25 @@ export class MemStorage implements IStorage {
       name: "Forêt des Singes",
       slug: "foret-singes",
       description: "Sanctuaire naturel au cœur d'Ubud.",
-      imageUrl: "https://images.unsplash.com/photo-1580478354055-4091f4a2b5f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      content: "La Forêt des Singes d'Ubud est un espace sacré où nature et spiritualité se rencontrent.",
+      imageUrl: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      content: "La Forêt des Singes d'Ubud est un lieu sacré où nature et spiritualité se rencontrent.",
       videoUrl: null,
-      visitDate: new Date('2024-03-21'),
-      gallery: null
+      visitDate: new Date('2024-03-21')
     };
 
     // Jakarta place
     const monas: Place = {
       id: this.currentPlaceId++,
       cityId: jakarta.id,
-      name: "Monument National (Monas)",
-      slug: "monument-national",
-      description: "Symbole de l'indépendance indonésienne.",
-      imageUrl: "https://images.unsplash.com/photo-1555993539-1732b0258c11?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      content: "Le Monument National de Jakarta symbolise la lutte pour l'indépendance de l'Indonésie.",
+      name: "Monument National",
+      slug: "monas",
+      description: "Monument emblématique de l'indépendance indonésienne.",
+      imageUrl: "https://images.unsplash.com/photo-1555993539-670cf1666ab7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      content: "Le Monas, symbole de l'indépendance, domine le centre de Jakarta.",
       videoUrl: null,
-      visitDate: new Date('2024-04-15'),
-      gallery: null
+      visitDate: new Date('2024-04-15')
     };
 
-    // Store all places
     this.places.set(eiffelTower.id, eiffelTower);
     this.places.set(louvre.id, louvre);
     this.places.set(sacreCoeur.id, sacreCoeur);
@@ -700,32 +741,32 @@ export class MemStorage implements IStorage {
     // Seed adventures
     const adventure1: Adventure = {
       id: this.currentAdventureId++,
-      placeId: eiffelTower.id,
-      title: "Montée au sommet de la Tour Eiffel",
-      content: "Une ascension inoubliable jusqu'au sommet de la Dame de Fer, avec une vue panoramique sur tout Paris. L'émotion est intense lorsqu'on découvre la capitale française depuis cette hauteur mythique.",
-      imageUrl: "https://images.unsplash.com/photo-1502602898536-47ad22581b52?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      slug: "montee-tour-eiffel",
-      publishedAt: new Date('2024-01-15')
+      placeId: kinkakuji.id,
+      title: "Temples et Jardins Zen",
+      description: "Une immersion spirituelle dans les temples traditionnels et les jardins zen de l'ancienne capitale japonaise.",
+      imageUrl: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+      content: "Mon voyage au Kinkaku-ji a été une expérience transformatrice...",
+      publishedAt: new Date('2024-02-12')
     };
 
     const adventure2: Adventure = {
       id: this.currentAdventureId++,
-      placeId: louvre.id,
-      title: "À la découverte de la Joconde",
-      content: "Rencontre avec le sourire le plus célèbre du monde au cœur du Louvre. Une expérience artistique unique dans les couloirs chargés d'histoire du plus grand musée du monde.",
-      imageUrl: "/images/IMG_20250603_151423.jpg",
-      slug: "decouverte-joconde-louvre",
-      publishedAt: new Date('2024-01-16')
+      placeId: oia.id,
+      title: "Couchers de Soleil Magiques",
+      description: "Des couchers de soleil à couper le souffle sur les falaises volcaniques de cette île grecque emblématique.",
+      imageUrl: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+      content: "Oia à Santorin offre probablement les plus beaux couchers de soleil du monde...",
+      publishedAt: new Date('2024-03-07')
     };
 
     const adventure3: Adventure = {
       id: this.currentAdventureId++,
-      placeId: sacreCoeur.id,
-      title: "Lever de soleil depuis Montmartre",
-      content: "Un réveil aux aurores pour admirer Paris qui s'éveille depuis les marches du Sacré-Cœur. Les premiers rayons du soleil illuminent la ville dans une atmosphère magique et paisible.",
-      imageUrl: "/images/IMG_20250516_164453.jpg",
-      slug: "lever-soleil-montmartre",
-      publishedAt: new Date('2024-01-17')
+      placeId: tegallalang.id,
+      title: "Rizières et Spiritualité",
+      description: "Exploration des rizières en terrasses et découverte de la culture balinaise authentique.",
+      imageUrl: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+      content: "Les rizières de Tegallalang m'ont permis de comprendre la relation profonde entre les Balinais et leur terre...",
+      publishedAt: new Date('2024-03-22')
     };
 
     this.adventures.set(adventure1.id, adventure1);
@@ -739,12 +780,9 @@ export class MemStorage implements IStorage {
   }
 
   async getUserByUsername(username: string): Promise<User | undefined> {
-    for (const user of this.users.values()) {
-      if (user.username === username) {
-        return user;
-      }
-    }
-    return undefined;
+    return Array.from(this.users.values()).find(
+      (user) => user.username === username,
+    );
   }
 
   async createUser(insertUser: InsertUser): Promise<User> {
@@ -760,60 +798,34 @@ export class MemStorage implements IStorage {
   }
 
   async getContinentBySlug(slug: string): Promise<Continent | undefined> {
-    for (const continent of this.continents.values()) {
-      if (continent.slug === slug) {
-        return continent;
-      }
-    }
-    return undefined;
+    return Array.from(this.continents.values()).find(c => c.slug === slug);
   }
 
   // Country methods
   async getCountriesByContinent(continentId: number): Promise<Country[]> {
-    return Array.from(this.countries.values()).filter(
-      country => country.continentId === continentId
-    );
+    return Array.from(this.countries.values()).filter(c => c.continentId === continentId);
   }
 
   async getCountryBySlug(slug: string): Promise<Country | undefined> {
-    for (const country of this.countries.values()) {
-      if (country.slug === slug) {
-        return country;
-      }
-    }
-    return undefined;
+    return Array.from(this.countries.values()).find(c => c.slug === slug);
   }
 
   // City methods
   async getCitiesByCountry(countryId: number): Promise<City[]> {
-    return Array.from(this.cities.values()).filter(
-      city => city.countryId === countryId
-    );
+    return Array.from(this.cities.values()).filter(c => c.countryId === countryId);
   }
 
   async getCityBySlug(slug: string): Promise<City | undefined> {
-    for (const city of this.cities.values()) {
-      if (city.slug === slug) {
-        return city;
-      }
-    }
-    return undefined;
+    return Array.from(this.cities.values()).find(c => c.slug === slug);
   }
 
   // Place methods
   async getPlacesByCity(cityId: number): Promise<Place[]> {
-    return Array.from(this.places.values()).filter(
-      place => place.cityId === cityId
-    );
+    return Array.from(this.places.values()).filter(p => p.cityId === cityId);
   }
 
   async getPlaceBySlug(slug: string): Promise<Place | undefined> {
-    for (const place of this.places.values()) {
-      if (place.slug === slug) {
-        return place;
-      }
-    }
-    return undefined;
+    return Array.from(this.places.values()).find(p => p.slug === slug);
   }
 
   // Adventure methods
@@ -824,9 +836,7 @@ export class MemStorage implements IStorage {
   }
 
   async getAdventuresByPlace(placeId: number): Promise<Adventure[]> {
-    return Array.from(this.adventures.values()).filter(
-      adventure => adventure.placeId === placeId
-    );
+    return Array.from(this.adventures.values()).filter(a => a.placeId === placeId);
   }
 }
 
