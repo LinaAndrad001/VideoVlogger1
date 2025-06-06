@@ -83,9 +83,9 @@ export class MemStorage implements IStorage {
       id: this.currentContinentId++,
       name: "Europe",
       slug: "europe",
-      description: "Découvrez l'histoire, l'art et la culture européenne à travers mes voyages en France, Italie, Espagne et bien d'autres destinations magiques.",
-      imageUrl: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-      countryCount: 3,
+      description: "Découvrez l'histoire, l'art et la culture européenne à travers mes voyages en France, Italie, Portugal et bien d'autres destinations magiques.",
+      imageUrl: "/images/IMG_20240721_142441.jpg",
+      countryCount: 4,
       cityCount: 8
     };
     
@@ -94,7 +94,7 @@ export class MemStorage implements IStorage {
       name: "Asie",
       slug: "asie",
       description: "Plongez dans la spiritualité, la modernité et les traditions millénaires du Japon, de la Thaïlande, du Vietnam et d'autres perles asiatiques.",
-      imageUrl: "@assets/IMG_20231228_141336.jpg",
+      imageUrl: "/images/IMG_20231228_141336.jpg",
       countryCount: 3,
       cityCount: 6
     };
@@ -109,7 +109,7 @@ export class MemStorage implements IStorage {
       name: "France",
       slug: "france",
       description: "De Paris romantique aux châteaux de la Loire, découvrez la richesse culturelle française.",
-      imageUrl: "https://images.unsplash.com/photo-1502602898536-47ad22581b52?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+      imageUrl: "/images/IMG_20250125_132103.jpg",
       cityCount: 3
     };
 
@@ -163,9 +163,20 @@ export class MemStorage implements IStorage {
       cityCount: 2
     };
 
+    const portugal: Country = {
+      id: this.currentCountryId++,
+      continentId: europe.id,
+      name: "Portugal",
+      slug: "portugal",
+      description: "Pays des navigateurs aux paysages authentiques et à l'hospitalité légendaire.",
+      imageUrl: "/images/IMG_20240804_111629.jpg",
+      cityCount: 1
+    };
+
     this.countries.set(france.id, france);
     this.countries.set(italy.id, italy);
     this.countries.set(greece.id, greece);
+    this.countries.set(portugal.id, portugal);
     this.countries.set(japan.id, japan);
     this.countries.set(thailand.id, thailand);
     this.countries.set(indonesia.id, indonesia);
@@ -177,8 +188,8 @@ export class MemStorage implements IStorage {
       name: "Paris",
       slug: "paris",
       description: "La Ville Lumière et ses monuments emblématiques.",
-      imageUrl: "https://images.unsplash.com/photo-1502602898536-47ad22581b52?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      placeCount: 2
+      imageUrl: "/images/IMG_20250228_175111.jpg",
+      placeCount: 3
     };
 
     const lyon: City = {
@@ -346,10 +357,22 @@ export class MemStorage implements IStorage {
       name: "Musée du Louvre",
       slug: "musee-louvre",
       description: "Le plus grand musée d'art au monde.",
-      imageUrl: "https://images.unsplash.com/photo-1566139443390-f908895b1167?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      imageUrl: "/images/IMG_20250603_151423.jpg",
       content: "Le Louvre abrite des œuvres d'art inestimables, dont la Joconde et la Vénus de Milo.",
       videoUrl: null,
       visitDate: new Date('2024-01-16')
+    };
+
+    const sacreCoeur: Place = {
+      id: this.currentPlaceId++,
+      cityId: paris.id,
+      name: "Sacré-Cœur",
+      slug: "sacre-coeur",
+      description: "Basilique emblématique de Montmartre offrant une vue panoramique sur Paris.",
+      imageUrl: "/images/IMG_20250516_164453.jpg",
+      content: "La basilique du Sacré-Cœur domine Paris depuis la butte Montmartre, offrant une vue exceptionnelle sur la capitale.",
+      videoUrl: null,
+      visitDate: new Date('2024-01-17')
     };
 
     // Lyon place
@@ -595,6 +618,7 @@ export class MemStorage implements IStorage {
 
     this.places.set(eiffelTower.id, eiffelTower);
     this.places.set(louvre.id, louvre);
+    this.places.set(sacreCoeur.id, sacreCoeur);
     this.places.set(vieuxLyon.id, vieuxLyon);
     this.places.set(promenadeAnglais.id, promenadeAnglais);
     this.places.set(colosseum.id, colosseum);
