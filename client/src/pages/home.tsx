@@ -51,7 +51,7 @@ export default function Home() {
 
         {/* Personal Introduction */}
         <div className="neon-shimmer text-lg leading-relaxed mb-16 max-w-4xl mx-auto">
-          Moi, c'est {travelerInfo.name}. Voyager, c'est plus qu'un loisir — c'est ma passion.<br/><br/>
+          {travelerInfo.name} Voyager, c'est plus qu'un loisir — c'est ma passion.<br/><br/>
           Depuis toute petite, je parcours le monde avec ma famille. Chaque pays visité m'a offert des cultures uniques, des expériences inoubliables.<br/><br/>
           J'ai rencontré des personnes incroyables que je ne reverrai peut-être jamais, mais chaque moment partagé m'a appris quelque chose de précieux.<br/><br/>
           Ce que j'aime, c'est m'immerger dans de nouveaux milieux, observer, écouter et apprendre.<br/><br/>

@@ -78,57 +78,27 @@ export default function PlacePage() {
             {/* Main Photo */}
             <div className="w-full max-w-4xl mx-auto h-64 md:h-96 overflow-hidden border-2 border-neon-cyan rounded-xl neon-glow mb-6">
               <img 
-                src={place.imageUrl}
+                src={adventures.length > 0 ? adventures[0].imageUrl : place.imageUrl}
                 alt={place.name}
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
               />
             </div>
             
-            {/* Additional Photos Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
-              <div className="h-32 md:h-48 overflow-hidden border border-neon-cyan rounded-lg neon-glow">
-                <img 
-                  src={place.imageUrl}
-                  alt={`${place.name} - Vue 2`}
-                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                />
+            {/* Additional Photos Grid - Using adventure photos */}
+            {adventures.length > 1 && (
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                {adventures.slice(1).map((adventure, index) => (
+                  <div key={adventure.id} className="h-32 md:h-48 overflow-hidden border border-neon-cyan rounded-lg neon-glow">
+                    <img 
+                      src={adventure.imageUrl}
+                      alt={adventure.title}
+                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                      title={adventure.title}
+                    />
+                  </div>
+                ))}
               </div>
-              <div className="h-32 md:h-48 overflow-hidden border border-neon-cyan rounded-lg neon-glow">
-                <img 
-                  src={place.imageUrl}
-                  alt={`${place.name} - Vue 3`}
-                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-              <div className="h-32 md:h-48 overflow-hidden border border-neon-cyan rounded-lg neon-glow">
-                <img 
-                  src={place.imageUrl}
-                  alt={`${place.name} - Vue 4`}
-                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-              <div className="h-32 md:h-48 overflow-hidden border border-neon-cyan rounded-lg neon-glow">
-                <img 
-                  src={place.imageUrl}
-                  alt={`${place.name} - Vue 5`}
-                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-              <div className="h-32 md:h-48 overflow-hidden border border-neon-cyan rounded-lg neon-glow">
-                <img 
-                  src={place.imageUrl}
-                  alt={`${place.name} - Vue 6`}
-                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-              <div className="h-32 md:h-48 overflow-hidden border border-neon-cyan rounded-lg neon-glow">
-                <img 
-                  src={place.imageUrl}
-                  alt={`${place.name} - Vue 7`}
-                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-            </div>
+            )}
           </div>
 
           {/* Detailed Information */}
