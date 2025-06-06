@@ -349,6 +349,7 @@ export class MemStorage implements IStorage {
       content: "La Tour Eiffel, monument emblématique de Paris, offre une vue spectaculaire sur la ville lumière.",
       videoUrl: null,
       visitDate: new Date('2024-01-15'),
+      gallery: null
     };
 
     const louvre: Place = {
@@ -361,6 +362,7 @@ export class MemStorage implements IStorage {
       content: "Le Louvre abrite des œuvres d'art inestimables, dont la Joconde et la Vénus de Milo.",
       videoUrl: null,
       visitDate: new Date('2024-01-16'),
+      gallery: null
     };
 
     const sacreCoeur: Place = {
@@ -373,6 +375,7 @@ export class MemStorage implements IStorage {
       content: "La basilique du Sacré-Cœur domine Paris depuis la butte Montmartre, offrant une vue exceptionnelle sur la capitale.",
       videoUrl: null,
       visitDate: new Date('2024-01-17'),
+      gallery: null
     };
 
     const tourDuo: Place = {
@@ -385,6 +388,7 @@ export class MemStorage implements IStorage {
       content: "Les Tours Duo représentent l'architecture moderne de Paris, illuminées dans la nuit urbaine.",
       videoUrl: null,
       visitDate: new Date('2024-01-20'),
+      gallery: null
     };
 
     const citesSciences: Place = {
@@ -397,6 +401,7 @@ export class MemStorage implements IStorage {
       content: "La Cité des Sciences offre une expérience immersive dans le monde de la science et de la technologie.",
       videoUrl: null,
       visitDate: new Date('2024-12-24'),
+      gallery: null
       gallery: [
         "/images/IMG_20241224_100259.jpg",
         "/images/IMG_20241224_100657.jpg", 
@@ -418,6 +423,7 @@ export class MemStorage implements IStorage {
       content: "Les rues de Paris révèlent l'âme de la capitale, entre architecture historique et vie quotidienne.",
       videoUrl: null,
       visitDate: new Date('2023-12-02'),
+      gallery: null
       gallery: [
         "/images/IMG_20231202_081038.jpg",
         "/images/IMG_20231202_090529.jpg",
@@ -437,6 +443,7 @@ export class MemStorage implements IStorage {
       content: "L'Hippodrome de Paris, temple des courses de chevaux et de l'élégance française.",
       videoUrl: null,
       visitDate: new Date('2024-02-15'),
+      gallery: null
       gallery: [
         "/images/hippodrome1.jpg",
         "/images/hippodrome2.jpg",
@@ -454,6 +461,7 @@ export class MemStorage implements IStorage {
       content: "Les quais de Seine offrent une perspective unique sur les monuments parisiens.",
       videoUrl: null,
       visitDate: new Date('2024-01-21'),
+      gallery: null
       gallery: [
         "/images/IMG_20240901_172738.jpg",
         "/images/bord_seine2.jpg",
