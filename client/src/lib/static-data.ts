@@ -97,9 +97,9 @@ export const contactInfo: ContactInfo = {
 };
 
 export const travelerInfo: TravelerInfo = {
-  name: "Alex Voyageur",
-  tagline: "Explorateur de cultures et créateur de souvenirs",
-  bio: "Passionné de voyage depuis plus de 5 ans, je parcours le monde pour découvrir de nouvelles cultures, goûter des saveurs authentiques et partager mes aventures avec vous. De l'Europe mystique à l'Asie exotique, chaque destination raconte une histoire unique.",
+  name: "Moi, c'est Lina",
+  tagline: "Exploratrice de cultures et créatrice de souvenirs",
+  bio: "Passionnée de voyage depuis plus de 5 ans, je parcours le monde pour découvrir de nouvelles cultures, goûter des saveurs authentiques et partager mes aventures avec vous. De l'Europe mystique à l'Asie exotique, chaque destination raconte une histoire unique.",
   joinDate: "2019-03-15"
 };
 
@@ -109,7 +109,7 @@ export const continents: Continent[] = [
     name: "Europe",
     slug: "europe",
     description: "Continent riche en histoire, culture et diversité architecturale",
-    imageUrl: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&h=600&fit=crop",
+    imageUrl: "@assets/IMG_20240721_142441.jpg",
     countries: 3
   },
   {
@@ -117,7 +117,7 @@ export const continents: Continent[] = [
     name: "Asie",
     slug: "asie",
     description: "Terre de contrastes entre tradition ancestrale et modernité",
-    imageUrl: "https://images.unsplash.com/photo-1480796927426-f609979314bd?w=800&h=600&fit=crop",
+    imageUrl: "@assets/IMG_20231228_141336.jpg",
     countries: 3
   }
 ];
@@ -130,7 +130,7 @@ export const countries: Country[] = [
     name: "France",
     slug: "france",
     description: "Pays de l'art de vivre, de la gastronomie et du patrimoine",
-    imageUrl: "https://images.unsplash.com/photo-1502602898536-47ad22581b52?w=800&h=600&fit=crop",
+    imageUrl: "@assets/IMG_20250125_132103.jpg",
     capital: "Paris",
     language: "Français",
     currency: "Euro"
@@ -155,6 +155,17 @@ export const countries: Country[] = [
     imageUrl: "https://images.unsplash.com/photo-1555993539-1732b0258095?w=800&h=600&fit=crop",
     capital: "Athènes",
     language: "Grec",
+    currency: "Euro"
+  },
+  {
+    id: 7,
+    continentId: 1,
+    name: "Portugal",
+    slug: "portugal",
+    description: "Pays des navigateurs aux paysages authentiques et à l'hospitalité légendaire",
+    imageUrl: "@assets/IMG_20240804_111629.jpg",
+    capital: "Lisbonne",
+    language: "Portugais",
     currency: "Euro"
   },
   // Asie
@@ -201,7 +212,7 @@ export const cities: City[] = [
     name: "Paris",
     slug: "paris",
     description: "Ville Lumière, capitale de l'amour et des arts",
-    imageUrl: "https://images.unsplash.com/photo-1502602898536-47ad22581b52?w=800&h=600&fit=crop",
+    imageUrl: "@assets/IMG_20250228_175111.jpg",
     population: 2161000,
     founded: "IIIe siècle av. J.-C.",
     climate: "Océanique"
@@ -375,10 +386,21 @@ export const places: Place[] = [
     name: "Musée du Louvre",
     slug: "musee-du-louvre",
     description: "Plus grand musée du monde et palais historique",
-    imageUrl: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800&h=600&fit=crop",
+    imageUrl: "@assets/IMG_20250603_151423.jpg",
     coordinates: "48.8606, 2.3376",
     bestTime: "Matinée",
     activities: ["Visite culturelle", "Art", "Histoire"]
+  },
+  {
+    id: 50,
+    cityId: 1,
+    name: "Sacré-Cœur",
+    slug: "sacre-coeur",
+    description: "Basilique emblématique de Montmartre offrant une vue panoramique sur Paris",
+    imageUrl: "@assets/IMG_20250516_164453.jpg",
+    coordinates: "48.8867, 2.3431",
+    bestTime: "Fin d'après-midi",
+    activities: ["Visite religieuse", "Vue panoramique", "Montmartre"]
   },
   // Lyon
   {
