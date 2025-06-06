@@ -18,8 +18,8 @@ export default function Home() {
       <div className="relative mb-16">
         <div className="h-64 md:h-80 overflow-hidden border-y-2 border-neon-cyan">
           <img 
-            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=400"
-            alt="Voyage et aventure"
+            src="@assets/IMG_20231231_150357.jpg"
+            alt="Vue panoramique sur la mer depuis les hauteurs"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-pure-black via-transparent to-transparent"></div>
