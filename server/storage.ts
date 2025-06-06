@@ -192,23 +192,23 @@ export class MemStorage implements IStorage {
       placeCount: 3
     };
 
-    const lyon: City = {
+    const bordeaux: City = {
       id: this.currentCityId++,
       countryId: france.id,
-      name: "Lyon",
-      slug: "lyon",
-      description: "Capitale de la gastronomie française.",
-      imageUrl: "https://images.unsplash.com/photo-1524305533606-0c6cc2bdc1ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      name: "Bordeaux",
+      slug: "bordeaux",
+      description: "Capitale mondiale du vin et joyau architectural.",
+      imageUrl: "/images/bordeauxrue02.jpg",
       placeCount: 1
     };
 
-    const nice: City = {
+    const ecluzelles: City = {
       id: this.currentCityId++,
       countryId: france.id,
-      name: "Nice",
-      slug: "nice",
-      description: "Perle de la Côte d'Azur.",
-      imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+      name: "Ecluzelles",
+      slug: "ecluzelles",
+      description: "Charmant village au bord de l'eau et nature préservée.",
+      imageUrl: "/images/IMG_20240721_134557.jpg",
       placeCount: 1
     };
 
@@ -323,8 +323,8 @@ export class MemStorage implements IStorage {
     };
 
     this.cities.set(paris.id, paris);
-    this.cities.set(lyon.id, lyon);
-    this.cities.set(nice.id, nice);
+    this.cities.set(bordeaux.id, bordeaux);
+    this.cities.set(ecluzelles.id, ecluzelles);
     this.cities.set(rome.id, rome);
     this.cities.set(venice.id, venice);
     this.cities.set(athens.id, athens);

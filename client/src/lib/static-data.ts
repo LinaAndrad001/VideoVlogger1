@@ -220,24 +220,24 @@ export const cities: City[] = [
   {
     id: 2,
     countryId: 1,
-    name: "Lyon",
-    slug: "lyon",
-    description: "Capitale gastronomique française au patrimoine Renaissance",
-    imageUrl: "https://images.unsplash.com/photo-1524717103510-d0e1eebe8308?w=800&h=600&fit=crop",
-    population: 515695,
-    founded: "43 av. J.-C.",
-    climate: "Semi-continental"
+    name: "Bordeaux",
+    slug: "bordeaux",
+    description: "Capitale mondiale du vin et joyau architectural",
+    imageUrl: "/images/bordeauxrue02.jpg",
+    population: 257804,
+    founded: "IIIe siècle av. J.-C.",
+    climate: "Océanique"
   },
   {
     id: 3,
     countryId: 1,
-    name: "Nice",
-    slug: "nice",
-    description: "Perle de la Côte d'Azur aux eaux turquoise",
-    imageUrl: "https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?w=800&h=600&fit=crop",
-    population: 342295,
-    founded: "350 av. J.-C.",
-    climate: "Méditerranéen"
+    name: "Ecluzelles",
+    slug: "ecluzelles",
+    description: "Charmant village au bord de l'eau et nature préservée",
+    imageUrl: "/images/IMG_20240721_134557.jpg",
+    population: 850,
+    founded: "XIe siècle",
+    climate: "Océanique"
   },
   // Italie
   {
@@ -402,29 +402,51 @@ export const places: Place[] = [
     bestTime: "Fin d'après-midi",
     activities: ["Visite religieuse", "Vue panoramique", "Montmartre"]
   },
-  // Lyon
+  {
+    id: 51,
+    cityId: 1,
+    name: "Tour Duo",
+    slug: "tour-duo",
+    description: "Gratte-ciel moderne symbolisant le Paris contemporain",
+    imageUrl: "/images/IMG_20231114_002800_619.jpg",
+    coordinates: "48.8294, 2.3677",
+    bestTime: "Soirée",
+    activities: ["Architecture moderne", "Vue urbaine", "Photos nocturnes"]
+  },
+  {
+    id: 52,
+    cityId: 1,
+    name: "Bord de Seine",
+    slug: "bord-de-seine",
+    description: "Promenade paisible le long des quais de Seine",
+    imageUrl: "/images/IMG_20240901_172738.jpg",
+    coordinates: "48.8566, 2.3522",
+    bestTime: "Matinée",
+    activities: ["Promenade", "Détente", "Vue sur les monuments"]
+  },
+  // Bordeaux
   {
     id: 3,
     cityId: 2,
-    name: "Vieux Lyon",
-    slug: "vieux-lyon",
-    description: "Quartier Renaissance classé UNESCO",
-    imageUrl: "https://images.unsplash.com/photo-1524717103510-d0e1eebe8308?w=800&h=600&fit=crop",
-    coordinates: "45.7640, 4.8357",
+    name: "Place de la Comédie",
+    slug: "place-de-la-comedie",
+    description: "Cœur historique de Bordeaux et son grand théâtre",
+    imageUrl: "/images/bordeauxrue02.jpg",
+    coordinates: "44.8414, -0.5719",
     bestTime: "Après-midi",
-    activities: ["Traboules", "Gastronomie", "Architecture"]
+    activities: ["Architecture", "Shopping", "Culture"]
   },
-  // Nice
+  // Ecluzelles
   {
     id: 4,
     cityId: 3,
-    name: "Promenade des Anglais",
-    slug: "promenade-des-anglais",
-    description: "Célèbre promenade face à la Méditerranée",
-    imageUrl: "https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?w=800&h=600&fit=crop",
-    coordinates: "43.6947, 7.2658",
-    bestTime: "Coucher de soleil",
-    activities: ["Promenade", "Plage", "Vélo"]
+    name: "Bord de l'Eure",
+    slug: "bord-de-leure",
+    description: "Promenade paisible au bord de la rivière",
+    imageUrl: "/images/IMG_20240721_134557.jpg",
+    coordinates: "48.9167, 1.6833",
+    bestTime: "Matinée",
+    activities: ["Nature", "Promenade", "Détente"]
   },
   // Rome
   {
