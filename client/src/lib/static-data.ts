@@ -97,7 +97,7 @@ export const contactInfo: ContactInfo = {
 };
 
 export const travelerInfo: TravelerInfo = {
-  name: "Moi, c'est Lina",
+  name: "Moi, c'est Lina.",
   tagline: "Exploratrice de cultures et créatrice de souvenirs",
   bio: "Passionnée de voyage depuis plus de 5 ans, je parcours le monde pour découvrir de nouvelles cultures, goûter des saveurs authentiques et partager mes aventures avec vous. De l'Europe mystique à l'Asie exotique, chaque destination raconte une histoire unique.",
   joinDate: "2019-03-15"
@@ -424,6 +424,39 @@ export const places: Place[] = [
     bestTime: "Matinée",
     activities: ["Promenade", "Détente", "Vue sur les monuments"]
   },
+  {
+    id: 53,
+    cityId: 1,
+    name: "Arc de Triomphe",
+    slug: "arc-de-triomphe",
+    description: "Monument emblématique dédié aux victoires de Napoléon",
+    imageUrl: "/images/arc-triomphe-1.jpg",
+    coordinates: "48.8738, 2.2950",
+    bestTime: "Soirée",
+    activities: ["Histoire militaire", "Vue panoramique", "Champs-Élysées"]
+  },
+  {
+    id: 54,
+    cityId: 1,
+    name: "Conciergerie",
+    slug: "conciergerie",
+    description: "Ancienne prison royale et témoin de l'histoire de France",
+    imageUrl: "/images/conciergerie-1.jpg",
+    coordinates: "48.8555, 2.3454",
+    bestTime: "Après-midi",
+    activities: ["Histoire royale", "Architecture gothique", "Île de la Cité"]
+  },
+  {
+    id: 55,
+    cityId: 1,
+    name: "Rues de Paris",
+    slug: "rues-de-paris",
+    description: "Exploration authentique des quartiers parisiens",
+    imageUrl: "/images/rues-paris-1.jpg",
+    coordinates: "48.8566, 2.3522",
+    bestTime: "Toute la journée",
+    activities: ["Promenade urbaine", "Architecture parisienne", "Vie locale"]
+  },
   // Bordeaux
   {
     id: 3,
@@ -649,14 +682,117 @@ export const places: Place[] = [
 ];
 
 export const adventures: Adventure[] = [
+  // Tour Eiffel - 4 photos
   {
     id: 1,
     placeId: 1,
-    title: "Sunset à la Tour Eiffel",
-    description: "Une soirée magique au sommet de la Dame de Fer",
-    imageUrl: "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?w=800&h=600&fit=crop",
+    title: "Visite de jour à la Tour Eiffel",
+    description: "Découverte de la Dame de Fer sous le soleil de Paris",
+    imageUrl: "/images/IMG_20231202_120332.jpg",
     videoUrl: null,
-    date: "2024-03-15"
+    date: "2023-12-02"
+  },
+  {
+    id: 4,
+    placeId: 1,
+    title: "Perspective unique Tour Eiffel",
+    description: "Un angle différent de la Dame de Fer",
+    imageUrl: "/images/IMG_20231202_120339.jpg",
+    videoUrl: null,
+    date: "2023-12-02"
+  },
+  {
+    id: 5,
+    placeId: 1,
+    title: "Selfie à la Tour Eiffel",
+    description: "Moment de complicité devant le monument emblématique",
+    imageUrl: "/images/Screenshot_2024-02-03-20-57-13-281_com.miui.gallery.jpg",
+    videoUrl: null,
+    date: "2024-02-03"
+  },
+  {
+    id: 6,
+    placeId: 1,
+    title: "Souvenirs hivernaux Tour Eiffel",
+    description: "Moment précieux en hiver parisien",
+    imageUrl: "/images/Screenshot_2024-02-03-20-57-36-247_com.miui.gallery.jpg",
+    videoUrl: null,
+    date: "2024-02-03"
+  },
+  // Arc de Triomphe - 2 photos
+  {
+    id: 7,
+    placeId: 53,
+    title: "Arc de Triomphe en soirée",
+    description: "L'Arc de Triomphe illuminé dans la nuit parisienne",
+    imageUrl: "/images/IMG_20231202_180547.jpg",
+    videoUrl: null,
+    date: "2023-12-02"
+  },
+  {
+    id: 8,
+    placeId: 53,
+    title: "Majesté de l'Arc de Triomphe",
+    description: "Vue rapprochée du monument aux victoires",
+    imageUrl: "/images/IMG_20231202_180851.jpg",
+    videoUrl: null,
+    date: "2023-12-02"
+  },
+  // Conciergerie - 2 photos
+  {
+    id: 9,
+    placeId: 54,
+    title: "Architecture de la Conciergerie",
+    description: "Découverte de l'ancienne prison royale",
+    imageUrl: "/images/IMG_20250125_132103.jpg",
+    videoUrl: null,
+    date: "2025-01-25"
+  },
+  {
+    id: 10,
+    placeId: 54,
+    title: "Moment de partage Conciergerie",
+    description: "Exploration de l'histoire de France en duo",
+    imageUrl: "/images/Screenshot_20231001_224228.jpg",
+    videoUrl: null,
+    date: "2023-10-01"
+  },
+  // Rues de Paris - 12 photos
+  {
+    id: 11,
+    placeId: 55,
+    title: "Champs-Élysées illuminés",
+    description: "Promenade nocturne sur la plus belle avenue du monde",
+    imageUrl: "/images/IMG_20231202_175052.jpg",
+    videoUrl: null,
+    date: "2023-12-02"
+  },
+  {
+    id: 12,
+    placeId: 55,
+    title: "Bateau Les Canards de Paris",
+    description: "Découverte originale de Paris depuis la Seine",
+    imageUrl: "/images/IMG_20240901_174257.jpg",
+    videoUrl: null,
+    date: "2024-09-01"
+  },
+  {
+    id: 13,
+    placeId: 55,
+    title: "Quartier résidentiel parisien",
+    description: "Exploration des rues authentiques de Paris",
+    imageUrl: "/images/IMG_20240919_150619.jpg",
+    videoUrl: null,
+    date: "2024-09-19"
+  },
+  {
+    id: 14,
+    placeId: 55,
+    title: "Gastronomie parisienne",
+    description: "Dégustation de spécialités dans un restaurant parisien",
+    imageUrl: "/images/IMG_20241117_200216.jpg",
+    videoUrl: null,
+    date: "2024-11-17"
   },
   {
     id: 2,
