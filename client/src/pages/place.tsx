@@ -20,11 +20,15 @@ export default function PlacePage() {
     );
   }
 
+  console.log('Searching for:', { continentSlug, countrySlug, citySlug, placeSlug });
+  
   const continent = getContinentBySlug(continentSlug);
   const country = getCountryBySlug(countrySlug);
   const city = getCityBySlug(citySlug);
   const place = getPlaceBySlug(placeSlug);
   const adventures = place ? getAdventuresByPlace(place.id) : [];
+  
+  console.log('Found data:', { continent: !!continent, country: !!country, city: !!city, place: !!place });
 
   if (!continent || !country || !city || !place) {
     return (
