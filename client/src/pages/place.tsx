@@ -45,19 +45,19 @@ export default function PlacePage() {
             </button>
           </Link>
           <span className="text-neon-cyan opacity-50">→</span>
-          <Link href={`/continent/${continentSlug}`}>
+          <Link href={`/${continentSlug}`}>
             <button className="text-neon-cyan hover:text-neon-purple transition-colors">
               {continent.name}
             </button>
           </Link>
           <span className="text-neon-cyan opacity-50">→</span>
-          <Link href={`/continent/${continentSlug}/country/${countrySlug}`}>
+          <Link href={`/${continentSlug}/${countrySlug}`}>
             <button className="text-neon-cyan hover:text-neon-purple transition-colors">
               {country.name}
             </button>
           </Link>
           <span className="text-neon-cyan opacity-50">→</span>
-          <Link href={`/continent/${continentSlug}/country/${countrySlug}/city/${citySlug}`}>
+          <Link href={`/${continentSlug}/${countrySlug}/${citySlug}`}>
             <button className="text-neon-cyan hover:text-neon-purple transition-colors">
               {city.name}
             </button>

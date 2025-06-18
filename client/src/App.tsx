@@ -27,10 +27,10 @@ function Router() {
       <ScrollToTop />
       <Switch>
         <Route path="/" component={Home} />
-        <Route path="/continent/:continentSlug" component={Continent} />
-        <Route path="/continent/:continentSlug/country/:countrySlug" component={Country} />
-        <Route path="/continent/:continentSlug/country/:countrySlug/city/:citySlug" component={City} />
-        <Route path="/continent/:continentSlug/country/:countrySlug/city/:citySlug/place/:placeSlug" component={Place} />
+        <Route path="/:continentSlug" component={Continent} />
+        <Route path="/:continentSlug/:countrySlug" component={Country} />
+        <Route path="/:continentSlug/:countrySlug/:citySlug" component={City} />
+        <Route path="/:continentSlug/:countrySlug/:citySlug/:placeSlug" component={Place} />
         <Route component={NotFound} />
       </Switch>
     </>
