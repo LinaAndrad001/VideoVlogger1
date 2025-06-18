@@ -379,7 +379,8 @@ export const places: Place[] = [
     imageUrl: "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?w=800&h=600&fit=crop",
     coordinates: "48.8584, 2.2945",
     bestTime: "Coucher de soleil",
-    activities: ["Photos", "Restaurant", "Ascension"]
+    activities: ["Photos", "Restaurant", "Ascension"],
+    gallery: null
   },
   {
     id: 2,
@@ -410,7 +411,8 @@ export const places: Place[] = [
     imageUrl: "/images/IMG_20250516_164453.jpg",
     coordinates: "48.8867, 2.3431",
     bestTime: "Fin d'après-midi",
-    activities: ["Visite religieuse", "Vue panoramique", "Montmartre"]
+    activities: ["Visite religieuse", "Vue panoramique", "Montmartre"],
+    gallery: null
   },
   {
     id: 51,
@@ -421,7 +423,8 @@ export const places: Place[] = [
     imageUrl: "/images/IMG_20231114_002800_619.jpg",
     coordinates: "48.8294, 2.3677",
     bestTime: "Soirée",
-    activities: ["Architecture moderne", "Vue urbaine", "Photos nocturnes"]
+    activities: ["Architecture moderne", "Vue urbaine", "Photos nocturnes"],
+    gallery: null
   },
   {
     id: 52,
@@ -432,7 +435,8 @@ export const places: Place[] = [
     imageUrl: "/images/IMG_20240901_172738.jpg",
     coordinates: "48.8566, 2.3522",
     bestTime: "Matinée",
-    activities: ["Promenade", "Détente", "Vue sur les monuments"]
+    activities: ["Promenade", "Détente", "Vue sur les monuments"],
+    gallery: null
   },
   {
     id: 53,
@@ -443,7 +447,8 @@ export const places: Place[] = [
     imageUrl: "/images/arc-triomphe-1.jpg",
     coordinates: "48.8738, 2.2950",
     bestTime: "Soirée",
-    activities: ["Histoire militaire", "Vue panoramique", "Champs-Élysées"]
+    activities: ["Histoire militaire", "Vue panoramique", "Champs-Élysées"],
+    gallery: null
   },
   {
     id: 54,
@@ -454,7 +459,8 @@ export const places: Place[] = [
     imageUrl: "/images/conciergerie-1.jpg",
     coordinates: "48.8555, 2.3454",
     bestTime: "Après-midi",
-    activities: ["Histoire royale", "Architecture gothique", "Île de la Cité"]
+    activities: ["Histoire royale", "Architecture gothique", "Île de la Cité"],
+    gallery: null
   },
   {
     id: 55,
@@ -465,7 +471,8 @@ export const places: Place[] = [
     imageUrl: "/images/rues-paris-1.jpg",
     coordinates: "48.8566, 2.3522",
     bestTime: "Toute la journée",
-    activities: ["Promenade urbaine", "Architecture parisienne", "Vie locale"]
+    activities: ["Promenade urbaine", "Architecture parisienne", "Vie locale"],
+    gallery: null
   },
   // Bordeaux
   {
@@ -477,7 +484,8 @@ export const places: Place[] = [
     imageUrl: "/images/bordeauxrue02.jpg",
     coordinates: "44.8414, -0.5719",
     bestTime: "Après-midi",
-    activities: ["Architecture", "Shopping", "Culture"]
+    activities: ["Architecture", "Shopping", "Culture"],
+    gallery: null
   },
   // Ecluzelles
   {
@@ -489,7 +497,8 @@ export const places: Place[] = [
     imageUrl: "/images/IMG_20240721_134557.jpg",
     coordinates: "48.9167, 1.6833",
     bestTime: "Matinée",
-    activities: ["Nature", "Promenade", "Détente"]
+    activities: ["Nature", "Promenade", "Détente"],
+    gallery: null
   },
   // Rome
   {
@@ -501,7 +510,8 @@ export const places: Place[] = [
     imageUrl: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=800&h=600&fit=crop",
     coordinates: "41.8902, 12.4922",
     bestTime: "Matinée",
-    activities: ["Visite historique", "Photos", "Gladiateurs"]
+    activities: ["Visite historique", "Photos", "Gladiateurs"],
+    gallery: null
   },
   {
     id: 6,
@@ -512,7 +522,8 @@ export const places: Place[] = [
     imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
     coordinates: "41.9029, 12.4534",
     bestTime: "Matinée",
-    activities: ["Chapelle Sixtine", "Musées", "Saint-Pierre"]
+    activities: ["Chapelle Sixtine", "Musées", "Saint-Pierre"],
+    gallery: null
   },
   // Venise
   {
@@ -524,7 +535,8 @@ export const places: Place[] = [
     imageUrl: "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?w=800&h=600&fit=crop",
     coordinates: "45.4342, 12.3388",
     bestTime: "Lever du soleil",
-    activities: ["Basilique", "Campanile", "Café historique"]
+    activities: ["Basilique", "Campanile", "Café historique"],
+    gallery: null
   },
   // Athènes
   {
@@ -536,7 +548,8 @@ export const places: Place[] = [
     imageUrl: "https://images.unsplash.com/photo-1555993539-1732b0258095?w=800&h=600&fit=crop",
     coordinates: "37.9755, 23.7348",
     bestTime: "Lever du soleil",
-    activities: ["Parthénon", "Histoire antique", "Panorama"]
+    activities: ["Parthénon", "Histoire antique", "Panorama"],
+    gallery: null
   },
   // Santorin
   {
@@ -548,7 +561,8 @@ export const places: Place[] = [
     imageUrl: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&h=600&fit=crop",
     coordinates: "36.4618, 25.3753",
     bestTime: "Coucher de soleil",
-    activities: ["Coucher de soleil", "Photos", "Vin local"]
+    activities: ["Coucher de soleil", "Photos", "Vin local"],
+    gallery: null
   },
   {
     id: 10,
@@ -559,7 +573,8 @@ export const places: Place[] = [
     imageUrl: "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?w=800&h=600&fit=crop",
     coordinates: "36.4138, 25.4318",
     bestTime: "Soirée",
-    activities: ["Shopping", "Restaurants", "Musées"]
+    activities: ["Shopping", "Restaurants", "Musées"],
+    gallery: null
   },
   // Mykonos
   {
@@ -571,7 +586,8 @@ export const places: Place[] = [
     imageUrl: "https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a?w=800&h=600&fit=crop",
     coordinates: "37.4467, 25.3289",
     bestTime: "Journée",
-    activities: ["Plage", "Sports nautiques", "Beach clubs"]
+    activities: ["Plage", "Sports nautiques", "Beach clubs"],
+    gallery: null
   },
   // Tokyo
   {
@@ -583,7 +599,8 @@ export const places: Place[] = [
     imageUrl: "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=800&h=600&fit=crop",
     coordinates: "35.7148, 139.7967",
     bestTime: "Matinée",
-    activities: ["Temple", "Marché traditionnel", "Culture"]
+    activities: ["Temple", "Marché traditionnel", "Culture"],
+    gallery: null
   },
   {
     id: 13,
@@ -594,7 +611,8 @@ export const places: Place[] = [
     imageUrl: "https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=800&h=600&fit=crop",
     coordinates: "35.6598, 139.7006",
     bestTime: "Soirée",
-    activities: ["Observation", "Shopping", "Néons"]
+    activities: ["Observation", "Shopping", "Néons"],
+    gallery: null
   },
   // Kyoto
   {
@@ -606,7 +624,8 @@ export const places: Place[] = [
     imageUrl: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&h=600&fit=crop",
     coordinates: "35.0394, 135.7292",
     bestTime: "Matinée",
-    activities: ["Temple", "Jardins", "Méditation"]
+    activities: ["Temple", "Jardins", "Méditation"],
+    gallery: null
   },
   {
     id: 15,
@@ -617,7 +636,8 @@ export const places: Place[] = [
     imageUrl: "https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?w=800&h=600&fit=crop",
     coordinates: "35.0170, 135.6719",
     bestTime: "Matinée",
-    activities: ["Promenade", "Photos", "Nature"]
+    activities: ["Promenade", "Photos", "Nature"],
+    gallery: null
   },
   // Bangkok
   {
@@ -629,7 +649,8 @@ export const places: Place[] = [
     imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
     coordinates: "13.7500, 100.4915",
     bestTime: "Matinée",
-    activities: ["Palais royal", "Temples", "Architecture"]
+    activities: ["Palais royal", "Temples", "Architecture"],
+    gallery: null
   },
   {
     id: 17,
@@ -640,7 +661,8 @@ export const places: Place[] = [
     imageUrl: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&h=600&fit=crop",
     coordinates: "13.7468, 100.4926",
     bestTime: "Matinée",
-    activities: ["Temple", "Massage thaï", "Spiritualité"]
+    activities: ["Temple", "Massage thaï", "Spiritualité"],
+    gallery: null
   },
   // Phuket
   {
@@ -652,7 +674,8 @@ export const places: Place[] = [
     imageUrl: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&h=600&fit=crop",
     coordinates: "7.8804, 98.3923",
     bestTime: "Journée",
-    activities: ["Plage", "Plongée", "Massage"]
+    activities: ["Plage", "Plongée", "Massage"],
+    gallery: null
   },
   // Ubud
   {
@@ -664,7 +687,8 @@ export const places: Place[] = [
     imageUrl: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=800&h=600&fit=crop",
     coordinates: "-8.4340, 115.2840",
     bestTime: "Matinée",
-    activities: ["Rizières", "Photos", "Balançoire"]
+    activities: ["Rizières", "Photos", "Balançoire"],
+    gallery: null
   },
   {
     id: 20,
@@ -675,7 +699,8 @@ export const places: Place[] = [
     imageUrl: "https://images.unsplash.com/photo-1597149756086-c75e5f64ca6d?w=800&h=600&fit=crop",
     coordinates: "-8.5169, 115.2584",
     bestTime: "Matinée",
-    activities: ["Faune", "Temple", "Nature"]
+    activities: ["Faune", "Temple", "Nature"],
+    gallery: null
   },
   // Jakarta
   {
@@ -687,7 +712,8 @@ export const places: Place[] = [
     imageUrl: "https://images.unsplash.com/photo-1555212697-194d092e3b8f?w=800&h=600&fit=crop",
     coordinates: "-6.1754, 106.8272",
     bestTime: "Soirée",
-    activities: ["Monument", "Panorama", "Musée"]
+    activities: ["Monument", "Panorama", "Musée"],
+    gallery: null
   }
 ];
 
