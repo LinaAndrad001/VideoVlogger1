@@ -10,6 +10,7 @@ export default defineConfig({
       "@assets": path.resolve(__dirname, "../attached_assets"),
     },
   },
+  assetsInclude: ['**/*.jpg', '**/*.jpeg', '**/*.png', '**/*.gif'],
   build: {
     outDir: 'dist',
     sourcemap: false,
