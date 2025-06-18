@@ -43,6 +43,7 @@ export interface Place {
   coordinates: string | null;
   bestTime: string | null;
   activities: string[] | null;
+  gallery: string[] | null;
 }
 
 export interface City {
@@ -389,7 +390,16 @@ export const places: Place[] = [
     imageUrl: "/images/IMG_20250603_151423.jpg",
     coordinates: "48.8606, 2.3376",
     bestTime: "Matinée",
-    activities: ["Visite culturelle", "Art", "Histoire"]
+    activities: ["Visite culturelle", "Art", "Histoire"],
+    gallery: [
+      "@assets/IMG_20250603_145401_1750249280433.jpg",
+      "@assets/IMG_20250603_154848_1750249280433.jpg",
+      "@assets/IMG_20250603_204014_1750249280433.jpg",
+      "@assets/IMG_20250603_204042_1750249280433.jpg",
+      "@assets/WhatsApp Image 2025-06-18 à 14.19.35_564e5695_1750249280433.jpg",
+      "@assets/WhatsApp Image 2025-06-18 à 14.19.39_e3f2383f_1750249280433.jpg",
+      "@assets/WhatsApp Image 2025-06-18 à 14.19.42_d8056c8a_1750249280433.jpg"
+    ]
   },
   {
     id: 50,
