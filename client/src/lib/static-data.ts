@@ -388,18 +388,18 @@ export const places: Place[] = [
     name: "Musée du Louvre",
     slug: "musee-louvre",
     description: "Plus grand musée du monde et palais historique",
-    imageUrl: "@assets/IMG_20250603_145401_1750251391847.jpg",
+    imageUrl: "@assets/IMG_20250603_145401_1750251977570.jpg",
     coordinates: "48.8606, 2.3376",
     bestTime: "Matinée",
     activities: ["Visite culturelle", "Art", "Histoire"],
     gallery: [
-      "@assets/IMG_20250603_145401_1750251391847.jpg",
-      "@assets/IMG_20250603_154848_1750251391847.jpg", 
-      "@assets/IMG_20250603_204014_1750251391847.jpg",
-      "@assets/IMG_20250603_204042_1750251391846.jpg",
-      "@assets/WhatsApp Image 2025-06-18 à 14.19.35_564e5695_1750251391847.jpg",
-      "@assets/WhatsApp Image 2025-06-18 à 14.19.39_e3f2383f_1750251391847.jpg",
-      "@assets/WhatsApp Image 2025-06-18 à 14.19.42_d8056c8a_1750251391847.jpg"
+      "@assets/IMG_20250603_145401_1750251977570.jpg",
+      "@assets/IMG_20250603_154848_1750251977570.jpg", 
+      "@assets/IMG_20250603_204014_1750251977570.jpg",
+      "@assets/IMG_20250603_204042_1750251977570.jpg",
+      "@assets/WhatsApp Image 2025-06-18 à 14.19.35_564e5695_1750251977570.jpg",
+      "@assets/WhatsApp Image 2025-06-18 à 14.19.39_e3f2383f_1750251977570.jpg",
+      "@assets/WhatsApp Image 2025-06-18 à 14.19.42_d8056c8a_1750251977570.jpg"
     ]
   },
   {
@@ -851,6 +851,70 @@ export const adventures: Adventure[] = [
     imageUrl: "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=800&h=600&fit=crop",
     videoUrl: null,
     date: "2024-01-10"
+  },
+  // Aventures au Louvre
+  {
+    id: 26,
+    placeId: 2,
+    title: "Découverte de la pyramide du Louvre",
+    description: "Vue extérieure iconique du musée du Louvre avec sa célèbre pyramide de verre",
+    imageUrl: "@assets/IMG_20250603_145401_1750251977570.jpg",
+    videoUrl: null,
+    date: "2025-06-03"
+  },
+  {
+    id: 27,
+    placeId: 2,
+    title: "Cour Napoléon et ses environs",
+    description: "Promenade dans les cours extérieures du palais royal",
+    imageUrl: "@assets/IMG_20250603_154848_1750251977570.jpg",
+    videoUrl: null,
+    date: "2025-06-03"
+  },
+  {
+    id: 28,
+    placeId: 2,
+    title: "Le Louvre au coucher du soleil",
+    description: "Magnifique façade du Louvre illuminée par les derniers rayons du jour",
+    imageUrl: "@assets/IMG_20250603_204014_1750251977570.jpg",
+    videoUrl: null,
+    date: "2025-06-03"
+  },
+  {
+    id: 29,
+    placeId: 2,
+    title: "Architecture classique du Louvre",
+    description: "Détails de l'architecture française classique du palais",
+    imageUrl: "@assets/IMG_20250603_204042_1750251977570.jpg",
+    videoUrl: null,
+    date: "2025-06-03"
+  },
+  {
+    id: 30,
+    placeId: 2,
+    title: "Le Sacre de Napoléon par David",
+    description: "Chef-d'œuvre de Jacques-Louis David représentant le couronnement de Napoléon",
+    imageUrl: "@assets/WhatsApp Image 2025-06-18 à 14.19.35_564e5695_1750251977570.jpg",
+    videoUrl: null,
+    date: "2025-06-03"
+  },
+  {
+    id: 31,
+    placeId: 2,
+    title: "Plafonds dorés des salles d'apparat",
+    description: "Somptueux plafonds peints et dorés des appartements royaux",
+    imageUrl: "@assets/WhatsApp Image 2025-06-18 à 14.19.39_e3f2383f_1750251977570.jpg",
+    videoUrl: null,
+    date: "2025-06-03"
+  },
+  {
+    id: 32,
+    placeId: 2,
+    title: "Collections antiques du Louvre",
+    description: "Sculptures antiques dans les galeries de marbre du musée",
+    imageUrl: "@assets/WhatsApp Image 2025-06-18 à 14.19.42_d8056c8a_1750251977570.jpg",
+    videoUrl: null,
+    date: "2025-06-03"
   }
 ];
 
