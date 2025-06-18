@@ -412,7 +412,11 @@ export const places: Place[] = [
     coordinates: "48.8867, 2.3431",
     bestTime: "Fin d'après-midi",
     activities: ["Visite religieuse", "Vue panoramique", "Montmartre"],
-    gallery: null
+    gallery: [
+      "/attached_assets/AirBrush_20250516185456_1750250547182.jpg",
+      "/attached_assets/IMG_20250516_164453_1750250547182.jpg",
+      "/attached_assets/SL-5927_29_31_1750250547182.jpg"
+    ]
   },
   {
     id: 51,
