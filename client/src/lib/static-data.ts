@@ -424,6 +424,22 @@ export const places: Place[] = [
     ]
   },
   {
+    id: 76,
+    cityId: 1,
+    name: "Restaurant japonais parisien",
+    slug: "restaurant-japonais",
+    description: "Découverte de la cuisine japonaise authentique au cœur de Paris",
+    imageUrl: "/images/IMG_20240217_193839_1750605743424.jpg",
+    coordinates: "48.8566, 2.3522",
+    bestTime: "Soirée",
+    activities: ["Gastronomie japonaise", "Sushi", "Ramen"],
+    gallery: [
+      "/images/IMG_20240217_193839_1750605743424.jpg",
+      "/images/IMG_20240217_193847_1750605743425.jpg",
+      "/images/IMG_20240323_150312_1750605743425.jpg"
+    ]
+  },
+  {
     id: 54,
     cityId: 1,
     name: "Conciergerie",
@@ -1146,6 +1162,118 @@ export const adventures: Adventure[] = [
     imageUrl: "/images/Screenshot_2024-02-03-21-02-54-610_com.miui.gallery_1750604037540.jpg",
     videoUrl: null,
     date: "2024-02-03"
+  },
+  // Nouvelles aventures Tour Eiffel
+  {
+    id: 59,
+    placeId: 1,
+    title: "Tour Eiffel majestueuse",
+    description: "Vue impressionnante de la Dame de Fer dans toute sa splendeur",
+    imageUrl: "/images/IMG_20231202_120333_1750605502381.jpg",
+    videoUrl: null,
+    date: "2023-12-02"
+  },
+  {
+    id: 60,
+    placeId: 1,
+    title: "Portrait hivernal près de la Tour Eiffel",
+    description: "Moment magique en hiver avec la tour en arrière-plan",
+    imageUrl: "/images/IMG_20231202_120936_1750605502381.jpg",
+    videoUrl: null,
+    date: "2023-12-02"
+  },
+  // Aventures à Ecluzelles enrichies
+  {
+    id: 61,
+    placeId: 11,
+    title: "Portrait au bord de l'Eure",
+    description: "Moment de sérénité face aux reflets de la rivière",
+    imageUrl: "/images/IMG_20240721_125649_1750605595412.jpg",
+    videoUrl: null,
+    date: "2024-07-21"
+  },
+  {
+    id: 62,
+    placeId: 11,
+    title: "Petite fille en robe blanche",
+    description: "Innocence et nature se rencontrent au bord de l'eau",
+    imageUrl: "/images/IMG_20240721_125659_1750605595412.jpg",
+    videoUrl: null,
+    date: "2024-07-21"
+  },
+  {
+    id: 63,
+    placeId: 11,
+    title: "Contemplation familiale",
+    description: "Moments de calme partagés dans un cadre naturel préservé",
+    imageUrl: "/images/IMG_20240721_140610_1750605595412.jpg",
+    videoUrl: null,
+    date: "2024-07-21"
+  },
+  {
+    id: 64,
+    placeId: 11,
+    title: "Photo de famille au bord de l'Eure",
+    description: "Souvenir précieux dans ce cadre bucolique d'Ecluzelles",
+    imageUrl: "/images/IMG_20240721_142045_1750605595412.jpg",
+    videoUrl: null,
+    date: "2024-07-21"
+  },
+  // Aventures dans la campagne de Chartres
+  {
+    id: 65,
+    placeId: 75,
+    title: "Champs de colza en fleur",
+    description: "Immersion dans les champs dorés de la campagne chartraine",
+    imageUrl: "/images/Screenshot_2023-12-19-14-24-58-392_com.google.android.apps.photos_1750605554821.jpg",
+    videoUrl: null,
+    date: "2023-12-19"
+  },
+  {
+    id: 66,
+    placeId: 75,
+    title: "Fermier et son agneau",
+    description: "Rencontre authentique avec la vie agricole traditionnelle",
+    imageUrl: "/images/Screenshot_2023-12-19-14-25-03-437_com.google.android.apps.photos_1750605554821.jpg",
+    videoUrl: null,
+    date: "2023-12-19"
+  },
+  {
+    id: 67,
+    placeId: 75,
+    title: "Petit agneau blanc",
+    description: "Tendresse et innocence dans la ferme chartraine",
+    imageUrl: "/images/IMG_20240714_165754_1750605554821.jpg",
+    videoUrl: null,
+    date: "2024-07-14"
+  },
+  // Aventures au restaurant japonais
+  {
+    id: 68,
+    placeId: 76,
+    title: "Plateau de sushis artisanaux",
+    description: "Dégustation de sushis frais préparés avec art",
+    imageUrl: "/images/IMG_20240217_193839_1750605743424.jpg",
+    videoUrl: null,
+    date: "2024-02-17"
+  },
+  {
+    id: 69,
+    placeId: 76,
+    title: "Ramen traditionnel",
+    description: "Saveurs authentiques du Japon dans un bol fumant",
+    imageUrl: "/images/IMG_20240217_193847_1750605743425.jpg",
+    videoUrl: null,
+    date: "2024-02-17"
+  },
+  {
+    id: 70,
+    placeId: 76,
+    title: "Assortiment sushi premium",
+    description: "Présentation raffinée de spécialités japonaises",
+    imageUrl: "/images/IMG_20240323_150312_1750605743425.jpg",
+    videoUrl: null,
+    date: "2024-03-23"
   }
 ];
 
