@@ -503,6 +503,8 @@ export const places: Place[] = [
     bestTime: "Matinée",
     activities: ["Nature", "Promenade", "Détente"],
     gallery: [
+      "/images/IMG_20240901_174257.jpg",
+      "/images/IMG_20240721_134557.jpg",
       "/images/IMG_20240721_125649_1750606556615.jpg",
       "/images/IMG_20240721_125659_1750606556615.jpg",
       "/images/IMG_20240721_140610_1750606556615.jpg",
@@ -1222,37 +1224,55 @@ export const adventures: Adventure[] = [
   // Aventures à Ecluzelles enrichies
   {
     id: 61,
-    placeId: 11,
-    title: "Portrait au bord de l'Eure",
-    description: "Moment de sérénité face aux reflets de la rivière",
-    imageUrl: "/images/IMG_20240721_125649_1750605595412.jpg",
+    placeId: 4,
+    title: "Promenade d'été au bord de l'Eure",
+    description: "Découverte des paysages verdoyants d'Ecluzelles",
+    imageUrl: "/images/IMG_20240901_174257.jpg",
     videoUrl: null,
-    date: "2024-07-21"
+    date: "2024-09-01"
   },
   {
     id: 62,
-    placeId: 11,
-    title: "Petite fille en robe blanche",
-    description: "Innocence et nature se rencontrent au bord de l'eau",
-    imageUrl: "/images/IMG_20240721_125659_1750605595412.jpg",
+    placeId: 4,
+    title: "Village pittoresque d'Ecluzelles",
+    description: "Charme authentique du patrimoine rural français",
+    imageUrl: "/images/IMG_20240721_134557.jpg",
     videoUrl: null,
     date: "2024-07-21"
   },
   {
     id: 63,
-    placeId: 11,
-    title: "Contemplation familiale",
-    description: "Moments de calme partagés dans un cadre naturel préservé",
-    imageUrl: "/images/IMG_20240721_140610_1750605595412.jpg",
+    placeId: 4,
+    title: "Portrait au bord de l'Eure",
+    description: "Moment de sérénité face aux reflets de la rivière",
+    imageUrl: "/images/IMG_20240721_125649_1750606556615.jpg",
     videoUrl: null,
     date: "2024-07-21"
   },
   {
     id: 64,
-    placeId: 11,
+    placeId: 4,
+    title: "Petite fille en robe blanche",
+    description: "Innocence et nature se rencontrent au bord de l'eau",
+    imageUrl: "/images/IMG_20240721_125659_1750606556615.jpg",
+    videoUrl: null,
+    date: "2024-07-21"
+  },
+  {
+    id: 65,
+    placeId: 4,
+    title: "Contemplation familiale",
+    description: "Moments de calme partagés dans un cadre naturel préservé",
+    imageUrl: "/images/IMG_20240721_140610_1750606556615.jpg",
+    videoUrl: null,
+    date: "2024-07-21"
+  },
+  {
+    id: 66,
+    placeId: 4,
     title: "Photo de famille au bord de l'Eure",
     description: "Souvenir précieux dans ce cadre bucolique d'Ecluzelles",
-    imageUrl: "/images/IMG_20240721_142045_1750605595412.jpg",
+    imageUrl: "/images/IMG_20240721_142045_1750606556615.jpg",
     videoUrl: null,
     date: "2024-07-21"
   },
@@ -1286,7 +1306,7 @@ export const adventures: Adventure[] = [
   },
   // Aventures au restaurant japonais
   {
-    id: 68,
+    id: 70,
     placeId: 76,
     title: "Plateau de sushis artisanaux",
     description: "Dégustation de sushis frais préparés avec art",
@@ -1295,7 +1315,7 @@ export const adventures: Adventure[] = [
     date: "2024-02-17"
   },
   {
-    id: 69,
+    id: 71,
     placeId: 76,
     title: "Ramen traditionnel",
     description: "Saveurs authentiques du Japon dans un bol fumant",
@@ -1304,7 +1324,7 @@ export const adventures: Adventure[] = [
     date: "2024-02-17"
   },
   {
-    id: 70,
+    id: 72,
     placeId: 76,
     title: "Assortiment sushi premium",
     description: "Présentation raffinée de spécialités japonaises",
