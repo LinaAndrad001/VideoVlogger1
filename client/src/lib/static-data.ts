@@ -315,7 +315,7 @@ export const cities: City[] = [
     name: "Patara",
     slug: "patara",
     description: "Site antique avec une plage de sable infinie",
-    imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+    imageUrl: "/images/IMG_20231230_140744_1750603034996.jpg",
     population: 1000,
     founded: "7e siècle av. J.-C.",
     climate: "Méditerranéen"
@@ -649,46 +649,21 @@ export const places: Place[] = [
   {
     id: 18,
     cityId: 12,
-    name: "Plage de Patara",
-    slug: "plage-patara",
-    description: "Plage de sable infinie et protégée",
+    name: "Dunes de Patara",
+    slug: "dunes-patara",
+    description: "Immenses dunes de sable doré et plage infinie protégée",
     imageUrl: "/images/IMG_20231230_135950_1750603034995.jpg",
     coordinates: "36.2667, 29.3167",
-    bestTime: "Journée",
-    activities: ["Plage", "Nature", "Tortues de mer"],
+    bestTime: "Journée complète",
+    activities: ["Plage", "Randonnée", "Photos", "Nature"],
     gallery: [
       "/images/IMG_20231230_135950_1750603034995.jpg",
       "/images/IMG_20231230_140126_1750603034996.jpg",
       "/images/IMG_20231230_140342_1750603034996.jpg",
-      "/images/IMG_20231230_140744_1750603034996.jpg"
-    ]
-  },
-  {
-    id: 71,
-    cityId: 12,
-    name: "Dunes de Patara",
-    slug: "dunes-patara",
-    description: "Immenses dunes de sable doré face à la Méditerranée",
-    imageUrl: "/images/IMG_20231230_141958_1750603034996.jpg",
-    coordinates: "36.2667, 29.3167",
-    bestTime: "Fin d'après-midi",
-    activities: ["Randonnée", "Photos", "Nature"],
-    gallery: [
+      "/images/IMG_20231230_140744_1750603034996.jpg",
       "/images/IMG_20231230_141958_1750603034996.jpg",
       "/images/IMG_20231230_142932_1750603034996.jpg"
     ]
-  },
-  {
-    id: 19,
-    cityId: 12,
-    name: "Ruines de Patara",
-    slug: "ruines-patara",
-    description: "Cité antique lycienne bien préservée",
-    imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
-    coordinates: "36.2683, 29.3175",
-    bestTime: "Matinée",
-    activities: ["Archéologie", "Histoire", "Photos"],
-    gallery: null
   }
 ];
 
@@ -1027,7 +1002,7 @@ export const adventures: Adventure[] = [
   },
   {
     id: 48,
-    placeId: 71,
+    placeId: 18,
     title: "Contemplation depuis les dunes",
     description: "Vue paisible sur le paysage naturel préservé de Patara",
     imageUrl: "/images/IMG_20231230_141958_1750603034996.jpg",
@@ -1036,7 +1011,7 @@ export const adventures: Adventure[] = [
   },
   {
     id: 49,
-    placeId: 71,
+    placeId: 18,
     title: "Paysage sauvage de Patara",
     description: "Nature préservée avec dunes et végétation méditerranéenne",
     imageUrl: "/images/IMG_20231230_142932_1750603034996.jpg",
