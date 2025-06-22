@@ -106,25 +106,7 @@ export default function PlacePage() {
             </div>
           </div>
 
-          {/* Photo Gallery */}
-          {place.gallery && place.gallery.length > 0 && (
-            <div className="max-w-6xl mx-auto mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 neon-shimmer">
-                Galerie Photos
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {place.gallery.map((photo, index) => (
-                  <div key={index} className="border-2 border-neon-cyan rounded-xl overflow-hidden neon-glow hover:border-neon-purple transition-all duration-300">
-                    <img 
-                      src={photo}
-                      alt={`${place.name} - Photo ${index + 1}`}
-                      className="w-full h-80 object-cover hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
+
         </div>
       </section>
 
