@@ -498,11 +498,33 @@ export const places: Place[] = [
     name: "Bord de l'Eure",
     slug: "bord-de-leure",
     description: "Promenade paisible au bord de la rivière",
-    imageUrl: "/images/IMG_20240721_134557.jpg",
+    imageUrl: "/images/IMG_20240721_125649_1750606556615.jpg",
     coordinates: "48.9167, 1.6833",
     bestTime: "Matinée",
     activities: ["Nature", "Promenade", "Détente"],
-    gallery: null
+    gallery: [
+      "/images/IMG_20240721_125649_1750606556615.jpg",
+      "/images/IMG_20240721_125659_1750606556615.jpg",
+      "/images/IMG_20240721_140610_1750606556615.jpg",
+      "/images/IMG_20240721_142045_1750606556615.jpg"
+    ]
+  },
+  // Chartres
+  {
+    id: 75,
+    cityId: 13,
+    name: "Campagne de Chartres",
+    slug: "campagne-chartres",
+    description: "Paysages bucoliques et nature préservée autour de Chartres",
+    imageUrl: "/images/Screenshot_2023-12-19-14-24-58-392_com.google.android.apps.photos_1750606521887.jpg",
+    coordinates: "48.4469, 1.4879",
+    bestTime: "Printemps",
+    activities: ["Nature", "Randonnée", "Agriculture"],
+    gallery: [
+      "/images/Screenshot_2023-12-19-14-24-58-392_com.google.android.apps.photos_1750606521887.jpg",
+      "/images/Screenshot_2023-12-19-14-25-03-437_com.google.android.apps.photos_1750606521887.jpg",
+      "/images/IMG_20240714_165754_1750606521887.jpg"
+    ]
   },
   // Rome
   {
