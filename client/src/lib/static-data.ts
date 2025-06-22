@@ -342,18 +342,18 @@ export const places: Place[] = [
     name: "Musée du Louvre",
     slug: "musee-louvre",
     description: "Plus grand musée du monde et palais historique",
-    imageUrl: "/attached_assets/IMG_20250603_145401_1750596752254.jpg",
+    imageUrl: "/images/IMG_20250603_145401_1750596752254.jpg",
     coordinates: "48.8606, 2.3376",
     bestTime: "Matinée",
     activities: ["Visite culturelle", "Art", "Histoire"],
     gallery: [
-      "/attached_assets/IMG_20250603_145401_1750596752254.jpg",
-      "/attached_assets/IMG_20250603_154848_1750596752254.jpg", 
-      "/attached_assets/IMG_20250603_204014_1750596752254.jpg",
-      "/attached_assets/IMG_20250603_204042_1750596752254.jpg",
-      "/attached_assets/WhatsApp Image 2025-06-18 à 14.19.35_564e5695_1750596752254.jpg",
-      "/attached_assets/WhatsApp Image 2025-06-18 à 14.19.39_e3f2383f_1750596752254.jpg",
-      "/attached_assets/WhatsApp Image 2025-06-18 à 14.19.42_d8056c8a_1750596752254.jpg"
+      "/images/IMG_20250603_145401_1750596752254.jpg",
+      "/images/IMG_20250603_154848_1750596752254.jpg", 
+      "/images/IMG_20250603_204014_1750596752254.jpg",
+      "/images/IMG_20250603_204042_1750596752254.jpg",
+      "/images/WhatsApp Image 2025-06-18 à 14.19.35_564e5695_1750596752254.jpg",
+      "/images/WhatsApp Image 2025-06-18 à 14.19.39_e3f2383f_1750596752254.jpg",
+      "/images/WhatsApp Image 2025-06-18 à 14.19.42_d8056c8a_1750596752254.jpg"
     ]
   },
   {
@@ -362,14 +362,14 @@ export const places: Place[] = [
     name: "Sacré-Cœur",
     slug: "sacre-coeur",
     description: "Basilique emblématique de Montmartre offrant une vue panoramique sur Paris",
-    imageUrl: "/attached_assets/IMG_20250516_164453_1750598866707.jpg",
+    imageUrl: "/images/IMG_20250516_164453_1750598866707.jpg",
     coordinates: "48.8867, 2.3431",
     bestTime: "Fin d'après-midi",
     activities: ["Visite religieuse", "Vue panoramique", "Montmartre"],
     gallery: [
-      "/attached_assets/IMG_20250516_164453_1750598866707.jpg",
-      "/attached_assets/SL-5927_29_31_1750598866707.jpg",
-      "/attached_assets/AirBrush_20250516185456_1750598866707.jpg"
+      "/images/IMG_20250516_164453_1750598866707.jpg",
+      "/images/SL-5927_29_31_1750598866707.jpg",
+      "/images/AirBrush_20250516185456_1750598866707.jpg"
     ]
   },
   {
@@ -786,7 +786,7 @@ export const adventures: Adventure[] = [
     placeId: 2,
     title: "Découverte de la pyramide du Louvre",
     description: "Vue extérieure iconique du musée du Louvre avec sa célèbre pyramide de verre",
-    imageUrl: "/attached_assets/IMG_20250603_145401_1750596752254.jpg",
+    imageUrl: "/images/IMG_20250603_145401_1750596752254.jpg",
     videoUrl: null,
     date: "2025-06-03"
   },
@@ -795,7 +795,7 @@ export const adventures: Adventure[] = [
     placeId: 2,
     title: "Cour Napoléon et ses environs",
     description: "Promenade dans les cours extérieures du palais royal",
-    imageUrl: "/attached_assets/IMG_20250603_154848_1750596752254.jpg",
+    imageUrl: "/images/IMG_20250603_154848_1750596752254.jpg",
     videoUrl: null,
     date: "2025-06-03"
   },
@@ -804,7 +804,7 @@ export const adventures: Adventure[] = [
     placeId: 2,
     title: "Le Louvre au coucher du soleil",
     description: "Magnifique façade du Louvre illuminée par les derniers rayons du jour",
-    imageUrl: "/attached_assets/IMG_20250603_204014_1750596752254.jpg",
+    imageUrl: "/images/IMG_20250603_204014_1750596752254.jpg",
     videoUrl: null,
     date: "2025-06-03"
   },
@@ -813,7 +813,7 @@ export const adventures: Adventure[] = [
     placeId: 2,
     title: "Architecture classique du Louvre",
     description: "Détails de l'architecture française classique du palais",
-    imageUrl: "/attached_assets/IMG_20250603_204042_1750596752254.jpg",
+    imageUrl: "/images/IMG_20250603_204042_1750596752254.jpg",
     videoUrl: null,
     date: "2025-06-03"
   },
@@ -822,7 +822,7 @@ export const adventures: Adventure[] = [
     placeId: 2,
     title: "Le Sacre de Napoléon par David",
     description: "Chef-d'œuvre de Jacques-Louis David représentant le couronnement de Napoléon",
-    imageUrl: "/attached_assets/WhatsApp Image 2025-06-18 à 14.19.35_564e5695_1750596752254.jpg",
+    imageUrl: "/images/WhatsApp Image 2025-06-18 à 14.19.35_564e5695_1750596752254.jpg",
     videoUrl: null,
     date: "2025-06-03"
   },
@@ -831,7 +831,7 @@ export const adventures: Adventure[] = [
     placeId: 2,
     title: "Plafonds dorés des salles d'apparat",
     description: "Somptueux plafonds peints et dorés des appartements royaux",
-    imageUrl: "/attached_assets/WhatsApp Image 2025-06-18 à 14.19.39_e3f2383f_1750596752254.jpg",
+    imageUrl: "/images/WhatsApp Image 2025-06-18 à 14.19.39_e3f2383f_1750596752254.jpg",
     videoUrl: null,
     date: "2025-06-03"
   },
@@ -840,7 +840,7 @@ export const adventures: Adventure[] = [
     placeId: 2,
     title: "Collections antiques du Louvre",
     description: "Sculptures antiques dans les galeries de marbre du musée",
-    imageUrl: "/attached_assets/WhatsApp Image 2025-06-18 à 14.19.42_d8056c8a_1750596752254.jpg",
+    imageUrl: "/images/WhatsApp Image 2025-06-18 à 14.19.42_d8056c8a_1750596752254.jpg",
     videoUrl: null,
     date: "2025-06-03"
   },
@@ -850,7 +850,7 @@ export const adventures: Adventure[] = [
     placeId: 50,
     title: "Basilique du Sacré-Cœur et ses visiteurs",
     description: "Vue emblématique de la basilique avec la foule sur les marches de Montmartre",
-    imageUrl: "/attached_assets/IMG_20250516_164453_1750598866707.jpg",
+    imageUrl: "/images/IMG_20250516_164453_1750598866707.jpg",
     videoUrl: null,
     date: "2025-05-16"
   },
@@ -859,7 +859,7 @@ export const adventures: Adventure[] = [
     placeId: 50,
     title: "Intérieur somptueux du Sacré-Cœur",
     description: "Architecture intérieure magnifique avec ses colonnes et vitraux colorés",
-    imageUrl: "/attached_assets/SL-5927_29_31_1750598866707.jpg",
+    imageUrl: "/images/SL-5927_29_31_1750598866707.jpg",
     videoUrl: null,
     date: "2025-05-16"
   },
@@ -868,7 +868,7 @@ export const adventures: Adventure[] = [
     placeId: 50,
     title: "Moment personnel au Sacré-Cœur",
     description: "Pause détente devant la basilique emblématique de Montmartre",
-    imageUrl: "/attached_assets/AirBrush_20250516185456_1750598866707.jpg",
+    imageUrl: "/images/AirBrush_20250516185456_1750598866707.jpg",
     videoUrl: null,
     date: "2025-05-16"
   }
