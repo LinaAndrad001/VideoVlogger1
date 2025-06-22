@@ -108,6 +108,10 @@ The application includes pre-populated content covering:
 
 ```
 Changelog:
+- June 22, 2025. Migration completed from Replit Agent to Replit environment
+  - Fixed image serving configuration for Louvre and Sacré-Cœur photos
+  - Added Express static middleware for /images/ route
+  - Corrected all image paths from /attached_assets/ to /images/
 - June 18, 2025. Initial setup
 ```
 
