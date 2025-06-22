@@ -291,18 +291,18 @@ export class MemStorage implements IStorage {
       name: "Musée du Louvre",
       slug: "musee-louvre",
       description: "Le plus grand musée d'art au monde.",
-      imageUrl: "@assets/IMG_20250603_145401_1750251391847.jpg",
+      imageUrl: "@assets/IMG_20250603_145401_1750596752254.jpg",
       content: "Le Louvre abrite des œuvres d'art inestimables, dont la Joconde et la Vénus de Milo. Une journée complète de découverte dans ce palais royal transformé en musée.",
       videoUrl: null,
       visitDate: new Date('2025-06-03'),
       gallery: [
-        "@assets/IMG_20250603_145401_1750251391847.jpg",
-        "@assets/IMG_20250603_154848_1750251391847.jpg", 
-        "@assets/IMG_20250603_204014_1750251391847.jpg",
-        "@assets/IMG_20250603_204042_1750251391846.jpg",
-        "@assets/WhatsApp Image 2025-06-18 à 14.19.35_564e5695_1750251391847.jpg",
-        "@assets/WhatsApp Image 2025-06-18 à 14.19.39_e3f2383f_1750251391847.jpg",
-        "@assets/WhatsApp Image 2025-06-18 à 14.19.42_d8056c8a_1750251391847.jpg"
+        "@assets/IMG_20250603_145401_1750596752254.jpg",
+        "@assets/IMG_20250603_154848_1750596752254.jpg", 
+        "@assets/IMG_20250603_204014_1750596752254.jpg",
+        "@assets/IMG_20250603_204042_1750596752254.jpg",
+        "@assets/WhatsApp Image 2025-06-18 à 14.19.35_564e5695_1750596752254.jpg",
+        "@assets/WhatsApp Image 2025-06-18 à 14.19.39_e3f2383f_1750596752254.jpg",
+        "@assets/WhatsApp Image 2025-06-18 à 14.19.42_d8056c8a_1750596752254.jpg"
       ]
     };
 
