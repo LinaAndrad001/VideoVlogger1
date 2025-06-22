@@ -409,6 +409,21 @@ export const places: Place[] = [
     gallery: null
   },
   {
+    id: 74,
+    cityId: 1,
+    name: "Hippodrome de Vincennes",
+    slug: "hippodrome-vincennes",
+    description: "Temple des courses de trot, moments en famille aux tribunes",
+    imageUrl: "/images/Screenshot_2024-02-03-21-02-45-316_com.miui.gallery_1750604037540.jpg",
+    coordinates: "48.8205, 2.4377",
+    bestTime: "Après-midi",
+    activities: ["Courses hippiques", "Famille", "Spectacle sportif"],
+    gallery: [
+      "/images/Screenshot_2024-02-03-21-02-45-316_com.miui.gallery_1750604037540.jpg",
+      "/images/Screenshot_2024-02-03-21-02-54-610_com.miui.gallery_1750604037540.jpg"
+    ]
+  },
+  {
     id: 54,
     cityId: 1,
     name: "Conciergerie",
@@ -642,8 +657,37 @@ export const places: Place[] = [
       "/images/IMG_20231228_105901_1750602086631.jpg",
       "/images/IMG_20231225_140022_1750602067266.jpg",
       "/images/IMG_20231231_144651_1750603108151.jpg",
-      "/images/IMG_20231231_150429(1)_1750603108152.jpg"
+      "/images/IMG_20231231_150429(1)_1750603108152.jpg",
+      "/images/IMG_20240103_095825_1750603939969.jpg"
     ]
+  },
+  {
+    id: 72,
+    cityId: 11,
+    name: "Gastronomie de Kas",
+    slug: "gastronomie-kas",
+    description: "Découverte des saveurs authentiques de la cuisine turque",
+    imageUrl: "/images/IMG_20240101_190146_1750603939969.jpg",
+    coordinates: "36.2021, 29.6417",
+    bestTime: "Soirée",
+    activities: ["Gastronomie", "Restaurants", "Culture locale"],
+    gallery: [
+      "/images/IMG_20240101_190146_1750603939969.jpg",
+      "/images/IMG_20240103_133714_1750603939969.jpg",
+      "/images/Screenshot_2024-02-03-20-59-38-180_com.miui.gallery_1750603939969.jpg"
+    ]
+  },
+  {
+    id: 73,
+    cityId: 11,
+    name: "Vie locale à Kas",
+    slug: "vie-locale-kas",
+    description: "Moments authentiques de la vie quotidienne dans le village",
+    imageUrl: "/images/IMG_20240102_140933_1750603939969.jpg",
+    coordinates: "36.2021, 29.6417",
+    bestTime: "Journée",
+    activities: ["Vie locale", "Détente", "Observation"],
+    gallery: ["/images/IMG_20240102_140933_1750603939969.jpg"]
   },
   // Patara
   {
@@ -1036,6 +1080,72 @@ export const adventures: Adventure[] = [
     imageUrl: "/images/IMG_20231231_150429(1)_1750603108152.jpg",
     videoUrl: null,
     date: "2023-12-31"
+  },
+  {
+    id: 52,
+    placeId: 70,
+    title: "Portrait en famille à Kas",
+    description: "Moment de bonheur partagé avec vue sur le paysage méditerranéen",
+    imageUrl: "/images/IMG_20240103_095825_1750603939969.jpg",
+    videoUrl: null,
+    date: "2024-01-03"
+  },
+  // Aventures gastronomiques à Kas
+  {
+    id: 53,
+    placeId: 72,
+    title: "Dessert turc traditionnel",
+    description: "Dégustation d'un délicieux gâteau au chocolat, spécialité locale",
+    imageUrl: "/images/IMG_20240101_190146_1750603939969.jpg",
+    videoUrl: null,
+    date: "2024-01-01"
+  },
+  {
+    id: 54,
+    placeId: 72,
+    title: "Repas de famille turc",
+    description: "Découverte de la cuisine authentique turque dans un restaurant local",
+    imageUrl: "/images/IMG_20240103_133714_1750603939969.jpg",
+    videoUrl: null,
+    date: "2024-01-03"
+  },
+  {
+    id: 55,
+    placeId: 72,
+    title: "Moment café en famille",
+    description: "Partage d'un moment convivial autour d'un café turc",
+    imageUrl: "/images/Screenshot_2024-02-03-20-59-38-180_com.miui.gallery_1750603939969.jpg",
+    videoUrl: null,
+    date: "2024-02-03"
+  },
+  // Aventure vie locale à Kas
+  {
+    id: 56,
+    placeId: 73,
+    title: "Chien endormi à Kas",
+    description: "Scène amusante de la vie quotidienne dans les rues du village",
+    imageUrl: "/images/IMG_20240102_140933_1750603939969.jpg",
+    videoUrl: null,
+    date: "2024-01-02"
+  },
+  // Aventures à l'Hippodrome de Vincennes
+  {
+    id: 57,
+    placeId: 74,
+    title: "Jour de courses à Vincennes",
+    description: "Moments en famille aux tribunes de l'hippodrome lors des courses de trot",
+    imageUrl: "/images/Screenshot_2024-02-03-21-02-45-316_com.miui.gallery_1750604037540.jpg",
+    videoUrl: null,
+    date: "2024-02-03"
+  },
+  {
+    id: 58,
+    placeId: 74,
+    title: "Selfie familial aux courses",
+    description: "Souvenir de famille dans l'ambiance festive de l'hippodrome",
+    imageUrl: "/images/Screenshot_2024-02-03-21-02-54-610_com.miui.gallery_1750604037540.jpg",
+    videoUrl: null,
+    date: "2024-02-03"
   }
 ];
 
