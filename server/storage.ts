@@ -102,28 +102,12 @@ export class MemStorage implements IStorage {
       description: "Le berceau de la démocratie et de la philosophie occidentale."
     };
 
-    const japan: Country = {
+    const turkey: Country = {
       id: this.currentCountryId++,
       continentId: asia.id,
-      name: "Japon",
-      slug: "japon",
-      description: "L'harmonie entre tradition et modernité."
-    };
-
-    const thailand: Country = {
-      id: this.currentCountryId++,
-      continentId: asia.id,
-      name: "Thaïlande",
-      slug: "thailande",
-      description: "Le pays du sourire aux temples dorés."
-    };
-
-    const indonesia: Country = {
-      id: this.currentCountryId++,
-      continentId: asia.id,
-      name: "Indonésie",
-      slug: "indonesie",
-      description: "L'archipel aux mille îles tropicales."
+      name: "Turquie",
+      slug: "turquie",
+      description: "Pont entre l'Europe et l'Asie, riche patrimoine historique et paysages variés."
     };
 
     const portugal: Country = {
@@ -137,9 +121,7 @@ export class MemStorage implements IStorage {
     this.countries.set(france.id, france);
     this.countries.set(italy.id, italy);
     this.countries.set(greece.id, greece);
-    this.countries.set(japan.id, japan);
-    this.countries.set(thailand.id, thailand);
-    this.countries.set(indonesia.id, indonesia);
+    this.countries.set(turkey.id, turkey);
     this.countries.set(portugal.id, portugal);
 
     // Seed cities
@@ -207,52 +189,36 @@ export class MemStorage implements IStorage {
       description: "L'île cosmopolite aux moulins à vent."
     };
 
-    const tokyo: City = {
+    const istanbul: City = {
       id: this.currentCityId++,
-      countryId: japan.id,
-      name: "Tokyo",
-      slug: "tokyo",
-      description: "La mégalopole futuriste aux traditions millénaires."
+      countryId: turkey.id,
+      name: "Istanbul",
+      slug: "istanbul",
+      description: "Ville transcontinentale au carrefour de l'Europe et de l'Asie."
     };
 
-    const kyoto: City = {
+    const antalya: City = {
       id: this.currentCityId++,
-      countryId: japan.id,
-      name: "Kyoto",
-      slug: "kyoto",
-      description: "L'ancienne capitale impériale aux temples sacrés."
+      countryId: turkey.id,
+      name: "Antalya",
+      slug: "antalya",
+      description: "Perle de la Riviera turque aux plages méditerranéennes."
     };
 
-    const bangkok: City = {
+    const kas: City = {
       id: this.currentCityId++,
-      countryId: thailand.id,
-      name: "Bangkok",
-      slug: "bangkok",
-      description: "La capitale vibrante aux temples dorés."
+      countryId: turkey.id,
+      name: "Kas",
+      slug: "kas",
+      description: "Charmant village côtier aux eaux turquoise."
     };
 
-    const phuket: City = {
+    const patara: City = {
       id: this.currentCityId++,
-      countryId: thailand.id,
-      name: "Phuket",
-      slug: "phuket",
-      description: "L'île paradisiaque aux plages de rêve."
-    };
-
-    const ubud: City = {
-      id: this.currentCityId++,
-      countryId: indonesia.id,
-      name: "Ubud",
-      slug: "ubud",
-      description: "Le cœur spirituel de Bali entouré de rizières."
-    };
-
-    const jakarta: City = {
-      id: this.currentCityId++,
-      countryId: indonesia.id,
-      name: "Jakarta",
-      slug: "jakarta",
-      description: "La capitale dynamique de l'archipel indonésien."
+      countryId: turkey.id,
+      name: "Patara",
+      slug: "patara",
+      description: "Site antique avec une plage de sable infinie."
     };
 
     this.cities.set(paris.id, paris);
@@ -263,12 +229,10 @@ export class MemStorage implements IStorage {
     this.cities.set(athens.id, athens);
     this.cities.set(santorini.id, santorini);
     this.cities.set(mykonos.id, mykonos);
-    this.cities.set(tokyo.id, tokyo);
-    this.cities.set(kyoto.id, kyoto);
-    this.cities.set(bangkok.id, bangkok);
-    this.cities.set(phuket.id, phuket);
-    this.cities.set(ubud.id, ubud);
-    this.cities.set(jakarta.id, jakarta);
+    this.cities.set(istanbul.id, istanbul);
+    this.cities.set(antalya.id, antalya);
+    this.cities.set(kas.id, kas);
+    this.cities.set(patara.id, patara);
 
     // Seed places
     // Paris places
@@ -540,139 +504,112 @@ export class MemStorage implements IStorage {
       gallery: null
     };
 
-    // Tokyo places
-    const sensoji: Place = {
+    // Istanbul places
+    const hagiaSophia: Place = {
       id: this.currentPlaceId++,
-      cityId: tokyo.id,
-      name: "Temple Sensoji",
-      slug: "temple-sensoji",
-      description: "Le plus ancien temple bouddhiste de Tokyo.",
-      imageUrl: "https://images.unsplash.com/photo-1542051841857-5f90071e7989?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      content: "Le temple Sensoji, dans le quartier d'Asakusa, est un havre de paix traditionnel au cœur de Tokyo moderne.",
-      videoUrl: null,
-      visitDate: new Date('2024-02-08'),
-      gallery: null
-    };
-
-    const shibuya: Place = {
-      id: this.currentPlaceId++,
-      cityId: tokyo.id,
-      name: "Carrefour de Shibuya",
-      slug: "carrefour-shibuya",
-      description: "Le carrefour le plus fréquenté au monde.",
-      imageUrl: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      content: "Le carrefour de Shibuya symbolise l'énergie frénétique de Tokyo avec ses milliers de piétons.",
-      videoUrl: null,
-      visitDate: new Date('2024-02-09'),
-      gallery: null
-    };
-
-    // Kyoto places
-    const kinkakuji: Place = {
-      id: this.currentPlaceId++,
-      cityId: kyoto.id,
-      name: "Kinkaku-ji",
-      slug: "kinkaku-ji",
-      description: "Le Pavillon d'Or, temple zen recouvert de feuilles d'or.",
-      imageUrl: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      content: "Kinkaku-ji, le Pavillon d'Or, est l'un des temples les plus photographiés du Japon.",
-      videoUrl: null,
-      visitDate: new Date('2024-02-10'),
-      gallery: null
-    };
-
-    const bambooGrove: Place = {
-      id: this.currentPlaceId++,
-      cityId: kyoto.id,
-      name: "Forêt de Bambous d'Arashiyama",
-      slug: "foret-bambous-arashiyama",
-      description: "Sentier mystique à travers une forêt de bambous géants.",
-      imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      content: "La forêt de bambous d'Arashiyama offre une expérience zen unique dans un tunnel naturel.",
-      videoUrl: null,
-      visitDate: new Date('2024-02-11'),
-      gallery: null
-    };
-
-    // Bangkok places
-    const grandPalace: Place = {
-      id: this.currentPlaceId++,
-      cityId: bangkok.id,
-      name: "Grand Palais",
-      slug: "grand-palais",
-      description: "Complexe royal somptueux au cœur de Bangkok.",
-      imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      content: "Le Grand Palais de Bangkok éblouit par ses toits dorés et son architecture thaïlandaise traditionnelle.",
-      videoUrl: null,
-      visitDate: new Date('2024-04-01'),
-      gallery: null
-    };
-
-    const watPho: Place = {
-      id: this.currentPlaceId++,
-      cityId: bangkok.id,
-      name: "Wat Pho",
-      slug: "wat-pho",
-      description: "Temple du Bouddha couché et école de massage traditionnel.",
-      imageUrl: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      content: "Wat Pho abrite le plus grand Bouddha couché de Thaïlande et l'école de massage la plus réputée.",
-      videoUrl: null,
-      visitDate: new Date('2024-04-02'),
-      gallery: null
-    };
-
-    // Phuket place
-    const phuketBeach: Place = {
-      id: this.currentPlaceId++,
-      cityId: phuket.id,
-      name: "Plages de Phuket",
-      slug: "plages-phuket",
-      description: "Plages paradisiaques aux eaux cristallines.",
-      imageUrl: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      content: "Les plages de Phuket offrent un paradis tropical avec leurs eaux turquoise et leur sable blanc.",
-      videoUrl: null,
-      visitDate: new Date('2024-04-10'),
-      gallery: null
-    };
-
-    // Ubud places
-    const tegallalang: Place = {
-      id: this.currentPlaceId++,
-      cityId: ubud.id,
-      name: "Rizières de Tegallalang",
-      slug: "rizieres-tegallalang",
-      description: "Terrasses de riz verdoyantes sculptées dans les collines.",
-      imageUrl: "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      content: "Les rizières en terrasses de Tegallalang offrent un paysage agricole d'une beauté époustouflante.",
-      videoUrl: null,
-      visitDate: new Date('2024-03-20'),
-      gallery: null
-    };
-
-    const monkeyForest: Place = {
-      id: this.currentPlaceId++,
-      cityId: ubud.id,
-      name: "Forêt des Singes",
-      slug: "foret-singes",
-      description: "Sanctuaire naturel au cœur d'Ubud.",
-      imageUrl: "https://images.unsplash.com/photo-1580478354055-4091f4a2b5f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      content: "La Forêt des Singes d'Ubud est un espace sacré où nature et spiritualité se rencontrent.",
-      videoUrl: null,
-      visitDate: new Date('2024-03-21'),
-      gallery: null
-    };
-
-    // Jakarta place
-    const monas: Place = {
-      id: this.currentPlaceId++,
-      cityId: jakarta.id,
-      name: "Monument National (Monas)",
-      slug: "monument-national",
-      description: "Symbole de l'indépendance indonésienne.",
-      imageUrl: "https://images.unsplash.com/photo-1555993539-1732b0258c11?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
-      content: "Le Monument National de Jakarta symbolise la lutte pour l'indépendance de l'Indonésie.",
+      cityId: istanbul.id,
+      name: "Sainte-Sophie",
+      slug: "sainte-sophie",
+      description: "Joyau architectural byzantin et ottoman.",
+      imageUrl: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?w=800&h=600&fit=crop",
+      content: "Sainte-Sophie, merveille architecturale, témoigne de l'histoire byzantine et ottomane d'Istanbul.",
       videoUrl: null,
       visitDate: new Date('2024-04-15'),
+      gallery: null
+    };
+
+    const grandBazaar: Place = {
+      id: this.currentPlaceId++,
+      cityId: istanbul.id,
+      name: "Grand Bazar",
+      slug: "grand-bazar",
+      description: "Marché couvert historique aux mille boutiques.",
+      imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+      content: "Le Grand Bazar d'Istanbul, avec ses 4000 boutiques, est l'un des plus anciens marchés couverts au monde.",
+      videoUrl: null,
+      visitDate: new Date('2024-04-16'),
+      gallery: null
+    };
+
+    // Antalya places
+    const kaleici: Place = {
+      id: this.currentPlaceId++,
+      cityId: antalya.id,
+      name: "Vieille Ville Kaleiçi",
+      slug: "kaleici",
+      description: "Centre historique aux ruelles ottomanes.",
+      imageUrl: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&h=600&fit=crop",
+      content: "Kaleiçi, le cœur historique d'Antalya, dévoile ses ruelles pavées et son architecture ottomane préservée.",
+      videoUrl: null,
+      visitDate: new Date('2024-06-01'),
+      gallery: null
+    };
+
+    const antalyaBeaches: Place = {
+      id: this.currentPlaceId++,
+      cityId: antalya.id,
+      name: "Plages d'Antalya",
+      slug: "plages-antalya",
+      description: "Côte méditerranéenne aux eaux cristallines.",
+      imageUrl: "https://images.unsplash.com/photo-1597149405940-64b3dc2ce4a7?w=800&h=600&fit=crop",
+      content: "Les plages d'Antalya offrent un cadre idyllique sur la Riviera turque avec leurs eaux turquoise.",
+      videoUrl: null,
+      visitDate: new Date('2024-06-02'),
+      gallery: null
+    };
+
+    // Kas places
+    const kasPort: Place = {
+      id: this.currentPlaceId++,
+      cityId: kas.id,
+      name: "Port de Kas",
+      slug: "port-kas",
+      description: "Charmant port de pêche aux maisons colorées.",
+      imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+      content: "Le port de Kas, avec ses maisons colorées et son ambiance authentique, incarne le charme méditerranéen.",
+      videoUrl: null,
+      visitDate: new Date('2024-06-10'),
+      gallery: null
+    };
+
+    const kekova: Place = {
+      id: this.currentPlaceId++,
+      cityId: kas.id,
+      name: "Île de Kekova",
+      slug: "ile-kekova",
+      description: "Site archéologique submergé unique.",
+      imageUrl: "https://images.unsplash.com/photo-1597149405940-64b3dc2ce4a7?w=800&h=600&fit=crop",
+      content: "L'île de Kekova révèle ses vestiges antiques submergés, témoins de l'histoire lycienne.",
+      videoUrl: null,
+      visitDate: new Date('2024-06-11'),
+      gallery: null
+    };
+
+
+
+    const pataraBeach: Place = {
+      id: this.currentPlaceId++,
+      cityId: patara.id,
+      name: "Plage de Patara",
+      slug: "plage-patara",
+      description: "Plage de sable infinie et protégée.",
+      imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+      content: "La plage de Patara s'étend sur 18 kilomètres de sable doré, refuge des tortues caouannes.",
+      videoUrl: null,
+      visitDate: new Date('2024-06-15'),
+      gallery: null
+    };
+
+    const pataraRuins: Place = {
+      id: this.currentPlaceId++,
+      cityId: patara.id,
+      name: "Ruines de Patara",
+      slug: "ruines-patara",
+      description: "Cité antique lycienne bien préservée.",
+      imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+      content: "Les ruines de Patara dévoilent l'ancienne capitale de la Lycie avec son théâtre et ses monuments antiques.",
+      videoUrl: null,
+      visitDate: new Date('2024-06-16'),
       gallery: null
     };
 
@@ -694,16 +631,14 @@ export class MemStorage implements IStorage {
     this.places.set(oia.id, oia);
     this.places.set(fira.id, fira);
     this.places.set(mykonosBeach.id, mykonosBeach);
-    this.places.set(sensoji.id, sensoji);
-    this.places.set(shibuya.id, shibuya);
-    this.places.set(kinkakuji.id, kinkakuji);
-    this.places.set(bambooGrove.id, bambooGrove);
-    this.places.set(grandPalace.id, grandPalace);
-    this.places.set(watPho.id, watPho);
-    this.places.set(phuketBeach.id, phuketBeach);
-    this.places.set(tegallalang.id, tegallalang);
-    this.places.set(monkeyForest.id, monkeyForest);
-    this.places.set(monas.id, monas);
+    this.places.set(hagiaSophia.id, hagiaSophia);
+    this.places.set(grandBazaar.id, grandBazaar);
+    this.places.set(kaleici.id, kaleici);
+    this.places.set(antalyaBeaches.id, antalyaBeaches);
+    this.places.set(kasPort.id, kasPort);
+    this.places.set(kekova.id, kekova);
+    this.places.set(pataraBeach.id, pataraBeach);
+    this.places.set(pataraRuins.id, pataraRuins);
 
     // Seed adventures
     const adventure1: Adventure = {

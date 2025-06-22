@@ -173,35 +173,13 @@ export const countries: Country[] = [
   {
     id: 4,
     continentId: 2,
-    name: "Japon",
-    slug: "japon",
-    description: "Empire du Soleil Levant, mélange parfait de tradition et modernité",
-    imageUrl: "https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=800&h=600&fit=crop",
-    capital: "Tokyo",
-    language: "Japonais",
-    currency: "Yen"
-  },
-  {
-    id: 5,
-    continentId: 2,
-    name: "Thaïlande",
-    slug: "thailande",
-    description: "Pays du sourire aux temples dorés et plages cristallines",
-    imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
-    capital: "Bangkok",
-    language: "Thaï",
-    currency: "Baht"
-  },
-  {
-    id: 6,
-    continentId: 2,
-    name: "Indonésie",
-    slug: "indonesie",
-    description: "Archipel aux mille îles et cultures diverses",
-    imageUrl: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=800&h=600&fit=crop",
-    capital: "Jakarta",
-    language: "Indonésien",
-    currency: "Roupie"
+    name: "Turquie",
+    slug: "turquie",
+    description: "Pont entre l'Europe et l'Asie, riche patrimoine historique et paysages variés",
+    imageUrl: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?w=800&h=600&fit=crop",
+    capital: "Ankara",
+    language: "Turc",
+    currency: "Livre turque"
   }
 ];
 
@@ -297,74 +275,50 @@ export const cities: City[] = [
     founded: "Antiquité",
     climate: "Méditerranéen"
   },
-  // Japon
+  // Turquie
   {
     id: 9,
     countryId: 4,
-    name: "Tokyo",
-    slug: "tokyo",
-    description: "Mégalopole futuriste entre tradition et modernité",
-    imageUrl: "https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=800&h=600&fit=crop",
-    population: 13960000,
-    founded: "1457",
+    name: "Istanbul",
+    slug: "istanbul",
+    description: "Ville transcontinentale au carrefour de l'Europe et de l'Asie",
+    imageUrl: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?w=800&h=600&fit=crop",
+    population: 15462452,
+    founded: "660 av. J.-C.",
     climate: "Subtropical humide"
   },
   {
     id: 10,
     countryId: 4,
-    name: "Kyoto",
-    slug: "kyoto",
-    description: "Ancienne capitale impériale aux temples millénaires",
-    imageUrl: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&h=600&fit=crop",
-    population: 1475183,
-    founded: "794",
-    climate: "Subtropical humide"
+    name: "Antalya",
+    slug: "antalya",
+    description: "Perle de la Riviera turque aux plages méditerranéennes",
+    imageUrl: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&h=600&fit=crop",
+    population: 2548308,
+    founded: "150 av. J.-C.",
+    climate: "Méditerranéen"
   },
-  // Thaïlande
   {
     id: 11,
-    countryId: 5,
-    name: "Bangkok",
-    slug: "bangkok",
-    description: "Capitale vibrante aux temples dorés et marchés flottants",
-    imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
-    population: 10539000,
-    founded: "1782",
-    climate: "Tropical"
+    countryId: 4,
+    name: "Kas",
+    slug: "kas",
+    description: "Charmant village côtier aux eaux turquoise",
+    imageUrl: "https://images.unsplash.com/photo-1597149405940-64b3dc2ce4a7?w=800&h=600&fit=crop",
+    population: 8000,
+    founded: "4e siècle av. J.-C.",
+    climate: "Méditerranéen"
   },
   {
     id: 12,
-    countryId: 5,
-    name: "Phuket",
-    slug: "phuket",
-    description: "Perle d'Andaman aux plages paradisiaques",
-    imageUrl: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&h=600&fit=crop",
-    population: 416582,
-    founded: "1er siècle",
-    climate: "Tropical"
-  },
-  // Indonésie
-  {
-    id: 13,
-    countryId: 6,
-    name: "Ubud",
-    slug: "ubud",
-    description: "Cœur spirituel de Bali entre rizières et forêts",
-    imageUrl: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=800&h=600&fit=crop",
-    population: 74320,
-    founded: "8e siècle",
-    climate: "Tropical équatorial"
-  },
-  {
-    id: 14,
-    countryId: 6,
-    name: "Jakarta",
-    slug: "jakarta",
-    description: "Capitale cosmopolite de l'archipel indonésien",
-    imageUrl: "https://images.unsplash.com/photo-1555212697-194d092e3b8f?w=800&h=600&fit=crop",
-    population: 10770000,
-    founded: "397",
-    climate: "Tropical"
+    countryId: 4,
+    name: "Patara",
+    slug: "patara",
+    description: "Site antique avec une plage de sable infinie",
+    imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+    population: 1000,
+    founded: "7e siècle av. J.-C.",
+    climate: "Méditerranéen"
   }
 ];
 
@@ -593,130 +547,104 @@ export const places: Place[] = [
     activities: ["Plage", "Sports nautiques", "Beach clubs"],
     gallery: null
   },
-  // Tokyo
+  // Istanbul
   {
     id: 12,
     cityId: 9,
-    name: "Temple Sensoji",
-    slug: "temple-sensoji",
-    description: "Plus ancien temple de Tokyo à Asakusa",
-    imageUrl: "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=800&h=600&fit=crop",
-    coordinates: "35.7148, 139.7967",
+    name: "Sainte-Sophie",
+    slug: "sainte-sophie",
+    description: "Joyau architectural byzantin et ottoman",
+    imageUrl: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?w=800&h=600&fit=crop",
+    coordinates: "41.0086, 28.9802",
     bestTime: "Matinée",
-    activities: ["Temple", "Marché traditionnel", "Culture"],
+    activities: ["Architecture", "Histoire", "Spiritualité"],
     gallery: null
   },
   {
     id: 13,
     cityId: 9,
-    name: "Shibuya Crossing",
-    slug: "shibuya-crossing",
-    description: "Carrefour le plus fréquenté du monde",
-    imageUrl: "https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=800&h=600&fit=crop",
-    coordinates: "35.6598, 139.7006",
-    bestTime: "Soirée",
-    activities: ["Observation", "Shopping", "Néons"],
+    name: "Grand Bazar",
+    slug: "grand-bazar",
+    description: "Marché couvert historique aux mille boutiques",
+    imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+    coordinates: "41.0106, 28.9681",
+    bestTime: "Après-midi",
+    activities: ["Shopping", "Artisanat", "Thé turc"],
     gallery: null
   },
-  // Kyoto
+  // Antalya
   {
     id: 14,
     cityId: 10,
-    name: "Kinkaku-ji",
-    slug: "kinkaku-ji",
-    description: "Pavillon d'Or aux reflets dorés",
-    imageUrl: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&h=600&fit=crop",
-    coordinates: "35.0394, 135.7292",
-    bestTime: "Matinée",
-    activities: ["Temple", "Jardins", "Méditation"],
+    name: "Vieille Ville Kaleiçi",
+    slug: "kaleici",
+    description: "Centre historique aux ruelles ottomanes",
+    imageUrl: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&h=600&fit=crop",
+    coordinates: "36.8841, 30.7056",
+    bestTime: "Soirée",
+    activities: ["Histoire", "Restaurants", "Port"],
     gallery: null
   },
   {
     id: 15,
     cityId: 10,
-    name: "Forêt de Bambous",
-    slug: "foret-bambous",
-    description: "Tunnel mystique de bambous géants",
-    imageUrl: "https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?w=800&h=600&fit=crop",
-    coordinates: "35.0170, 135.6719",
-    bestTime: "Matinée",
-    activities: ["Promenade", "Photos", "Nature"],
+    name: "Plages d'Antalya",
+    slug: "plages-antalya",
+    description: "Côte méditerranéenne aux eaux cristallines",
+    imageUrl: "https://images.unsplash.com/photo-1597149405940-64b3dc2ce4a7?w=800&h=600&fit=crop",
+    coordinates: "36.8969, 30.7133",
+    bestTime: "Journée",
+    activities: ["Plage", "Natation", "Sports nautiques"],
     gallery: null
   },
-  // Bangkok
+  // Kas
   {
     id: 16,
     cityId: 11,
-    name: "Grand Palais",
-    slug: "grand-palais",
-    description: "Complexe royal aux temples dorés",
-    imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
-    coordinates: "13.7500, 100.4915",
-    bestTime: "Matinée",
-    activities: ["Palais royal", "Temples", "Architecture"],
+    name: "Port de Kas",
+    slug: "port-kas",
+    description: "Charmant port de pêche aux maisons colorées",
+    imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+    coordinates: "36.2021, 29.6417",
+    bestTime: "Coucher de soleil",
+    activities: ["Port", "Restaurants", "Plongée"],
     gallery: null
   },
   {
     id: 17,
     cityId: 11,
-    name: "Wat Pho",
-    slug: "wat-pho",
-    description: "Temple du Bouddha couché et massage traditionnel",
-    imageUrl: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=800&h=600&fit=crop",
-    coordinates: "13.7468, 100.4926",
-    bestTime: "Matinée",
-    activities: ["Temple", "Massage thaï", "Spiritualité"],
+    name: "Île de Kekova",
+    slug: "ile-kekova",
+    description: "Site archéologique submergé unique",
+    imageUrl: "https://images.unsplash.com/photo-1597149405940-64b3dc2ce4a7?w=800&h=600&fit=crop",
+    coordinates: "36.1833, 29.8667",
+    bestTime: "Journée",
+    activities: ["Kayak", "Archéologie", "Snorkeling"],
     gallery: null
   },
-  // Phuket
+  // Patara
   {
     id: 18,
     cityId: 12,
-    name: "Plages de Phuket",
-    slug: "plages-phuket",
-    description: "Plages paradisiaques de la mer d'Andaman",
-    imageUrl: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=800&h=600&fit=crop",
-    coordinates: "7.8804, 98.3923",
+    name: "Plage de Patara",
+    slug: "plage-patara",
+    description: "Plage de sable infinie et protégée",
+    imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+    coordinates: "36.2667, 29.3167",
     bestTime: "Journée",
-    activities: ["Plage", "Plongée", "Massage"],
+    activities: ["Plage", "Nature", "Tortues de mer"],
     gallery: null
   },
-  // Ubud
   {
     id: 19,
-    cityId: 13,
-    name: "Rizières de Tegallalang",
-    slug: "rizieres-tegallalang",
-    description: "Terrasses de riz verdoyantes en escalier",
-    imageUrl: "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=800&h=600&fit=crop",
-    coordinates: "-8.4340, 115.2840",
+    cityId: 12,
+    name: "Ruines de Patara",
+    slug: "ruines-patara",
+    description: "Cité antique lycienne bien préservée",
+    imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+    coordinates: "36.2683, 29.3175",
     bestTime: "Matinée",
-    activities: ["Rizières", "Photos", "Balançoire"],
-    gallery: null
-  },
-  {
-    id: 20,
-    cityId: 13,
-    name: "Forêt des Singes",
-    slug: "foret-singes",
-    description: "Sanctuaire naturel des macaques sacrés",
-    imageUrl: "https://images.unsplash.com/photo-1597149756086-c75e5f64ca6d?w=800&h=600&fit=crop",
-    coordinates: "-8.5169, 115.2584",
-    bestTime: "Matinée",
-    activities: ["Faune", "Temple", "Nature"],
-    gallery: null
-  },
-  // Jakarta
-  {
-    id: 21,
-    cityId: 14,
-    name: "Monas",
-    slug: "monas",
-    description: "Monument national symbole de l'indépendance",
-    imageUrl: "https://images.unsplash.com/photo-1555212697-194d092e3b8f?w=800&h=600&fit=crop",
-    coordinates: "-6.1754, 106.8272",
-    bestTime: "Soirée",
-    activities: ["Monument", "Panorama", "Musée"],
+    activities: ["Archéologie", "Histoire", "Photos"],
     gallery: null
   }
 ];
