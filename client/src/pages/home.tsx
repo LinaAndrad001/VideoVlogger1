@@ -84,7 +84,7 @@ export default function Home() {
                 </div>
                 
                 {/* Bouton continent */}
-                <Link href={`/continent/${continent.slug}`}>
+                <Link href={`/${continent.slug}`}>
                   <button className="neon-button px-8 py-4 text-lg neon-glow-hover min-w-[200px]">
                     {continent.name}
                   </button>

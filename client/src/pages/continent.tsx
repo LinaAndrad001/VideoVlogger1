@@ -7,8 +7,6 @@ import type { Continent, Country } from "@/lib/static-data";
 export default function ContinentPage() {
   const { continentSlug } = useParams<{ continentSlug: string }>();
 
-  console.log("ContinentPage - continentSlug:", continentSlug);
-
   if (!continentSlug) {
     return (
       <div className="min-h-screen bg-pure-black flex items-center justify-center">
@@ -18,9 +16,7 @@ export default function ContinentPage() {
   }
 
   const continent = getContinentBySlug(continentSlug);
-  console.log("ContinentPage - continent found:", continent);
   const countries = continent ? getCountriesByContinent(continent.id) : [];
-  console.log("ContinentPage - countries found:", countries);
 
   if (!continent) {
     return (
