@@ -115,7 +115,7 @@ export default function ContinentPage() {
                     </div>
                     
                     {/* Visit Button */}
-                    <Link href={`/continent/${continentSlug}/country/${country.slug}`}>
+                    <Link href={`/${continentSlug}/${country.slug}`}>
                       <button className="w-full neon-button py-2 text-sm neon-glow-hover">
                         Explorer {country.name}
                       </button>

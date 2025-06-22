@@ -40,7 +40,7 @@ export default function CountryPage() {
             </button>
           </Link>
           <span className="text-neon-cyan opacity-50">→</span>
-          <Link href={`/continent/${continentSlug}`}>
+          <Link href={`/${continentSlug}`}>
             <button className="text-neon-cyan hover:text-neon-purple transition-colors">
               {continent.name}
             </button>
@@ -88,7 +88,7 @@ export default function CountryPage() {
                     </p>
                     
                     {/* Visit Button */}
-                    <Link href={`/continent/${continentSlug}/country/${countrySlug}/city/${city.slug}`}>
+                    <Link href={`/${continentSlug}/${countrySlug}/${city.slug}`}>
                       <button className="w-full neon-button py-2 text-sm neon-glow-hover">
                         Découvrir {city.name}
                       </button>
