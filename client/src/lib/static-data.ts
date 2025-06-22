@@ -455,6 +455,18 @@ export const places: Place[] = [
     ]
   },
   {
+    id: 77,
+    cityId: 1,
+    name: "Rues de Paris",
+    slug: "rues-paris",
+    description: "Promenades dans les rues authentiques de la capitale",
+    imageUrl: "/images/IMG_20240901_174257.jpg",
+    coordinates: "48.8566, 2.3522",
+    bestTime: "Journée",
+    activities: ["Promenade urbaine", "Découverte", "Photos"],
+    gallery: ["/images/IMG_20240901_174257.jpg"]
+  },
+  {
     id: 54,
     cityId: 1,
     name: "Conciergerie",
@@ -503,7 +515,6 @@ export const places: Place[] = [
     bestTime: "Matinée",
     activities: ["Nature", "Promenade", "Détente"],
     gallery: [
-      "/images/IMG_20240901_174257.jpg",
       "/images/IMG_20240721_134557.jpg",
       "/images/IMG_20240721_125649_1750606556615.jpg",
       "/images/IMG_20240721_125659_1750606556615.jpg",
@@ -1224,9 +1235,9 @@ export const adventures: Adventure[] = [
   // Aventures à Ecluzelles enrichies
   {
     id: 61,
-    placeId: 4,
-    title: "Promenade d'été au bord de l'Eure",
-    description: "Découverte des paysages verdoyants d'Ecluzelles",
+    placeId: 77,
+    title: "Promenade dans les rues de Paris",
+    description: "Découverte des quartiers authentiques de la capitale",
     imageUrl: "/images/IMG_20240901_174257.jpg",
     videoUrl: null,
     date: "2024-09-01"
@@ -1289,18 +1300,18 @@ export const adventures: Adventure[] = [
   {
     id: 66,
     placeId: 75,
-    title: "Fermier et son agneau",
-    description: "Rencontre authentique avec la vie agricole traditionnelle",
-    imageUrl: "/images/Screenshot_2023-12-19-14-25-03-437_com.google.android.apps.photos_1750605554821.jpg",
+    title: "Grand-père et l'agneau",
+    description: "Moment touchant entre grand-père et son petit compagnon à quatre pattes",
+    imageUrl: "/images/Screenshot_2023-12-19-14-25-03-437_com.google.android.apps.photos_1750606521887.jpg",
     videoUrl: null,
     date: "2023-12-19"
   },
   {
     id: 67,
     placeId: 75,
-    title: "Petit agneau blanc",
-    description: "Tendresse et innocence dans la ferme chartraine",
-    imageUrl: "/images/IMG_20240714_165754_1750605554821.jpg",
+    title: "Petit chevreau blanc",
+    description: "Adorable chevreau blanc dans son environnement naturel",
+    imageUrl: "/images/IMG_20240714_165754_1750606521887.jpg",
     videoUrl: null,
     date: "2024-07-14"
   },
