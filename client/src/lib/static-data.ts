@@ -304,7 +304,7 @@ export const cities: City[] = [
     name: "Kas",
     slug: "kas",
     description: "Charmant village côtier aux eaux turquoise",
-    imageUrl: "https://images.unsplash.com/photo-1597149405940-64b3dc2ce4a7?w=800&h=600&fit=crop",
+    imageUrl: "/images/IMG_20231225_140022_1750602067266.jpg",
     population: 8000,
     founded: "4e siècle av. J.-C.",
     climate: "Méditerranéen"
@@ -604,23 +604,44 @@ export const places: Place[] = [
     name: "Port de Kas",
     slug: "port-kas",
     description: "Charmant port de pêche aux maisons colorées",
-    imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+    imageUrl: "/images/IMG_20231226_134146_1750602086631.jpg",
     coordinates: "36.2021, 29.6417",
     bestTime: "Coucher de soleil",
     activities: ["Port", "Restaurants", "Plongée"],
-    gallery: null
+    gallery: [
+      "/images/IMG_20231226_134146_1750602086631.jpg",
+      "/images/IMG_20231228_105233_1750602086631.jpg"
+    ]
   },
   {
     id: 17,
     cityId: 11,
-    name: "Île de Kekova",
-    slug: "ile-kekova",
-    description: "Site archéologique submergé unique",
-    imageUrl: "https://images.unsplash.com/photo-1597149405940-64b3dc2ce4a7?w=800&h=600&fit=crop",
-    coordinates: "36.1833, 29.8667",
-    bestTime: "Journée",
-    activities: ["Kayak", "Archéologie", "Snorkeling"],
-    gallery: null
+    name: "Plage de Kas",
+    slug: "plage-kas",
+    description: "Magnifique plage aux eaux cristallines avec vue sur les îles",
+    imageUrl: "/images/IMG_20231228_155645_1750602086631.jpg",
+    coordinates: "36.2021, 29.6417",
+    bestTime: "Après-midi",
+    activities: ["Plage", "Baignade", "Détente"],
+    gallery: [
+      "/images/IMG_20231228_155645_1750602086631.jpg",
+      "/images/IMG_20231228_142307_1750602086631.jpg"
+    ]
+  },
+  {
+    id: 70,
+    cityId: 11,
+    name: "Vue panoramique de Kas",
+    slug: "vue-panoramique-kas",
+    description: "Points de vue spectaculaires sur la côte méditerranéenne",
+    imageUrl: "/images/IMG_20231228_105901_1750602086631.jpg",
+    coordinates: "36.2021, 29.6417",
+    bestTime: "Matin",
+    activities: ["Randonnée", "Photos", "Vue panoramique"],
+    gallery: [
+      "/images/IMG_20231228_105901_1750602086631.jpg",
+      "/images/IMG_20231225_140022_1750602067266.jpg"
+    ]
   },
   // Patara
   {
@@ -871,6 +892,79 @@ export const adventures: Adventure[] = [
     imageUrl: "/images/AirBrush_20250516185456_1750598866707.jpg",
     videoUrl: null,
     date: "2025-05-16"
+  },
+  // Aventures à Kas
+  {
+    id: 36,
+    placeId: 16,
+    title: "Centre animé de Kas",
+    description: "Promenade dans les rues du charmant village côtier avec ses boutiques locales",
+    imageUrl: "/images/IMG_20231226_134146_1750602086631.jpg",
+    videoUrl: null,
+    date: "2023-12-26"
+  },
+  {
+    id: 37,
+    placeId: 16,
+    title: "Portrait à Kas",
+    description: "Moment personnel dans le décor authentique du village méditerranéen",
+    imageUrl: "/images/IMG_20231228_105233_1750602086631.jpg",
+    videoUrl: null,
+    date: "2023-12-28"
+  },
+  {
+    id: 38,
+    placeId: 70,
+    title: "Vue panoramique sur la côte",
+    description: "Point de vue spectaculaire sur la Méditerranée et les montagnes",
+    imageUrl: "/images/IMG_20231228_105901_1750602086631.jpg",
+    videoUrl: null,
+    date: "2023-12-28"
+  },
+  {
+    id: 39,
+    placeId: 17,
+    title: "Moments en famille à la plage",
+    description: "Détente et complicité sur la magnifique plage de Kas",
+    imageUrl: "/images/IMG_20231228_142307_1750602086631.jpg",
+    videoUrl: null,
+    date: "2023-12-28"
+  },
+  {
+    id: 40,
+    placeId: 17,
+    title: "Paradis de la plage de Kas",
+    description: "Eaux cristallines et plage de sable fin avec vue sur les îles",
+    imageUrl: "/images/IMG_20231228_155645_1750602086631.jpg",
+    videoUrl: null,
+    date: "2023-12-28"
+  },
+  {
+    id: 41,
+    placeId: 16,
+    title: "Saveurs locales de Kas",
+    description: "Dégustation de la cuisine turque authentique dans un restaurant local",
+    imageUrl: "/images/IMG_20231228_164736_1750602086631.jpg",
+    videoUrl: null,
+    date: "2023-12-28"
+  },
+  {
+    id: 42,
+    placeId: 16,
+    title: "Site historique près de Kas",
+    description: "Exploration des vestiges antiques dans les environs du village",
+    imageUrl: "/images/IMG_20231229_180636_1750602086631.jpg",
+    videoUrl: null,
+    date: "2023-12-29"
+  },
+  {
+    id: 43,
+    placeId: 16,
+    title: "Petit-déjeuner matinal à Kas",
+    description: "Moments de partage autour d'un petit-déjeuner turc traditionnel",
+    imageUrl: "/images/IMG_20231230_084948_1750602086631.jpg",
+    videoUrl: null,
+    date: "2023-12-30"
   }
 ];
 
