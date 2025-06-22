@@ -408,14 +408,14 @@ export const places: Place[] = [
     name: "Sacré-Cœur",
     slug: "sacre-coeur",
     description: "Basilique emblématique de Montmartre offrant une vue panoramique sur Paris",
-    imageUrl: "/images/IMG_20250516_164453.jpg",
+    imageUrl: "/attached_assets/IMG_20250516_164453_1750598866707.jpg",
     coordinates: "48.8867, 2.3431",
     bestTime: "Fin d'après-midi",
     activities: ["Visite religieuse", "Vue panoramique", "Montmartre"],
     gallery: [
-      "/attached_assets/AirBrush_20250516185456_1750250547182.jpg",
-      "/attached_assets/IMG_20250516_164453_1750250547182.jpg",
-      "/attached_assets/SL-5927_29_31_1750250547182.jpg"
+      "/attached_assets/IMG_20250516_164453_1750598866707.jpg",
+      "/attached_assets/SL-5927_29_31_1750598866707.jpg",
+      "/attached_assets/AirBrush_20250516185456_1750598866707.jpg"
     ]
   },
   {
@@ -915,6 +915,34 @@ export const adventures: Adventure[] = [
     imageUrl: "/attached_assets/WhatsApp Image 2025-06-18 à 14.19.42_d8056c8a_1750596752254.jpg",
     videoUrl: null,
     date: "2025-06-03"
+  },
+  // Aventures au Sacré-Cœur
+  {
+    id: 33,
+    placeId: 50,
+    title: "Basilique du Sacré-Cœur et ses visiteurs",
+    description: "Vue emblématique de la basilique avec la foule sur les marches de Montmartre",
+    imageUrl: "/attached_assets/IMG_20250516_164453_1750598866707.jpg",
+    videoUrl: null,
+    date: "2025-05-16"
+  },
+  {
+    id: 34,
+    placeId: 50,
+    title: "Intérieur somptueux du Sacré-Cœur",
+    description: "Architecture intérieure magnifique avec ses colonnes et vitraux colorés",
+    imageUrl: "/attached_assets/SL-5927_29_31_1750598866707.jpg",
+    videoUrl: null,
+    date: "2025-05-16"
+  },
+  {
+    id: 35,
+    placeId: 50,
+    title: "Moment personnel au Sacré-Cœur",
+    description: "Pause détente devant la basilique emblématique de Montmartre",
+    imageUrl: "/attached_assets/AirBrush_20250516185456_1750598866707.jpg",
+    videoUrl: null,
+    date: "2025-05-16"
   }
 ];
 
