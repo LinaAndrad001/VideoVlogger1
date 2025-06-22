@@ -218,6 +218,17 @@ export const cities: City[] = [
     founded: "XIe siècle",
     climate: "Océanique"
   },
+  {
+    id: 13,
+    countryId: 1,
+    name: "Chartres",
+    slug: "chartres",
+    description: "Ville historique célèbre pour sa cathédrale gothique",
+    imageUrl: "/images/Screenshot_2023-12-19-14-24-58-392_com.google.android.apps.photos_1750605554821.jpg",
+    population: 38000,
+    founded: "Antiquité",
+    climate: "Océanique tempéré"
+  },
   // Italie
   {
     id: 4,
@@ -329,12 +340,16 @@ export const places: Place[] = [
     cityId: 1,
     name: "Tour Eiffel",
     slug: "tour-eiffel",
-    description: "Monument emblématique de Paris et de la France",
-    imageUrl: "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?w=800&h=600&fit=crop",
+    description: "Symbole iconique de Paris et monument le plus visité au monde",
+    imageUrl: "/images/IMG_20231202_074800.jpg",
     coordinates: "48.8584, 2.2945",
-    bestTime: "Coucher de soleil",
-    activities: ["Photos", "Restaurant", "Ascension"],
-    gallery: null
+    bestTime: "Soirée pour l'illumination",
+    activities: ["Photos", "Vue panoramique", "Histoire"],
+    gallery: [
+      "/images/IMG_20231202_074800.jpg",
+      "/images/IMG_20231202_120333_1750605502381.jpg",
+      "/images/IMG_20231202_120936_1750605502381.jpg"
+    ]
   },
   {
     id: 2,
