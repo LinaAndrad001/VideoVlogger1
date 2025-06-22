@@ -640,7 +640,9 @@ export const places: Place[] = [
     activities: ["Randonnée", "Photos", "Vue panoramique"],
     gallery: [
       "/images/IMG_20231228_105901_1750602086631.jpg",
-      "/images/IMG_20231225_140022_1750602067266.jpg"
+      "/images/IMG_20231225_140022_1750602067266.jpg",
+      "/images/IMG_20231231_144651_1750603108151.jpg",
+      "/images/IMG_20231231_150429(1)_1750603108152.jpg"
     ]
   },
   // Patara
@@ -650,11 +652,31 @@ export const places: Place[] = [
     name: "Plage de Patara",
     slug: "plage-patara",
     description: "Plage de sable infinie et protégée",
-    imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+    imageUrl: "/images/IMG_20231230_135950_1750603034995.jpg",
     coordinates: "36.2667, 29.3167",
     bestTime: "Journée",
     activities: ["Plage", "Nature", "Tortues de mer"],
-    gallery: null
+    gallery: [
+      "/images/IMG_20231230_135950_1750603034995.jpg",
+      "/images/IMG_20231230_140126_1750603034996.jpg",
+      "/images/IMG_20231230_140342_1750603034996.jpg",
+      "/images/IMG_20231230_140744_1750603034996.jpg"
+    ]
+  },
+  {
+    id: 71,
+    cityId: 12,
+    name: "Dunes de Patara",
+    slug: "dunes-patara",
+    description: "Immenses dunes de sable doré face à la Méditerranée",
+    imageUrl: "/images/IMG_20231230_141958_1750603034996.jpg",
+    coordinates: "36.2667, 29.3167",
+    bestTime: "Fin d'après-midi",
+    activities: ["Randonnée", "Photos", "Nature"],
+    gallery: [
+      "/images/IMG_20231230_141958_1750603034996.jpg",
+      "/images/IMG_20231230_142932_1750603034996.jpg"
+    ]
   },
   {
     id: 19,
@@ -965,6 +987,80 @@ export const adventures: Adventure[] = [
     imageUrl: "/images/IMG_20231230_084948_1750602086631.jpg",
     videoUrl: null,
     date: "2023-12-30"
+  },
+  // Aventures à Patara
+  {
+    id: 44,
+    placeId: 18,
+    title: "Exploration des dunes de Patara",
+    description: "Moment de détente et de contemplation sur les immenses dunes de sable",
+    imageUrl: "/images/IMG_20231230_135950_1750603034995.jpg",
+    videoUrl: null,
+    date: "2023-12-30"
+  },
+  {
+    id: 45,
+    placeId: 18,
+    title: "Complicité sur les dunes",
+    description: "Moments de partage en famille sur les dunes dorées de Patara",
+    imageUrl: "/images/IMG_20231230_140126_1750603034996.jpg",
+    videoUrl: null,
+    date: "2023-12-30"
+  },
+  {
+    id: 46,
+    placeId: 18,
+    title: "Liberté sur les dunes",
+    description: "Expression de joie et de liberté face à l'immensité du paysage",
+    imageUrl: "/images/IMG_20231230_140342_1750603034996.jpg",
+    videoUrl: null,
+    date: "2023-12-30"
+  },
+  {
+    id: 47,
+    placeId: 18,
+    title: "Portrait en couple à Patara",
+    description: "Moment romantique sur les dunes avec vue sur les montagnes",
+    imageUrl: "/images/IMG_20231230_140744_1750603034996.jpg",
+    videoUrl: null,
+    date: "2023-12-30"
+  },
+  {
+    id: 48,
+    placeId: 71,
+    title: "Contemplation depuis les dunes",
+    description: "Vue paisible sur le paysage naturel préservé de Patara",
+    imageUrl: "/images/IMG_20231230_141958_1750603034996.jpg",
+    videoUrl: null,
+    date: "2023-12-30"
+  },
+  {
+    id: 49,
+    placeId: 71,
+    title: "Paysage sauvage de Patara",
+    description: "Nature préservée avec dunes et végétation méditerranéenne",
+    imageUrl: "/images/IMG_20231230_142932_1750603034996.jpg",
+    videoUrl: null,
+    date: "2023-12-30"
+  },
+  // Nouvelles aventures pour Vue panoramique de Kas
+  {
+    id: 50,
+    placeId: 70,
+    title: "Contemplation face à la Méditerranée",
+    description: "Moment de sérénité avec vue panoramique sur les îles turques",
+    imageUrl: "/images/IMG_20231231_144651_1750603108151.jpg",
+    videoUrl: null,
+    date: "2023-12-31"
+  },
+  {
+    id: 51,
+    placeId: 70,
+    title: "Coucher de soleil depuis Kas",
+    description: "Lumière dorée sur la mer Méditerranée et les îles au loin",
+    imageUrl: "/images/IMG_20231231_150429(1)_1750603108152.jpg",
+    videoUrl: null,
+    date: "2023-12-31"
   }
 ];
 
