@@ -110,6 +110,31 @@ export default function PlacePage() {
         </div>
       </section>
 
+      {/* Gallery Section */}
+      {place.gallery && place.gallery.length > 0 && (
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 neon-shimmer">
+              Galerie de photos
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              {place.gallery.map((imageUrl: string, index: number) => (
+                <div key={index} className="group">
+                  <div className="border-2 border-neon-cyan neon-glow overflow-hidden group-hover:border-neon-purple transition-all duration-300">
+                    <img 
+                      src={imageUrl}
+                      alt={`${place.name} - Photo ${index + 1}`}
+                      className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Adventures Section */}
       {adventures.length > 0 && (
         <section className="py-16">
