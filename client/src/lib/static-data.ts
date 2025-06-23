@@ -479,6 +479,20 @@ export const places: Place[] = [
     activities: ["Promenade urbaine", "Architecture parisienne", "Vie locale"],
     gallery: null
   },
+  {
+    id: 56,
+    cityId: 1,
+    name: "Institut de France",
+    slug: "institut-de-france",
+    description: "Prestigieuse institution française regroupant les cinq Académies",  
+    imageUrl: "/images/institut-france-1.jpg",
+    coordinates: "48.8570, 2.3376",
+    bestTime: "Après-midi",
+    activities: ["Architecture classique", "Histoire académique", "Patrimoine français"],
+    gallery: [
+      "/images/institut-france-1.jpg"
+    ]
+  },
   // Bordeaux
   {
     id: 3,
@@ -490,7 +504,18 @@ export const places: Place[] = [
     coordinates: "44.8414, -0.5719",
     bestTime: "Après-midi",
     activities: ["Architecture", "Shopping", "Culture"],
-    gallery: null
+    gallery: [
+      "/images/bordeaux-1.jpg",
+      "/images/bordeaux-2.jpg",
+      "/images/bordeaux-3.jpg",
+      "/images/bordeaux-4.jpg",
+      "/images/bordeaux-5.jpg",
+      "/images/bordeaux-6.jpg",
+      "/images/bordeaux-7.jpg",
+      "/images/bordeaux-8.jpg",
+      "/images/bordeaux-9.jpg",
+      "/images/bordeaux-10.jpg"
+    ]
   },
   // Ecluzelles
   {
@@ -508,7 +533,8 @@ export const places: Place[] = [
       "/images/IMG_20240721_125649_1750606556615.jpg",
       "/images/IMG_20240721_125659_1750606556615.jpg",
       "/images/IMG_20240721_140610_1750606556615.jpg",
-      "/images/IMG_20240721_142045_1750606556615.jpg"
+      "/images/IMG_20240721_142045_1750606556615.jpg",
+      "/images/ecluzelles-1.jpg"
     ]
   },
   // Chartres
