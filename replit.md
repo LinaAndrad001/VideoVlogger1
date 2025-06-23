@@ -117,6 +117,7 @@ Changelog:
     * 5 photos added to new Institut de France section in Paris
   - Consolidated image serving to single secure /images/ route
   - Applied robust security practices with proper client/server separation
+  - Optimized photo display to fill cyan frames perfectly with object-cover
 - June 22, 2025. Migration completed from Replit Agent to Replit environment
   - Fixed image serving configuration for Louvre and Sacré-Cœur photos
   - Added Express static middleware for /images/ route
