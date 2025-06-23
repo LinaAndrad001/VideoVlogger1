@@ -113,30 +113,7 @@ export default function PlacePage() {
         </div>
       </section>
 
-      {/* Gallery Section */}
-      {place.gallery && place.gallery.length > 0 && (
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 neon-shimmer">
-              Galerie de photos
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-              {place.gallery.map((imageUrl: string, index: number) => (
-                <div key={index} className="group cursor-pointer" onClick={() => setSelectedImage(imageUrl)}>
-                  <div className="border-2 border-neon-cyan neon-glow overflow-hidden group-hover:border-neon-purple transition-all duration-300">
-                    <img 
-                      src={imageUrl}
-                      alt={`${place.name} - Photo ${index + 1}`}
-                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
+
 
       {/* Image Modal */}
       {selectedImage && (
@@ -144,7 +121,7 @@ export default function PlacePage() {
           className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
           onClick={() => setSelectedImage(null)}
         >
-          <div className="relative max-w-sm sm:max-w-md md:max-w-2xl lg:max-w-3xl max-h-[80vh]">
+          <div className="relative max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg max-h-[70vh]">
             <button
               onClick={() => setSelectedImage(null)}
               className="absolute -top-2 -right-2 text-neon-cyan hover:text-neon-purple transition-colors z-10 bg-black border border-neon-cyan rounded-full p-2"
@@ -174,7 +151,7 @@ export default function PlacePage() {
                 <Card key={adventure.id} className="bg-transparent border-2 border-neon-cyan neon-glow group hover:border-neon-purple transition-all duration-300">
                   <CardContent className="p-0">
                     {/* Adventure Image */}
-                    <div className="h-48 overflow-hidden">
+                    <div className="h-48 overflow-hidden cursor-pointer" onClick={() => setSelectedImage(adventure.imageUrl)}>
                       <img 
                         src={adventure.imageUrl}
                         alt={adventure.title}

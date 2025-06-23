@@ -118,7 +118,8 @@ Changelog:
   - Consolidated image serving to single secure /images/ route
   - Applied robust security practices with proper client/server separation
   - Optimized photo display to fill cyan frames perfectly with object-cover
-  - Added click-to-enlarge modal functionality for gallery images with responsive sizing
+  - Removed gallery section, kept only adventures with click-to-enlarge modal for adventure images
+  - Optimized modal sizing for mobile viewing (smaller, appropriate size)
 - June 22, 2025. Migration completed from Replit Agent to Replit environment
   - Fixed image serving configuration for Louvre and Sacré-Cœur photos
   - Added Express static middleware for /images/ route
