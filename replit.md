@@ -118,6 +118,7 @@ Changelog:
   - Consolidated image serving to single secure /images/ route
   - Applied robust security practices with proper client/server separation
   - Optimized photo display to fill cyan frames perfectly with object-cover
+  - Added click-to-enlarge modal functionality for gallery images
 - June 22, 2025. Migration completed from Replit Agent to Replit environment
   - Fixed image serving configuration for Louvre and Sacré-Cœur photos
   - Added Express static middleware for /images/ route

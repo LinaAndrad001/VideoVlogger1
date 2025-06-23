@@ -1,6 +1,7 @@
 import { useParams, Link } from "wouter";
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Calendar, Play } from "lucide-react";
+import { Calendar, Play, X } from "lucide-react";
 import { getContinentBySlug, getCountryBySlug, getCityBySlug, getPlaceBySlug, getAdventuresByPlace, formatDate } from "@/lib/static-data";
 import type { Adventure } from "@/lib/static-data";
 
@@ -11,6 +12,8 @@ export default function PlacePage() {
     citySlug: string; 
     placeSlug: string; 
   }>();
+
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   if (!continentSlug || !countrySlug || !citySlug || !placeSlug) {
     return (
@@ -120,7 +123,7 @@ export default function PlacePage() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {place.gallery.map((imageUrl: string, index: number) => (
-                <div key={index} className="group">
+                <div key={index} className="group cursor-pointer" onClick={() => setSelectedImage(imageUrl)}>
                   <div className="border-2 border-neon-cyan neon-glow overflow-hidden group-hover:border-neon-purple transition-all duration-300">
                     <img 
                       src={imageUrl}
@@ -133,6 +136,29 @@ export default function PlacePage() {
             </div>
           </div>
         </section>
+      )}
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div className="relative max-w-4xl max-h-full">
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute top-4 right-4 text-neon-cyan hover:text-neon-purple transition-colors z-10 bg-black bg-opacity-50 rounded-full p-2"
+            >
+              <X className="w-6 h-6" />
+            </button>
+            <img
+              src={selectedImage}
+              alt="Image agrandie"
+              className="max-w-full max-h-full object-contain border-2 border-neon-cyan neon-glow"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        </div>
       )}
 
       {/* Adventures Section */}
