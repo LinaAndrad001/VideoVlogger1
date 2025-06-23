@@ -6,11 +6,8 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// Serve attached assets
-app.use('/attached_assets', express.static('attached_assets'));
-
-// Serve client public images  
-app.use('/images', express.static('public/images'));
+// Serve images from client/public/images directory
+app.use('/images', express.static('client/public/images'));
 
 app.use((req, res, next) => {
   const start = Date.now();
