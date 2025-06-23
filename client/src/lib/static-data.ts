@@ -454,18 +454,7 @@ export const places: Place[] = [
       "/images/IMG_20240323_150312_1750605743425.jpg"
     ]
   },
-  {
-    id: 77,
-    cityId: 1,
-    name: "Rues de Paris",
-    slug: "rues-paris",
-    description: "Promenades dans les rues authentiques de la capitale",
-    imageUrl: "/images/IMG_20240901_174257.jpg",
-    coordinates: "48.8566, 2.3522",
-    bestTime: "Journée",
-    activities: ["Promenade urbaine", "Découverte", "Photos"],
-    gallery: ["/images/IMG_20240901_174257.jpg"]
-  },
+
   {
     id: 54,
     cityId: 1,
@@ -1235,7 +1224,7 @@ export const adventures: Adventure[] = [
   // Aventures à Ecluzelles enrichies
   {
     id: 61,
-    placeId: 77,
+    placeId: 52,
     title: "Promenade dans les rues de Paris",
     description: "Découverte des quartiers authentiques de la capitale",
     imageUrl: "/images/IMG_20240901_174257.jpg",
