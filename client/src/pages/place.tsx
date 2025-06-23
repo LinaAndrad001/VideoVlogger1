@@ -125,7 +125,7 @@ export default function PlacePage() {
                     <img 
                       src={imageUrl}
                       alt={`${place.name} - Photo ${index + 1}`}
-                      className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-64 object-contain bg-black group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                 </div>
