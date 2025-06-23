@@ -490,7 +490,11 @@ export const places: Place[] = [
     bestTime: "Après-midi",
     activities: ["Architecture classique", "Histoire académique", "Patrimoine français"],
     gallery: [
-      "/images/institut-france-1.jpg"
+      "/images/institut-france-1.jpg",
+      "/images/institut-france-2.jpg",
+      "/images/institut-france-3.jpg",
+      "/images/institut-france-4.jpg",
+      "/images/institut-france-5.jpg"
     ]
   },
   // Bordeaux

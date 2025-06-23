@@ -108,6 +108,15 @@ The application includes pre-populated content covering:
 
 ```
 Changelog:
+- June 23, 2025. Migration completed from Replit Agent to Replit environment
+  - Fixed image serving configuration and security issues
+  - Added gallery display functionality to place pages
+  - Integrated user's personal travel photos (21 photos total):
+    * 10 photos added to Bordeaux Place de la Comédie gallery
+    * 6 photos added to Ecluzelles Bord de l'Eure gallery  
+    * 5 photos added to new Institut de France section in Paris
+  - Consolidated image serving to single secure /images/ route
+  - Applied robust security practices with proper client/server separation
 - June 22, 2025. Migration completed from Replit Agent to Replit environment
   - Fixed image serving configuration for Louvre and Sacré-Cœur photos
   - Added Express static middleware for /images/ route
