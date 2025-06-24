@@ -451,7 +451,8 @@ export const places: Place[] = [
     gallery: [
       "/images/IMG_20240217_193839_1750605743424.jpg",
       "/images/IMG_20240217_193847_1750605743425.jpg",
-      "/images/IMG_20240323_150312_1750605743425.jpg"
+      "/images/IMG_20240323_150312_1750605743425.jpg",
+      "/images/Screenshot_2024-05-27-18-57-09-700_com.whatsapp_1750807590931.jpg"
     ]
   },
 
@@ -1361,6 +1362,15 @@ export const adventures: Adventure[] = [
     imageUrl: "/images/IMG_20240323_150312_1750605743425.jpg",
     videoUrl: null,
     date: "2024-03-23"
+  },
+  {
+    id: 73,
+    placeId: 76,
+    title: "Moment convivial au restaurant",
+    description: "Portrait dans l'ambiance chaleureuse du restaurant japonais",
+    imageUrl: "/images/Screenshot_2024-05-27-18-57-09-700_com.whatsapp_1750807590931.jpg",
+    videoUrl: null,
+    date: "2024-05-27"
   }
 ];
 

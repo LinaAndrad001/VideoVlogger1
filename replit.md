@@ -108,6 +108,9 @@ The application includes pre-populated content covering:
 
 ```
 Changelog:
+- June 24, 2025. Added personal photo to Japanese restaurant section
+  - Added user's portrait photo to Restaurant japonais parisien gallery
+  - Photo integrated as new adventure with proper date and description
 - June 24, 2025. Enhanced visual experience with destination backgrounds
   - Added dynamic background images for all destinations in Europe and Asia sections
   - Implemented specialized background system with high-quality scenic images
