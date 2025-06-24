@@ -27,8 +27,8 @@ export default function ContinentPage() {
     );
   }
 
-  // Use continent image as background
-  const backgroundImage = continent.imageUrl;
+  // Use specialized continent background image
+  const backgroundImage = getBackgroundImage(continentSlug) || continent.imageUrl;
 
   return (
     <div 

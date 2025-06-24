@@ -1,5 +1,8 @@
 // Background images for destinations - high quality scenic images
 export const backgroundImages = {
+  // Continental backgrounds
+  europe: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=1920&h=1080&fit=crop&q=80", // European cityscape with historic architecture
+  asie: "https://images.unsplash.com/photo-1480796927426-f609979314bd?w=1920&h=1080&fit=crop&q=80", // Asian temple landscape
   // France
   paris: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=1920&h=1080&fit=crop&q=80", // Eiffel Tower view
   bordeaux: "https://images.unsplash.com/photo-1580492516014-4a28466d55df?w=1920&h=1080&fit=crop&q=80", // Bordeaux vineyards

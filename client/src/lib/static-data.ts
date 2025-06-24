@@ -110,7 +110,7 @@ export const continents: Continent[] = [
     name: "Europe",
     slug: "europe",
     description: "Continent riche en histoire, culture et diversité architecturale",
-    imageUrl: "/images/IMG_20240721_142441.jpg",
+    imageUrl: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=1920&h=1080&fit=crop&q=80",
     countries: 4
   },
   {
