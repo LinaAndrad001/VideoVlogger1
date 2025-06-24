@@ -5,7 +5,7 @@ export const backgroundImages = {
   asie: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1920&h=1080&fit=crop&q=80", // Turkish coastline and turquoise sea
   // France
   paris: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=1920&h=1080&fit=crop&q=80", // Eiffel Tower view
-  bordeaux: "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=1920&h=1080&fit=crop&q=80", // Bordeaux Place de la Bourse reflection
+  bordeaux: "https://images.unsplash.com/photo-1551775712-de86c5ccf90b?w=1920&h=1080&fit=crop&q=80", // Bordeaux Place de la Comédie with Grand Théâtre
   ecluzelles: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop&q=80", // Small French village by river
   chartres: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=1920&h=1080&fit=crop&q=80", // Gothic cathedral
   
