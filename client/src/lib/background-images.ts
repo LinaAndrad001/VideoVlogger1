@@ -2,7 +2,7 @@
 export const backgroundImages = {
   // Continental backgrounds
   europe: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=1920&h=1080&fit=crop&q=80", // European cityscape with historic architecture
-  asie: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1920&h=1080&fit=crop&q=80", // Turkish coastline and turquoise sea
+  asie: "/images/IMG_20231231_144651_1750603108151.jpg", // Authentic Turkish Mediterranean sea view from Kas
   // France
   paris: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=1920&h=1080&fit=crop&q=80", // Eiffel Tower view
   bordeaux: "/images/bordeauxrue02.jpg", // Authentic Bordeaux street scene from your photos
