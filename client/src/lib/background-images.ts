@@ -26,7 +26,7 @@ export const backgroundImages = {
   istanbul: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?w=1920&h=1080&fit=crop&q=80", // Istanbul skyline
   antalya: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1920&h=1080&fit=crop&q=80", // Turkish riviera
   kas: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1920&h=1080&fit=crop&q=80", // Turkish coastal village with turquoise water
-  patara: "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=1920&h=1080&fit=crop&q=80", // Sand dunes landscape
+  patara: "/images/IMG_20231230_142932_1750603034996.jpg", // Authentic Patara sand dunes from your photos
 };
 
 export function getBackgroundImage(citySlug: string): string {
