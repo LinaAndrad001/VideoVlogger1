@@ -2,6 +2,7 @@ import { useParams, Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
 import { ChevronDown } from "lucide-react";
 import { getContinentBySlug, getCountriesByContinent } from "@/lib/static-data";
+import { getBackgroundImage } from "@/lib/background-images";
 import type { Continent, Country } from "@/lib/static-data";
 
 export default function ContinentPage() {
@@ -26,8 +27,18 @@ export default function ContinentPage() {
     );
   }
 
+  // Use continent image as background
+  const backgroundImage = continent.imageUrl;
+
   return (
-    <div className="min-h-screen bg-pure-black text-neon-cyan font-mono">
+    <div 
+      className="min-h-screen text-neon-cyan font-mono relative"
+      style={{
+        background: backgroundImage 
+          ? `linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(${backgroundImage}) center/cover fixed`
+          : '#000000'
+      }}
+    >
       {/* Simple navigation */}
       <div className="p-4 border-b border-neon-cyan">
         <Link href="/">

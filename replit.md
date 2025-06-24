@@ -108,6 +108,12 @@ The application includes pre-populated content covering:
 
 ```
 Changelog:
+- June 24, 2025. Enhanced visual experience with background images
+  - Added dynamic background images for all destinations in Europe and Asia
+  - Created background-images.ts with high-quality scenic images for each city
+  - Implemented overlay system with 85% opacity for content readability
+  - Applied background images to continent, country, and city pages
+  - Used fixed background attachment for immersive scrolling experience
 - June 23, 2025. Migration completed from Replit Agent to Replit environment
   - Fixed image serving configuration and security issues
   - Added gallery display functionality to place pages

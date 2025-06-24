@@ -1,6 +1,7 @@
 import { useParams, Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
 import { getContinentBySlug, getCountryBySlug, getCitiesByCountry } from "@/lib/static-data";
+import { getBackgroundImage } from "@/lib/background-images";
 import type { City } from "@/lib/static-data";
 
 export default function CountryPage() {
@@ -29,8 +30,19 @@ export default function CountryPage() {
     );
   }
 
+  // Use the first city's background or country image as fallback
+  const firstCity = cities[0];
+  const backgroundImage = firstCity ? getBackgroundImage(firstCity.slug) : country.imageUrl;
+
   return (
-    <div className="min-h-screen bg-pure-black text-neon-cyan font-mono">
+    <div 
+      className="min-h-screen text-neon-cyan font-mono relative"
+      style={{
+        background: backgroundImage 
+          ? `linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(${backgroundImage}) center/cover fixed`
+          : '#000000'
+      }}
+    >
       {/* Simple navigation */}
       <div className="p-4 border-b border-neon-cyan">
         <div className="flex items-center space-x-4">
