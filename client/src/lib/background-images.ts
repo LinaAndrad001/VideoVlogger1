@@ -6,7 +6,7 @@ export const backgroundImages = {
   // France
   paris: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=1920&h=1080&fit=crop&q=80", // Eiffel Tower view
   bordeaux: "/images/bordeauxrue02.jpg", // Authentic Bordeaux street scene from your photos
-  ecluzelles: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop&q=80", // Small French village by river
+  ecluzelles: "/images/ecluzelles-1.jpg", // Authentic Ecluzelles from your photos
   chartres: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=1920&h=1080&fit=crop&q=80", // Gothic cathedral
   
   // Italie
