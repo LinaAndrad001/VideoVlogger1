@@ -2,11 +2,11 @@
 export const backgroundImages = {
   // Continental backgrounds
   europe: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=1920&h=1080&fit=crop&q=80", // European cityscape with historic architecture
-  asie: "https://images.unsplash.com/photo-1480796927426-f609979314bd?w=1920&h=1080&fit=crop&q=80", // Asian temple landscape
+  asie: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1920&h=1080&fit=crop&q=80", // Turkish coastline and turquoise sea
   // France
   paris: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=1920&h=1080&fit=crop&q=80", // Eiffel Tower view
-  bordeaux: "https://images.unsplash.com/photo-1580492516014-4a28466d55df?w=1920&h=1080&fit=crop&q=80", // Bordeaux vineyards
-  ecluzelles: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop&q=80", // French countryside river
+  bordeaux: "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=1920&h=1080&fit=crop&q=80", // Bordeaux Place de la Bourse reflection
+  ecluzelles: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&h=1080&fit=crop&q=80", // Small French village by river
   chartres: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=1920&h=1080&fit=crop&q=80", // Gothic cathedral
   
   // Italie
@@ -25,8 +25,8 @@ export const backgroundImages = {
   // Turquie
   istanbul: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?w=1920&h=1080&fit=crop&q=80", // Istanbul skyline
   antalya: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=1920&h=1080&fit=crop&q=80", // Turkish riviera
-  kas: "https://images.unsplash.com/photo-1567202188976-47abde93a85e?w=1920&h=1080&fit=crop&q=80", // Turkish coastal town
-  patara: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=1920&h=1080&fit=crop&q=80", // Ancient ruins
+  kas: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1920&h=1080&fit=crop&q=80", // Turkish coastal village with turquoise water
+  patara: "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=1920&h=1080&fit=crop&q=80", // Sand dunes landscape
 };
 
 export function getBackgroundImage(citySlug: string): string {
