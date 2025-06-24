@@ -121,6 +121,7 @@ Changelog:
   - Restored gallery section for places with photos (Institut de France, Bordeaux, etc.)
   - Kept adventures with click-to-enlarge modal for all images
   - Optimized modal sizing for mobile viewing (smaller, appropriate size)
+  - Made all images clickable with same functionality as their corresponding buttons across all sections
 - June 22, 2025. Migration completed from Replit Agent to Replit environment
   - Fixed image serving configuration for Louvre and Sacré-Cœur photos
   - Added Express static middleware for /images/ route

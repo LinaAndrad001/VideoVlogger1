@@ -75,13 +75,15 @@ export default function ContinentPage() {
               <Card key={country.id} className="bg-transparent border-2 border-neon-cyan neon-glow group hover:border-neon-purple transition-all duration-300">
                 <CardContent className="p-0">
                   {/* Country Image */}
-                  <div className="h-48 overflow-hidden">
-                    <img 
-                      src={country.imageUrl}
-                      alt={`Paysage de ${country.name}`}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
+                  <Link href={`/${continentSlug}/${country.slug}`}>
+                    <div className="h-48 overflow-hidden cursor-pointer">
+                      <img 
+                        src={country.imageUrl}
+                        alt={`Paysage de ${country.name}`}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                    </div>
+                  </Link>
                   
                   {/* Country Info */}
                   <div className="p-6">

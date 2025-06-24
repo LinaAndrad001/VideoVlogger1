@@ -70,13 +70,15 @@ export default function CountryPage() {
               <Card key={city.id} className="bg-transparent border-2 border-neon-cyan neon-glow group hover:border-neon-purple transition-all duration-300">
                 <CardContent className="p-0">
                   {/* City Image */}
-                  <div className="h-48 overflow-hidden">
-                    <img 
-                      src={city.imageUrl}
-                      alt={`Vue de ${city.name}`}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
+                  <Link href={`/${continentSlug}/${countrySlug}/${city.slug}`}>
+                    <div className="h-48 overflow-hidden cursor-pointer">
+                      <img 
+                        src={city.imageUrl}
+                        alt={`Vue de ${city.name}`}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                    </div>
+                  </Link>
                   
                   {/* City Info */}
                   <div className="p-6">

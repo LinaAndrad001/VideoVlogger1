@@ -75,13 +75,15 @@ export default function Home() {
             {continents.map((continent: Continent) => (
               <div key={continent.id} className="flex flex-col items-center space-y-6">
                 {/* Image représentative du continent */}
-                <div className="w-64 h-48 border-2 border-neon-cyan rounded-xl overflow-hidden neon-glow">
-                  <img 
-                    src={continent.imageUrl}
-                    alt={`Ville représentative de ${continent.name}`}
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
+                <Link href={`/${continent.slug}`}>
+                  <div className="w-64 h-48 border-2 border-neon-cyan rounded-xl overflow-hidden neon-glow cursor-pointer hover:border-neon-purple transition-all duration-300">
+                    <img 
+                      src={continent.imageUrl}
+                      alt={`Ville représentative de ${continent.name}`}
+                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+                </Link>
                 
                 {/* Bouton continent */}
                 <Link href={`/${continent.slug}`}>

@@ -79,13 +79,15 @@ export default function CityPage() {
               <Card key={place.id} className="bg-transparent border-2 border-neon-cyan neon-glow group hover:border-neon-purple transition-all duration-300">
                 <CardContent className="p-0">
                   {/* Place Image */}
-                  <div className="h-48 overflow-hidden">
-                    <img 
-                      src={place.imageUrl}
-                      alt={place.name}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                  </div>
+                  <Link href={`/${continentSlug}/${countrySlug}/${citySlug}/${place.slug}`}>
+                    <div className="h-48 overflow-hidden cursor-pointer">
+                      <img 
+                        src={place.imageUrl}
+                        alt={place.name}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                    </div>
+                  </Link>
                   
                   {/* Place Info */}
                   <div className="p-6">
