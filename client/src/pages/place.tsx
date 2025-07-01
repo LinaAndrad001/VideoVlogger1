@@ -15,6 +15,10 @@ export default function PlacePage() {
 
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
+  const handleImageError = (imageUrl: string) => {
+    console.log('Image error:', imageUrl);
+  };
+
   if (!continentSlug || !countrySlug || !citySlug || !placeSlug) {
     return (
       <div className="min-h-screen bg-pure-black flex items-center justify-center">
@@ -129,6 +133,13 @@ export default function PlacePage() {
                       src={imageUrl}
                       alt={`${place.name} - Photo ${index + 1}`}
                       className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                      decoding="async"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        handleImageError(target.src);
+                        target.style.border = '2px solid red';
+                      }}
                     />
                   </div>
                 </div>
@@ -156,6 +167,12 @@ export default function PlacePage() {
               alt="Image agrandie"
               className="w-full h-auto object-contain border-2 border-neon-cyan neon-glow rounded"
               onClick={(e) => e.stopPropagation()}
+              loading="eager"
+              decoding="async"
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                handleImageError(target.src);
+              }}
             />
           </div>
         </div>
@@ -179,6 +196,13 @@ export default function PlacePage() {
                         src={adventure.imageUrl}
                         alt={adventure.title}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        loading="lazy"
+                        decoding="async"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          handleImageError(target.src);
+                          target.style.border = '2px solid red';
+                        }}
                       />
                     </div>
                     

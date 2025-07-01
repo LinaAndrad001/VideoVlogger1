@@ -6,8 +6,35 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// Serve images from images directory
-app.use('/images', express.static('images'));
+// Enable CORS for all routes
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+  next();
+});
+
+// Serve images from images directory with optimized headers for mobile
+app.use('/images', express.static('images', {
+  maxAge: '1d', // 1 day cache instead of 1 year for easier debugging
+  etag: true,
+  lastModified: true,
+  setHeaders: (res, path) => {
+    // Ensure proper MIME types
+    if (path.endsWith('.jpg') || path.endsWith('.jpeg')) {
+      res.setHeader('Content-Type', 'image/jpeg');
+    } else if (path.endsWith('.png')) {
+      res.setHeader('Content-Type', 'image/png');
+    } else if (path.endsWith('.webp')) {
+      res.setHeader('Content-Type', 'image/webp');
+    }
+    
+    // Mobile-friendly headers
+    res.setHeader('Cache-Control', 'public, max-age=86400'); // 1 day
+    res.setHeader('Vary', 'Accept-Encoding');
+    res.setHeader('Accept-Ranges', 'bytes');
+  }
+}));
 
 app.use((req, res, next) => {
   const start = Date.now();
