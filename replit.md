@@ -108,10 +108,14 @@ The application includes pre-populated content covering:
 
 ```
 Changelog:
+- January 01, 2025. Removed duplicate galleries from all sections
+  - Eliminated all gallery sections to prevent duplicate photo display
+  - Kept only adventures with their individual photos
+  - Clean interface without redundant image sections
+  - Users now see each photo only once in its corresponding adventure
 - January 01, 2025. Added Musée Aquarium section to Paris
   - Created new place "Musée Aquarium" with 10 high-quality photos
-  - Added gallery featuring: architecture Art déco, fresques murales, aquarium, poissons tropicaux, maquettes navires, manuscrits
-  - Integrated 10 detailed adventures documenting the museum visit experience
+  - Added 10 detailed adventures documenting the museum visit experience
   - Photos show both architectural beauty and marine exhibits
 - January 01, 2025. Major expansion of European destinations
   - Added 9 new European countries: Espagne, Allemagne, Suisse, Autriche, Croatie, Slovénie, Serbie, Bulgarie, Roumanie

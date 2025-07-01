@@ -466,11 +466,7 @@ export const places: Place[] = [
     coordinates: "48.8584, 2.2945",
     bestTime: "Soirée pour l'illumination",
     activities: ["Photos", "Vue panoramique", "Histoire"],
-    gallery: [
-      "/images/IMG_20231202_074800.jpg",
-      "/images/IMG_20231202_120333_1750605502381.jpg",
-      "/images/IMG_20231202_120936_1750605502381.jpg"
-    ]
+    gallery: null
   },
   {
     id: 2,
@@ -482,15 +478,7 @@ export const places: Place[] = [
     coordinates: "48.8606, 2.3376",
     bestTime: "Matinée",
     activities: ["Visite culturelle", "Art", "Histoire"],
-    gallery: [
-      "/images/IMG_20250603_145401_1750596752254.jpg",
-      "/images/IMG_20250603_154848_1750596752254.jpg", 
-      "/images/IMG_20250603_204014_1750596752254.jpg",
-      "/images/IMG_20250603_204042_1750596752254.jpg",
-      "/images/WhatsApp Image 2025-06-18 à 14.19.35_564e5695_1750596752254.jpg",
-      "/images/WhatsApp Image 2025-06-18 à 14.19.39_e3f2383f_1750596752254.jpg",
-      "/images/WhatsApp Image 2025-06-18 à 14.19.42_d8056c8a_1750596752254.jpg"
-    ]
+    gallery: null
   },
   {
     id: 50,
@@ -502,11 +490,7 @@ export const places: Place[] = [
     coordinates: "48.8867, 2.3431",
     bestTime: "Fin d'après-midi",
     activities: ["Visite religieuse", "Vue panoramique", "Montmartre"],
-    gallery: [
-      "/images/IMG_20250516_164453_1750598866707.jpg",
-      "/images/SL-5927_29_31_1750598866707.jpg",
-      "/images/AirBrush_20250516185456_1750598866707.jpg"
-    ]
+    gallery: null
   },
   {
     id: 51,
@@ -554,10 +538,7 @@ export const places: Place[] = [
     coordinates: "48.8205, 2.4377",
     bestTime: "Après-midi",
     activities: ["Courses hippiques", "Famille", "Spectacle sportif"],
-    gallery: [
-      "/images/Screenshot_2024-02-03-21-02-45-316_com.miui.gallery_1750604037540.jpg",
-      "/images/Screenshot_2024-02-03-21-02-54-610_com.miui.gallery_1750604037540.jpg"
-    ]
+    gallery: null
   },
   {
     id: 76,
@@ -569,12 +550,7 @@ export const places: Place[] = [
     coordinates: "48.8566, 2.3522",
     bestTime: "Soirée",
     activities: ["Gastronomie japonaise", "Sushi", "Ramen"],
-    gallery: [
-      "/images/IMG_20240217_193839_1750605743424.jpg",
-      "/images/IMG_20240217_193847_1750605743425.jpg",
-      "/images/IMG_20240323_150312_1750605743425.jpg",
-      "/images/Screenshot_2024-05-27-18-57-09-700_com.whatsapp_1750807590931.jpg"
-    ]
+    gallery: null
   },
   {
     id: 77,
@@ -586,18 +562,7 @@ export const places: Place[] = [
     coordinates: "48.8584, 2.2945",
     bestTime: "Après-midi",
     activities: ["Visite marine", "Architecture", "Sciences naturelles"],
-    gallery: [
-      "/images/IMG_20250507_150706_1751373924943.jpg",
-      "/images/IMG_20250507_150937_1751373924943.jpg",
-      "/images/IMG_20250507_150939_1751373924943.jpg",
-      "/images/IMG_20250507_151158_1751373924943.jpg",
-      "/images/IMG_20250507_151203_1751373924943.jpg",
-      "/images/IMG_20250507_151629_1751373924943.jpg",
-      "/images/IMG_20250507_152317_1751373924943.jpg",
-      "/images/IMG_20250507_152332_1751373924943.jpg",
-      "/images/IMG_20250507_160612_1751373924943.jpg",
-      "/images/IMG_20250507_162337_1751373924943.jpg"
-    ]
+    gallery: null
   },
 
   {
@@ -634,13 +599,7 @@ export const places: Place[] = [
     coordinates: "48.8570, 2.3376",
     bestTime: "Après-midi",
     activities: ["Architecture classique", "Histoire académique", "Patrimoine français"],
-    gallery: [
-      "/images/institut-france-1.jpg",
-      "/images/institut-france-2.jpg",
-      "/images/institut-france-3.jpg",
-      "/images/institut-france-4.jpg",
-      "/images/institut-france-5.jpg"
-    ]
+    gallery: null
   },
   // Bordeaux
   {
@@ -653,18 +612,7 @@ export const places: Place[] = [
     coordinates: "44.8414, -0.5719",
     bestTime: "Après-midi",
     activities: ["Architecture", "Shopping", "Culture"],
-    gallery: [
-      "/images/bordeaux-1.jpg",
-      "/images/bordeaux-2.jpg",
-      "/images/bordeaux-3.jpg",
-      "/images/bordeaux-4.jpg",
-      "/images/bordeaux-5.jpg",
-      "/images/bordeaux-6.jpg",
-      "/images/bordeaux-7.jpg",
-      "/images/bordeaux-8.jpg",
-      "/images/bordeaux-9.jpg",
-      "/images/bordeaux-10.jpg"
-    ]
+    gallery: null
   },
   // Ecluzelles
   {
@@ -677,14 +625,7 @@ export const places: Place[] = [
     coordinates: "48.9167, 1.6833",
     bestTime: "Matinée",
     activities: ["Nature", "Promenade", "Détente"],
-    gallery: [
-      "/images/IMG_20240721_134557.jpg",
-      "/images/IMG_20240721_125649_1750606556615.jpg",
-      "/images/IMG_20240721_125659_1750606556615.jpg",
-      "/images/IMG_20240721_140610_1750606556615.jpg",
-      "/images/IMG_20240721_142045_1750606556615.jpg",
-      "/images/ecluzelles-1.jpg"
-    ]
+    gallery: null
   },
   // Chartres
   {
@@ -697,11 +638,7 @@ export const places: Place[] = [
     coordinates: "48.4469, 1.4879",
     bestTime: "Printemps",
     activities: ["Nature", "Randonnée", "Agriculture"],
-    gallery: [
-      "/images/Screenshot_2023-12-19-14-24-58-392_com.google.android.apps.photos_1750606521887.jpg",
-      "/images/Screenshot_2023-12-19-14-25-03-437_com.google.android.apps.photos_1750606521887.jpg",
-      "/images/IMG_20240714_165754_1750606521887.jpg"
-    ]
+    gallery: null
   },
   // Rome
   {
@@ -853,10 +790,7 @@ export const places: Place[] = [
     coordinates: "36.2021, 29.6417",
     bestTime: "Coucher de soleil",
     activities: ["Port", "Restaurants", "Plongée"],
-    gallery: [
-      "/images/IMG_20231226_134146_1750602086631.jpg",
-      "/images/IMG_20231228_105233_1750602086631.jpg"
-    ]
+    gallery: null
   },
   {
     id: 17,
@@ -868,10 +802,7 @@ export const places: Place[] = [
     coordinates: "36.2021, 29.6417",
     bestTime: "Après-midi",
     activities: ["Plage", "Baignade", "Détente"],
-    gallery: [
-      "/images/IMG_20231228_155645_1750602086631.jpg",
-      "/images/IMG_20231228_142307_1750602086631.jpg"
-    ]
+    gallery: null
   },
   {
     id: 70,
@@ -883,13 +814,7 @@ export const places: Place[] = [
     coordinates: "36.2021, 29.6417",
     bestTime: "Matin",
     activities: ["Randonnée", "Photos", "Vue panoramique"],
-    gallery: [
-      "/images/IMG_20231228_105901_1750602086631.jpg",
-      "/images/IMG_20231225_140022_1750602067266.jpg",
-      "/images/IMG_20231231_144651_1750603108151.jpg",
-      "/images/IMG_20231231_150429(1)_1750603108152.jpg",
-      "/images/IMG_20240103_095825_1750603939969.jpg"
-    ]
+    gallery: null
   },
   {
     id: 72,
@@ -901,11 +826,7 @@ export const places: Place[] = [
     coordinates: "36.2021, 29.6417",
     bestTime: "Soirée",
     activities: ["Gastronomie", "Restaurants", "Culture locale"],
-    gallery: [
-      "/images/IMG_20240101_190146_1750603939969.jpg",
-      "/images/IMG_20240103_133714_1750603939969.jpg",
-      "/images/Screenshot_2024-02-03-20-59-38-180_com.miui.gallery_1750603939969.jpg"
-    ]
+    gallery: null
   },
   {
     id: 73,
@@ -917,27 +838,7 @@ export const places: Place[] = [
     coordinates: "36.2021, 29.6417",
     bestTime: "Journée",
     activities: ["Vie locale", "Détente", "Observation"],
-    gallery: ["/images/IMG_20240102_140933_1750603939969.jpg"]
-  },
-  // Patara
-  {
-    id: 18,
-    cityId: 12,
-    name: "Dunes de Patara",
-    slug: "dunes-patara",
-    description: "Immenses dunes de sable doré et plage infinie protégée",
-    imageUrl: "/images/IMG_20231230_135950_1750603034995.jpg",
-    coordinates: "36.2667, 29.3167",
-    bestTime: "Journée complète",
-    activities: ["Plage", "Randonnée", "Photos", "Nature"],
-    gallery: [
-      "/images/IMG_20231230_135950_1750603034995.jpg",
-      "/images/IMG_20231230_140126_1750603034996.jpg",
-      "/images/IMG_20231230_140342_1750603034996.jpg",
-      "/images/IMG_20231230_140744_1750603034996.jpg",
-      "/images/IMG_20231230_141958_1750603034996.jpg",
-      "/images/IMG_20231230_142932_1750603034996.jpg"
-    ]
+    gallery: null
   }
 ];
 
