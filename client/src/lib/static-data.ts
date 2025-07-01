@@ -517,6 +517,18 @@ export const places: Place[] = [
     gallery: null
   },
   {
+    id: 91,
+    cityId: 1,
+    name: "Opera Garnier",
+    slug: "opera-garnier",
+    description: "Palais de l'Opéra, joyau architectural du Second Empire parisien",
+    imageUrl: "/images/paris/opera/facade.jpg",
+    coordinates: "48.8720, 2.3319",
+    bestTime: "Après-midi",
+    activities: ["Architecture", "Culture", "Visite guidée", "Photographie"],
+    gallery: null
+  },
+  {
     id: 53,
     cityId: 1,
     name: "Arc de Triomphe",
@@ -1584,6 +1596,115 @@ export const adventures: Adventure[] = [
     imageUrl: "/images/paris/seine/bercy.jpg",
     videoUrl: null,
     date: "2023-12-19"
+  },
+  // Nouvelles aventures Opera Garnier 2020
+  {
+    id: 91,
+    placeId: 91,
+    title: "Façade majestueuse de l'Opéra",
+    description: "Vue spectaculaire sur la façade néo-baroque de l'Opéra Garnier avec ses dorures dorées",
+    imageUrl: "/images/paris/opera/facade.jpg",
+    videoUrl: null,
+    date: "2020-07-21"
+  },
+  {
+    id: 92,
+    placeId: 91,
+    title: "Selfie devant l'Opéra",
+    description: "Moment de complicité devant ce monument emblématique de Paris",
+    imageUrl: "/images/paris/opera/selfie_facade.jpg",
+    videoUrl: null,
+    date: "2020-07-21"
+  },
+  {
+    id: 93,
+    placeId: 91,
+    title: "Hall principal aux colonnes de marbre",
+    description: "Architecture somptueuse du hall d'entrée avec ses colonnes et plafonds sculptés",
+    imageUrl: "/images/paris/opera/hall_principal.jpg",
+    videoUrl: null,
+    date: "2020-07-21"
+  },
+  {
+    id: 94,
+    placeId: 91,
+    title: "Sculpture décorative",
+    description: "Détail artistique d'une sculpture baroque ornant les intérieurs de l'Opéra",
+    imageUrl: "/images/paris/opera/sculpture.jpg",
+    videoUrl: null,
+    date: "2020-07-21"
+  },
+  {
+    id: 95,
+    placeId: 91,
+    title: "Portrait avec masque sanitaire",
+    description: "Souvenir de cette visite particulière pendant la période COVID",
+    imageUrl: "/images/paris/opera/portrait_masque.jpg",
+    videoUrl: null,
+    date: "2020-07-21"
+  },
+  {
+    id: 96,
+    placeId: 91,
+    title: "Grand escalier d'honneur",
+    description: "Vue impressionnante sur le célèbre escalier de marbre et ses lustres en cristal",
+    imageUrl: "/images/paris/opera/escalier_majesteur.jpg",
+    videoUrl: null,
+    date: "2020-07-21"
+  },
+  {
+    id: 97,
+    placeId: 91,
+    title: "Plafond peint et sculptures",
+    description: "Plafond richement décoré avec fresques et ornements dorés du Second Empire",
+    imageUrl: "/images/paris/opera/plafond_peint.jpg",
+    videoUrl: null,
+    date: "2020-07-21"
+  },
+  {
+    id: 98,
+    placeId: 91,
+    title: "Architecture du grand escalier",
+    description: "Perspective sur l'architecture monumentale de l'escalier d'honneur",
+    imageUrl: "/images/paris/opera/grand_escalier.jpg",
+    videoUrl: null,
+    date: "2020-07-21"
+  },
+  {
+    id: 99,
+    placeId: 91,
+    title: "Balcons dorés et colonnes",
+    description: "Richesse architecturale des balcons ornés et colonnes corinthiennes",
+    imageUrl: "/images/paris/opera/balcons_dores.jpg",
+    videoUrl: null,
+    date: "2020-07-21"
+  },
+  {
+    id: 100,
+    placeId: 91,
+    title: "Portrait dans le hall",
+    description: "Élégance personnelle dans ce cadre architectural exceptionnel",
+    imageUrl: "/images/paris/opera/portrait_hall.jpg",
+    videoUrl: null,
+    date: "2020-07-21"
+  },
+  {
+    id: 101,
+    placeId: 91,
+    title: "Dans la salle rouge",
+    description: "Moment privilégié dans la salle de spectacle aux fauteuils rouge et or",
+    imageUrl: "/images/paris/opera/portrait_salle.jpg",
+    videoUrl: null,
+    date: "2020-07-21"
+  },
+  {
+    id: 102,
+    placeId: 91,
+    title: "Selfie dans le foyer",
+    description: "Souvenir lumineux dans les somptueux espaces de réception de l'Opéra",
+    imageUrl: "/images/paris/opera/selfie_foyer.jpg",
+    videoUrl: null,
+    date: "2020-07-21"
   }
 ];
 

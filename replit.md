@@ -108,6 +108,12 @@ The application includes pre-populated content covering:
 
 ```
 Changelog:
+- July 01, 2025. Added Opera Garnier section to Paris with 12 personal photos
+  - Created new place "Opera Garnier" with comprehensive photo documentation
+  - Added 12 adventures documenting 2020 visit to the Palais de l'Opéra
+  - Photos capture facade, interior architecture, grand staircase, sculptures, and personal moments
+  - Includes unique COVID-era photos showing visit during mask period
+  - Showcases the neo-baroque architecture and Second Empire grandeur
 - July 01, 2025. Added personal photos to Bord de Seine section in Paris
   - Added 7 personal photos from July 21, 2020 Seine boat trip and December 19, 2023 Bercy sunset
   - Created 7 new adventures documenting Seine experiences with authentic photos
