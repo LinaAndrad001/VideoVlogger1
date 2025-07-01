@@ -839,6 +839,26 @@ export const places: Place[] = [
     bestTime: "Journée",
     activities: ["Vie locale", "Détente", "Observation"],
     gallery: null
+  },
+  // Patara
+  {
+    id: 18,
+    cityId: 12,
+    name: "Plage de Patara",
+    slug: "plage-patara",
+    description: "Plage de sable infinie et protégée, dunes spectaculaires",
+    imageUrl: "/images/patara/dunes1.jpg",
+    coordinates: "36.2749, 29.3181",
+    bestTime: "Après-midi",
+    activities: ["Dunes", "Nature", "Plage"],
+    gallery: [
+      "/images/patara/dunes1.jpg",
+      "/images/patara/dunes2.jpg",
+      "/images/patara/dunes3.jpg",
+      "/images/patara/dunes4.jpg",
+      "/images/patara/dunes5.jpg",
+      "/images/patara/dunes6.jpg"
+    ]
   }
 ];
 
@@ -1142,27 +1162,27 @@ export const adventures: Adventure[] = [
   {
     id: 44,
     placeId: 18,
-    title: "Exploration des dunes de Patara",
+    title: "Méditation sur les dunes de Patara",
     description: "Moment de détente et de contemplation sur les immenses dunes de sable",
-    imageUrl: "/images/IMG_20231230_135950_1750603034995.jpg",
+    imageUrl: "/images/patara/dunes1.jpg",
     videoUrl: null,
     date: "2023-12-30"
   },
   {
     id: 45,
     placeId: 18,
-    title: "Complicité sur les dunes",
+    title: "Complicité familiale sur les dunes",
     description: "Moments de partage en famille sur les dunes dorées de Patara",
-    imageUrl: "/images/IMG_20231230_140126_1750603034996.jpg",
+    imageUrl: "/images/patara/dunes2.jpg",
     videoUrl: null,
     date: "2023-12-30"
   },
   {
     id: 46,
     placeId: 18,
-    title: "Liberté sur les dunes",
+    title: "Liberté sur les dunes infinies",
     description: "Expression de joie et de liberté face à l'immensité du paysage",
-    imageUrl: "/images/IMG_20231230_140342_1750603034996.jpg",
+    imageUrl: "/images/patara/dunes3.jpg",
     videoUrl: null,
     date: "2023-12-30"
   },
@@ -1171,25 +1191,25 @@ export const adventures: Adventure[] = [
     placeId: 18,
     title: "Portrait en couple à Patara",
     description: "Moment romantique sur les dunes avec vue sur les montagnes",
-    imageUrl: "/images/IMG_20231230_140744_1750603034996.jpg",
+    imageUrl: "/images/patara/dunes4.jpg",
     videoUrl: null,
     date: "2023-12-30"
   },
   {
     id: 48,
     placeId: 18,
-    title: "Contemplation depuis les dunes",
+    title: "Contemplation depuis les hauteurs",
     description: "Vue paisible sur le paysage naturel préservé de Patara",
-    imageUrl: "/images/IMG_20231230_141958_1750603034996.jpg",
+    imageUrl: "/images/patara/dunes5.jpg",
     videoUrl: null,
     date: "2023-12-30"
   },
   {
     id: 49,
     placeId: 18,
-    title: "Paysage sauvage de Patara",
+    title: "Nature sauvage de Patara",
     description: "Nature préservée avec dunes et végétation méditerranéenne",
-    imageUrl: "/images/IMG_20231230_142932_1750603034996.jpg",
+    imageUrl: "/images/patara/dunes6.jpg",
     videoUrl: null,
     date: "2023-12-30"
   },
