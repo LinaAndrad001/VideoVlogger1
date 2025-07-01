@@ -108,6 +108,11 @@ The application includes pre-populated content covering:
 
 ```
 Changelog:
+- July 01, 2025. Added personal photos to Patara section
+  - Added 6 personal photos from December 30, 2023 visit to Patara dunes
+  - Created 6 new adventures documenting the dune experience with authentic photos
+  - Updated Patara Beach place with new gallery and personal photo as main image
+  - Photos show the magnificent sand dunes, family moments, and natural landscape
 - January 01, 2025. Removed duplicate galleries from all sections
   - Eliminated all gallery sections to prevent duplicate photo display
   - Kept only adventures with their individual photos

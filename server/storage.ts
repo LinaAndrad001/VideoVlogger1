@@ -593,11 +593,18 @@ export class MemStorage implements IStorage {
       name: "Plage de Patara",
       slug: "plage-patara",
       description: "Plage de sable infinie et protégée.",
-      imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+      imageUrl: "/images/patara/dunes1.jpg",
       content: "La plage de Patara s'étend sur 18 kilomètres de sable doré, refuge des tortues caouannes.",
       videoUrl: null,
-      visitDate: new Date('2024-06-15'),
-      gallery: null
+      visitDate: new Date('2023-12-30'),
+      gallery: [
+        "/images/patara/dunes1.jpg",
+        "/images/patara/dunes2.jpg",
+        "/images/patara/dunes3.jpg",
+        "/images/patara/dunes4.jpg",
+        "/images/patara/dunes5.jpg",
+        "/images/patara/dunes6.jpg"
+      ]
     };
 
     const pataraRuins: Place = {
@@ -671,9 +678,76 @@ export class MemStorage implements IStorage {
       publishedAt: new Date('2024-01-17')
     };
 
+    // Patara adventures
+    const pataraAdventure1: Adventure = {
+      id: this.currentAdventureId++,
+      placeId: pataraBeach.id,
+      title: "Méditation sur les dunes de Patara",
+      content: "Un moment de pure sérénité sur les immenses dunes de sable de Patara. L'immensité du paysage invite à la contemplation, avec les montagnes à l'horizon et le silence du désert turc. C'est ici que l'on comprend la beauté brute de la nature méditerranéenne.",
+      imageUrl: "/images/patara/dunes1.jpg",
+      slug: "meditation-dunes-patara",
+      publishedAt: new Date('2023-12-30')
+    };
+
+    const pataraAdventure2: Adventure = {
+      id: this.currentAdventureId++,
+      placeId: pataraBeach.id,
+      title: "Complicité familiale sur les dunes",
+      content: "Moments précieux de partage en famille sur les dunes dorées de Patara. Le sable fin sous les pieds et l'air marin créent une atmosphère parfaite pour se reconnecter avec ses proches, loin de l'agitation quotidienne.",
+      imageUrl: "/images/patara/dunes2.jpg",
+      slug: "complicite-familiale-patara",
+      publishedAt: new Date('2023-12-30')
+    };
+
+    const pataraAdventure3: Adventure = {
+      id: this.currentAdventureId++,
+      placeId: pataraBeach.id,
+      title: "Liberté sur les dunes infinies",
+      content: "Expression pure de joie et de liberté face à l'immensité du paysage de Patara. Les dunes ondulent à perte de vue, créant un terrain de jeu naturel où l'âme peut s'épanouir en toute liberté.",
+      imageUrl: "/images/patara/dunes3.jpg",
+      slug: "liberte-dunes-infinies",
+      publishedAt: new Date('2023-12-30')
+    };
+
+    const pataraAdventure4: Adventure = {
+      id: this.currentAdventureId++,
+      placeId: pataraBeach.id,
+      title: "Portrait en couple à Patara",
+      content: "Moment romantique capturé sur les dunes avec vue sur les montagnes lycienennes. Patara offre un cadre exceptionnel pour immortaliser les instants précieux, où la beauté du paysage rivalise avec celle des sentiments partagés.",
+      imageUrl: "/images/patara/dunes4.jpg",
+      slug: "portrait-couple-patara",
+      publishedAt: new Date('2023-12-30')
+    };
+
+    const pataraAdventure5: Adventure = {
+      id: this.currentAdventureId++,
+      placeId: pataraBeach.id,
+      title: "Contemplation depuis les hauteurs",
+      content: "Vue paisible sur le paysage naturel préservé de Patara depuis les dunes élevées. La perspective change tout : d'ici, on saisit l'étendue sauvage de cette région protégée, sanctuaire des tortues caouannes.",
+      imageUrl: "/images/patara/dunes5.jpg",
+      slug: "contemplation-hauteurs-patara",
+      publishedAt: new Date('2023-12-30')
+    };
+
+    const pataraAdventure6: Adventure = {
+      id: this.currentAdventureId++,
+      placeId: pataraBeach.id,
+      title: "Nature sauvage de Patara",
+      content: "Découverte de la nature préservée avec ses dunes et sa végétation méditerranéenne unique. Patara révèle ici son visage le plus authentique, où buissons épineux et herbes folles colonisent les espaces entre les dunes, créant un écosystème fragile et précieux.",
+      imageUrl: "/images/patara/dunes6.jpg",
+      slug: "nature-sauvage-patara",
+      publishedAt: new Date('2023-12-30')
+    };
+
     this.adventures.set(adventure1.id, adventure1);
     this.adventures.set(adventure2.id, adventure2);
     this.adventures.set(adventure3.id, adventure3);
+    this.adventures.set(pataraAdventure1.id, pataraAdventure1);
+    this.adventures.set(pataraAdventure2.id, pataraAdventure2);
+    this.adventures.set(pataraAdventure3.id, pataraAdventure3);
+    this.adventures.set(pataraAdventure4.id, pataraAdventure4);
+    this.adventures.set(pataraAdventure5.id, pataraAdventure5);
+    this.adventures.set(pataraAdventure6.id, pataraAdventure6);
   }
 
   // User methods
