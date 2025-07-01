@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, Play, X } from "lucide-react";
 import { getContinentBySlug, getCountryBySlug, getCityBySlug, getPlaceBySlug, getAdventuresByPlace, formatDate } from "@/lib/static-data";
+import { getImageUrl } from "@/lib/image-utils";
 import type { Adventure } from "@/lib/static-data";
 
 export default function PlacePage() {
@@ -17,6 +18,8 @@ export default function PlacePage() {
 
   const handleImageError = (imageUrl: string) => {
     console.log('Image error:', imageUrl);
+    console.log('Current origin:', window.location.origin);
+    console.log('Full URL would be:', getImageUrl(imageUrl));
   };
 
   if (!continentSlug || !countrySlug || !citySlug || !placeSlug) {
@@ -80,7 +83,15 @@ export default function PlacePage() {
             {place.description}
           </p>
 
-
+          {/* Debug Info - Only in development */}
+          {import.meta.env.DEV && (
+            <div className="bg-gray-900 border border-neon-cyan rounded p-4 mb-8 text-xs max-w-3xl mx-auto">
+              <div className="text-neon-cyan font-bold mb-2">Debug Info (Mobile)</div>
+              <div>Current Origin: {window.location.origin}</div>
+              <div>Sample Image URL: {getImageUrl('/images/paris/opera/facade.jpg')}</div>
+              <div>Environment: {import.meta.env.MODE}</div>
+            </div>
+          )}
 
           {/* Detailed Information */}
           <div className="max-w-3xl mx-auto mb-12">
@@ -130,7 +141,7 @@ export default function PlacePage() {
                 <div key={index} className="group cursor-pointer" onClick={() => setSelectedImage(imageUrl)}>
                   <div className="border-2 border-neon-cyan neon-glow overflow-hidden group-hover:border-neon-purple transition-all duration-300">
                     <img 
-                      src={imageUrl}
+                      src={getImageUrl(imageUrl)}
                       alt={`${place.name} - Photo ${index + 1}`}
                       className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
                       loading="lazy"
@@ -163,7 +174,7 @@ export default function PlacePage() {
               <X className="w-4 h-4 sm:w-6 sm:h-6" />
             </button>
             <img
-              src={selectedImage}
+              src={getImageUrl(selectedImage)}
               alt="Image agrandie"
               className="w-full h-auto object-contain border-2 border-neon-cyan neon-glow rounded"
               onClick={(e) => e.stopPropagation()}
@@ -193,7 +204,7 @@ export default function PlacePage() {
                     {/* Adventure Image */}
                     <div className="h-48 overflow-hidden cursor-pointer" onClick={() => setSelectedImage(adventure.imageUrl)}>
                       <img 
-                        src={adventure.imageUrl}
+                        src={getImageUrl(adventure.imageUrl)}
                         alt={adventure.title}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                         loading="lazy"

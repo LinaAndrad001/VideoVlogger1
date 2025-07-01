@@ -1,6 +1,8 @@
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
+import fs from "fs";
+import path from "path";
 
 const app = express();
 app.use(express.json());
@@ -14,25 +16,38 @@ app.use((req, res, next) => {
   next();
 });
 
-// Serve images from images directory with optimized headers for mobile
-app.use('/images', express.static('images', {
-  maxAge: '1d', // 1 day cache instead of 1 year for easier debugging
-  etag: true,
-  lastModified: true,
+// Simple health check
+app.get('/health', (req, res) => {
+  res.json({ status: 'ok', images: 'serving from /images' });
+});
+
+// Serve images from images directory with mobile-optimized headers
+app.use('/images', (req, res, next) => {
+  // Log image requests to debug mobile issues
+  console.log(`Image request: ${req.path} from ${req.get('User-Agent')?.substring(0, 50)}...`);
+  
+  // Set mobile-friendly headers before serving
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate'); // Disable cache for debugging
+  res.setHeader('Pragma', 'no-cache');
+  res.setHeader('Expires', '0');
+  
+  next();
+}, express.static('images', {
+  maxAge: 0, // No cache for debugging
+  etag: false,
+  lastModified: false,
   setHeaders: (res, path) => {
     // Ensure proper MIME types
     if (path.endsWith('.jpg') || path.endsWith('.jpeg')) {
       res.setHeader('Content-Type', 'image/jpeg');
     } else if (path.endsWith('.png')) {
       res.setHeader('Content-Type', 'image/png');
-    } else if (path.endsWith('.webp')) {
-      res.setHeader('Content-Type', 'image/webp');
     }
     
-    // Mobile-friendly headers
-    res.setHeader('Cache-Control', 'public, max-age=86400'); // 1 day
-    res.setHeader('Vary', 'Accept-Encoding');
+    // Additional mobile headers
     res.setHeader('Accept-Ranges', 'bytes');
+    res.setHeader('X-Content-Type-Options', 'nosniff');
   }
 }));
 

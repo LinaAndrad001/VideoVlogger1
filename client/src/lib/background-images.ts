@@ -76,6 +76,13 @@ export const backgroundImages = {
   patara: "/images/IMG_20231230_142932_1750603034996.jpg", // Authentic Patara sand dunes from your photos
 };
 
+import { getImageUrl } from "./image-utils";
+
 export function getBackgroundImage(citySlug: string): string {
-  return backgroundImages[citySlug as keyof typeof backgroundImages] || "";
+  const imagePath = backgroundImages[citySlug as keyof typeof backgroundImages] || "";
+  // Only process local images that start with /images/
+  if (imagePath.startsWith('/images/')) {
+    return getImageUrl(imagePath);
+  }
+  return imagePath;
 }
