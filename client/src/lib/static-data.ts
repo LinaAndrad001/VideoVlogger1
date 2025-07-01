@@ -851,14 +851,7 @@ export const places: Place[] = [
     coordinates: "36.2749, 29.3181",
     bestTime: "Après-midi",
     activities: ["Dunes", "Nature", "Plage"],
-    gallery: [
-      "/images/patara/dunes1.jpg",
-      "/images/patara/dunes2.jpg",
-      "/images/patara/dunes3.jpg",
-      "/images/patara/dunes4.jpg",
-      "/images/patara/dunes5.jpg",
-      "/images/patara/dunes6.jpg"
-    ]
+    gallery: null
   }
 ];
 
