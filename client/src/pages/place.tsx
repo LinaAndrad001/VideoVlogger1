@@ -83,15 +83,7 @@ export default function PlacePage() {
             {place.description}
           </p>
 
-          {/* Debug Info - Only in development */}
-          {import.meta.env.DEV && (
-            <div className="bg-gray-900 border border-neon-cyan rounded p-4 mb-8 text-xs max-w-3xl mx-auto">
-              <div className="text-neon-cyan font-bold mb-2">Debug Info (Mobile)</div>
-              <div>Current Origin: {window.location.origin}</div>
-              <div>Sample Image URL: {getImageUrl('/images/paris/opera/facade.jpg')}</div>
-              <div>Environment: {import.meta.env.MODE}</div>
-            </div>
-          )}
+
 
           {/* Detailed Information */}
           <div className="max-w-3xl mx-auto mb-12">
