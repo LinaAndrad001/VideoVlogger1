@@ -1520,6 +1520,70 @@ export const adventures: Adventure[] = [
     imageUrl: "/images/IMG_20250507_162337_1751373924943.jpg",
     videoUrl: null,
     date: "2025-05-07"
+  },
+  // Nouvelles aventures Bord de Seine 2020
+  {
+    id: 84,
+    placeId: 52,
+    title: "Bateau-mouche sur la Seine",
+    description: "Moment magique observant les bateaux-mouches naviguer sur la Seine",
+    imageUrl: "/images/paris/seine/bateau1.jpg",
+    videoUrl: null,
+    date: "2020-07-21"
+  },
+  {
+    id: 85,
+    placeId: 52,
+    title: "Portrait élégant au bord de Seine",
+    description: "Portrait en tenue estivale avec la Seine en arrière-plan",
+    imageUrl: "/images/paris/seine/portrait1.jpg",
+    videoUrl: null,
+    date: "2020-07-21"
+  },
+  {
+    id: 86,
+    placeId: 52,
+    title: "Architecture des ponts parisiens",
+    description: "Vue spectaculaire sur l'architecture métallique des ponts de Paris",
+    imageUrl: "/images/paris/seine/pont1.jpg",
+    videoUrl: null,
+    date: "2020-07-21"
+  },
+  {
+    id: 87,
+    placeId: 52,
+    title: "Pont Alexandre III",
+    description: "Vue majestueuse sur l'un des plus beaux ponts de Paris",
+    imageUrl: "/images/paris/seine/pont2.jpg",
+    videoUrl: null,
+    date: "2020-07-21"
+  },
+  {
+    id: 88,
+    placeId: 52,
+    title: "Perspective depuis les quais",
+    description: "Vue panoramique sur les monuments parisiens depuis les berges",
+    imageUrl: "/images/paris/seine/pont3.jpg",
+    videoUrl: null,
+    date: "2020-07-21"
+  },
+  {
+    id: 89,
+    placeId: 52,
+    title: "Tour Eiffel depuis la Seine",
+    description: "Vue emblématique de la Tour Eiffel depuis un bateau sur la Seine",
+    imageUrl: "/images/paris/seine/tour_eiffel.jpg",
+    videoUrl: null,
+    date: "2020-07-21"
+  },
+  {
+    id: 90,
+    placeId: 52,
+    title: "Coucher de soleil à Bercy",
+    description: "Ambiance dorée du coucher de soleil sur les quais modernes de Bercy",
+    imageUrl: "/images/paris/seine/bercy.jpg",
+    videoUrl: null,
+    date: "2023-12-19"
   }
 ];
 

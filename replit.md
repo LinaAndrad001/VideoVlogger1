@@ -108,6 +108,11 @@ The application includes pre-populated content covering:
 
 ```
 Changelog:
+- July 01, 2025. Added personal photos to Bord de Seine section in Paris
+  - Added 7 personal photos from July 21, 2020 Seine boat trip and December 19, 2023 Bercy sunset
+  - Created 7 new adventures documenting Seine experiences with authentic photos
+  - Photos include boat perspectives, elegant portraits, bridge architecture, and Tour Eiffel views
+  - Organized photos chronologically from 2020 summer boat trip to 2023 golden hour at Bercy
 - July 01, 2025. Added personal photos to Patara section
   - Added 6 personal photos from December 30, 2023 visit to Patara dunes
   - Created 6 new adventures documenting the dune experience with authentic photos
