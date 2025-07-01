@@ -108,6 +108,12 @@ The application includes pre-populated content covering:
 
 ```
 Changelog:
+- January 01, 2025. Major expansion of European destinations
+  - Added 9 new European countries: Espagne, Allemagne, Suisse, Autriche, Croatie, Slovénie, Serbie, Bulgarie, Roumanie
+  - Added 2 new French cities for Bretagne region: Brest, Rennes
+  - Updated Europe continent count from 4 to 13 countries
+  - Added background images for all new destinations with authentic scenic views
+  - Expanded travel coverage to include Balkans, Alpine regions, and Eastern Europe
 - June 24, 2025. Added personal photo to Japanese restaurant section
   - Added user's portrait photo to Restaurant japonais parisien gallery
   - Photo integrated as new adventure with proper date and description

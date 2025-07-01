@@ -111,7 +111,7 @@ export const continents: Continent[] = [
     slug: "europe",
     description: "Continent riche en histoire, culture et diversité architecturale",
     imageUrl: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=1920&h=1080&fit=crop&q=80",
-    countries: 4
+    countries: 13
   },
   {
     id: 2,
@@ -169,6 +169,105 @@ export const countries: Country[] = [
     language: "Portugais",
     currency: "Euro"
   },
+  {
+    id: 5,
+    continentId: 1,
+    name: "Espagne",
+    slug: "espagne",
+    description: "Terre de flamenco, d'art et de passion méditerranéenne",
+    imageUrl: "https://images.unsplash.com/photo-1543785734-4b6e564642f8?w=800&h=600&fit=crop",
+    capital: "Madrid",
+    language: "Espagnol",
+    currency: "Euro"
+  },
+  {
+    id: 6,
+    continentId: 1,
+    name: "Allemagne",
+    slug: "allemagne",
+    description: "Pays de châteaux, de forêts et d'innovation technologique",
+    imageUrl: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&h=600&fit=crop",
+    capital: "Berlin",
+    language: "Allemand",
+    currency: "Euro"
+  },
+  {
+    id: 8,
+    continentId: 1,
+    name: "Suisse",
+    slug: "suisse",
+    description: "Pays des Alpes, des lacs cristallins et du chocolat",
+    imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop",
+    capital: "Berne",
+    language: "Français/Allemand/Italien",
+    currency: "Franc suisse"
+  },
+  {
+    id: 9,
+    continentId: 1,
+    name: "Autriche",
+    slug: "autriche",
+    description: "Terre de Mozart, des valses et des paysages alpins",
+    imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+    capital: "Vienne",
+    language: "Allemand",
+    currency: "Euro"
+  },
+  {
+    id: 10,
+    continentId: 1,
+    name: "Croatie",
+    slug: "croatie",
+    description: "Perle de l'Adriatique aux eaux cristallines",
+    imageUrl: "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=800&h=600&fit=crop",
+    capital: "Zagreb",
+    language: "Croate",
+    currency: "Euro"
+  },
+  {
+    id: 11,
+    continentId: 1,
+    name: "Slovénie",
+    slug: "slovenie",
+    description: "Joyau alpin entre l'Italie et l'Autriche",
+    imageUrl: "https://images.unsplash.com/photo-1586996292898-71f4036c4e07?w=800&h=600&fit=crop",
+    capital: "Ljubljana",
+    language: "Slovène",
+    currency: "Euro"
+  },
+  {
+    id: 12,
+    continentId: 1,
+    name: "Serbie",
+    slug: "serbie",
+    description: "Carrefour des Balkans riche en culture slave",
+    imageUrl: "https://images.unsplash.com/photo-1578836537282-3171d77f8632?w=800&h=600&fit=crop",
+    capital: "Belgrade",
+    language: "Serbe",
+    currency: "Dinar serbe"
+  },
+  {
+    id: 13,
+    continentId: 1,
+    name: "Bulgarie",
+    slug: "bulgarie",
+    description: "Pays des roses et des monastères orthodoxes",
+    imageUrl: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=800&h=600&fit=crop",
+    capital: "Sofia",
+    language: "Bulgare",
+    currency: "Lev bulgare"
+  },
+  {
+    id: 14,
+    continentId: 1,
+    name: "Roumanie",
+    slug: "roumanie",
+    description: "Terre de Dracula et des Carpates mystérieuses",
+    imageUrl: "https://images.unsplash.com/photo-1526404227981-2b36326bd9ba?w=800&h=600&fit=crop",
+    capital: "Bucarest",
+    language: "Roumain",
+    currency: "Leu roumain"
+  },
   // Asie
   {
     id: 4,
@@ -216,6 +315,28 @@ export const cities: City[] = [
     imageUrl: "/images/IMG_20240721_134557.jpg",
     population: 850,
     founded: "XIe siècle",
+    climate: "Océanique"
+  },
+  {
+    id: 15,
+    countryId: 1,
+    name: "Brest",
+    slug: "brest",
+    description: "Port de Bretagne face à l'océan Atlantique",
+    imageUrl: "https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=800&h=600&fit=crop",
+    population: 139456,
+    founded: "1240",
+    climate: "Océanique"
+  },
+  {
+    id: 16,
+    countryId: 1,
+    name: "Rennes",
+    slug: "rennes",
+    description: "Capitale bretonne au patrimoine médiéval",
+    imageUrl: "https://images.unsplash.com/photo-1566552788734-36d9b0d1e9ae?w=800&h=600&fit=crop",
+    population: 217728,
+    founded: "VIe siècle",
     climate: "Océanique"
   },
   {
