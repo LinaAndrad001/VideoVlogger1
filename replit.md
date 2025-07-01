@@ -108,6 +108,11 @@ The application includes pre-populated content covering:
 
 ```
 Changelog:
+- January 01, 2025. Added Musée Aquarium section to Paris
+  - Created new place "Musée Aquarium" with 10 high-quality photos
+  - Added gallery featuring: architecture Art déco, fresques murales, aquarium, poissons tropicaux, maquettes navires, manuscrits
+  - Integrated 10 detailed adventures documenting the museum visit experience
+  - Photos show both architectural beauty and marine exhibits
 - January 01, 2025. Major expansion of European destinations
   - Added 9 new European countries: Espagne, Allemagne, Suisse, Autriche, Croatie, Slovénie, Serbie, Bulgarie, Roumanie
   - Added 2 new French cities for Bretagne region: Brest, Rennes

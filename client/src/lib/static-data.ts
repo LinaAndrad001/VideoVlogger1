@@ -576,6 +576,29 @@ export const places: Place[] = [
       "/images/Screenshot_2024-05-27-18-57-09-700_com.whatsapp_1750807590931.jpg"
     ]
   },
+  {
+    id: 77,
+    cityId: 1,
+    name: "Musée Aquarium",
+    slug: "musee-aquarium",
+    description: "Découverte fascinante du monde marin et de l'architecture Art déco",
+    imageUrl: "/images/IMG_20250507_150706_1751373924943.jpg",
+    coordinates: "48.8584, 2.2945",
+    bestTime: "Après-midi",
+    activities: ["Visite marine", "Architecture", "Sciences naturelles"],
+    gallery: [
+      "/images/IMG_20250507_150706_1751373924943.jpg",
+      "/images/IMG_20250507_150937_1751373924943.jpg",
+      "/images/IMG_20250507_150939_1751373924943.jpg",
+      "/images/IMG_20250507_151158_1751373924943.jpg",
+      "/images/IMG_20250507_151203_1751373924943.jpg",
+      "/images/IMG_20250507_151629_1751373924943.jpg",
+      "/images/IMG_20250507_152317_1751373924943.jpg",
+      "/images/IMG_20250507_152332_1751373924943.jpg",
+      "/images/IMG_20250507_160612_1751373924943.jpg",
+      "/images/IMG_20250507_162337_1751373924943.jpg"
+    ]
+  },
 
   {
     id: 54,
@@ -1492,6 +1515,97 @@ export const adventures: Adventure[] = [
     imageUrl: "/images/Screenshot_2024-05-27-18-57-09-700_com.whatsapp_1750807590931.jpg",
     videoUrl: null,
     date: "2024-05-27"
+  },
+  // Aventures au Musée Aquarium
+  {
+    id: 74,
+    placeId: 77,
+    title: "Façade majestueuse du Musée Aquarium",
+    description: "Architecture imposante avec ses colonnes et sculptures détaillées",
+    imageUrl: "/images/IMG_20250507_150706_1751373924943.jpg",
+    videoUrl: null,
+    date: "2025-05-07"
+  },
+  {
+    id: 75,
+    placeId: 77,
+    title: "Grande salle aux fresques murales",
+    description: "Immense hall orné de fresques colorées représentant la vie marine",
+    imageUrl: "/images/IMG_20250507_150937_1751373924943.jpg",
+    videoUrl: null,
+    date: "2025-05-07"
+  },
+  {
+    id: 76,
+    placeId: 77,
+    title: "Perspective panoramique du hall principal",
+    description: "Vue d'ensemble de l'architecture intérieure avec visiteurs",
+    imageUrl: "/images/IMG_20250507_150939_1751373924943.jpg",
+    videoUrl: null,
+    date: "2025-05-07"
+  },
+  {
+    id: 77,
+    placeId: 77,
+    title: "Salon Art déco aux fresques mythologiques",
+    description: "Élégant salon décoré de fresques représentant des scènes mythologiques",
+    imageUrl: "/images/IMG_20250507_151158_1751373924943.jpg",
+    videoUrl: null,
+    date: "2025-05-07"
+  },
+  {
+    id: 78,
+    placeId: 77,
+    title: "Autre perspective du salon décoré",
+    description: "Vue alternative des fresques murales et de l'aménagement intérieur",
+    imageUrl: "/images/IMG_20250507_151203_1751373924943.jpg",
+    videoUrl: null,
+    date: "2025-05-07"
+  },
+  {
+    id: 79,
+    placeId: 77,
+    title: "Section aquarium souterraine",
+    description: "Visite des bassins aquatiques dans les fondations du musée",
+    imageUrl: "/images/IMG_20250507_151629_1751373924943.jpg",
+    videoUrl: null,
+    date: "2025-05-07"
+  },
+  {
+    id: 80,
+    placeId: 77,
+    title: "Poisson tropical dans son habitat",
+    description: "Magnifique poisson aux couleurs vives dans son environnement aquatique",
+    imageUrl: "/images/IMG_20250507_152317_1751373924943.jpg",
+    videoUrl: null,
+    date: "2025-05-07"
+  },
+  {
+    id: 81,
+    placeId: 77,
+    title: "Poisson jaune et noir élégant",
+    description: "Splendide spécimen aux couleurs contrastées nageant dans les coraux",
+    imageUrl: "/images/IMG_20250507_152332_1751373924943.jpg",
+    videoUrl: null,
+    date: "2025-05-07"
+  },
+  {
+    id: 82,
+    placeId: 77,
+    title: "Maquette de navire historique",
+    description: "Reproduction détaillée d'un navire d'époque exposé dans le musée",
+    imageUrl: "/images/IMG_20250507_160612_1751373924943.jpg",
+    videoUrl: null,
+    date: "2025-05-07"
+  },
+  {
+    id: 83,
+    placeId: 77,
+    title: "Manuscrit ancien maritime",
+    description: "Document historique relatant les expéditions maritimes d'époque",
+    imageUrl: "/images/IMG_20250507_162337_1751373924943.jpg",
+    videoUrl: null,
+    date: "2025-05-07"
   }
 ];
 
