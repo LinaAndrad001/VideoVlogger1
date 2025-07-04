@@ -9,6 +9,7 @@ import Continent from "@/pages/continent";
 import Country from "@/pages/country";
 import City from "@/pages/city";
 import Place from "@/pages/place";
+import TestImages from "@/pages/test-images";
 import NotFound from "@/pages/not-found";
 
 function ScrollToTop() {
@@ -31,6 +32,7 @@ function Router() {
         <Route path="/:continentSlug/:countrySlug" component={Country} />
         <Route path="/:continentSlug/:countrySlug/:citySlug" component={City} />
         <Route path="/:continentSlug/:countrySlug/:citySlug/:placeSlug" component={Place} />
+        <Route path="/test-images" component={TestImages} />
         <Route component={NotFound} />
       </Switch>
     </>
