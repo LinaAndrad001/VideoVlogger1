@@ -20,9 +20,25 @@ export function getImageUrl(imagePath: string): string {
   const cleanPath = imagePath.startsWith('/') ? imagePath : `/${imagePath}`;
   
   // In development or production, use the current origin
-  const baseUrl = getBaseUrl();
+  let baseUrl = getBaseUrl();
   
-  return `${baseUrl}${cleanPath}`;
+  // Force HTTPS for Replit URLs (mobile security requirement)
+  if (baseUrl.includes('replit.co') || baseUrl.includes('repl.co')) {
+    baseUrl = baseUrl.replace('http://', 'https://');
+  }
+  
+  const finalUrl = `${baseUrl}${cleanPath}`;
+  
+  // Debug logging for mobile troubleshooting
+  console.log('🖼️ Image URL Debug:', {
+    input: imagePath,
+    cleanPath: cleanPath,
+    baseUrl: baseUrl,
+    finalUrl: finalUrl,
+    userAgent: navigator.userAgent.substring(0, 50)
+  });
+  
+  return finalUrl;
 }
 
 export function preloadImage(src: string): Promise<void> {

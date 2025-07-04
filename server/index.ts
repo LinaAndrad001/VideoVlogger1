@@ -21,6 +21,45 @@ app.get('/health', (req, res) => {
   res.json({ status: 'ok', images: 'serving from /images' });
 });
 
+// Debug endpoint for mobile troubleshooting
+app.get('/debug/images', (req, res) => {
+  const imagesList: string[] = [];
+  try {
+    // List some sample images
+    const operaDir = path.join(__dirname, '../images/paris/opera');
+    if (fs.existsSync(operaDir)) {
+      const operaFiles = fs.readdirSync(operaDir).slice(0, 3);
+      operaFiles.forEach(file => {
+        imagesList.push(`/images/paris/opera/${file}`);
+      });
+    }
+  } catch (error) {
+    console.error('Error listing images:', error);
+  }
+  
+  res.json({
+    status: 'ok',
+    server: req.get('host'),
+    protocol: req.protocol,
+    baseUrl: `${req.protocol}://${req.get('host')}`,
+    sampleImages: imagesList,
+    userAgent: req.get('User-Agent')
+  });
+});
+
+// Direct image test endpoint
+app.get('/test-image', (req, res) => {
+  const testImagePath = path.join(__dirname, '../images/paris/opera/facade.jpg');
+  
+  if (fs.existsSync(testImagePath)) {
+    res.setHeader('Content-Type', 'image/jpeg');
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.sendFile(testImagePath);
+  } else {
+    res.status(404).json({ error: 'Test image not found', path: testImagePath });
+  }
+});
+
 // Serve images from images directory with mobile-optimized headers
 app.use('/images', (req, res, next) => {
   // Log image requests to debug mobile issues
