@@ -131,17 +131,22 @@ export default function PlacePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {place.gallery.map((imageUrl: string, index: number) => (
                 <div key={index} className="group cursor-pointer" onClick={() => setSelectedImage(imageUrl)}>
-                  <div className="border-2 border-neon-cyan neon-glow overflow-hidden group-hover:border-neon-purple transition-all duration-300">
+                  <div className="border-2 border-neon-cyan neon-glow overflow-hidden group-hover:border-neon-purple transition-all duration-300 bg-black">
                     <img 
                       src={getImageUrl(imageUrl)}
                       alt={`${place.name} - Photo ${index + 1}`}
                       className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
                       loading="lazy"
                       decoding="async"
+                      onLoad={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.style.backgroundColor = 'transparent';
+                      }}
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
                         handleImageError(target.src);
                         target.style.border = '2px solid red';
+                        target.style.backgroundColor = 'red';
                       }}
                     />
                   </div>
@@ -194,17 +199,22 @@ export default function PlacePage() {
                 <Card key={adventure.id} className="bg-transparent border-2 border-neon-cyan neon-glow group hover:border-neon-purple transition-all duration-300">
                   <CardContent className="p-0">
                     {/* Adventure Image */}
-                    <div className="h-48 overflow-hidden cursor-pointer" onClick={() => setSelectedImage(adventure.imageUrl)}>
+                    <div className="aspect-video overflow-hidden cursor-pointer bg-black" onClick={() => setSelectedImage(adventure.imageUrl)}>
                       <img 
                         src={getImageUrl(adventure.imageUrl)}
                         alt={adventure.title}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                         loading="lazy"
                         decoding="async"
+                        onLoad={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.style.backgroundColor = 'transparent';
+                        }}
                         onError={(e) => {
                           const target = e.target as HTMLImageElement;
                           handleImageError(target.src);
                           target.style.border = '2px solid red';
+                          target.style.backgroundColor = 'red';
                         }}
                       />
                     </div>
