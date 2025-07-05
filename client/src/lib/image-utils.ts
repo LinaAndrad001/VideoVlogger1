@@ -29,14 +29,15 @@ export function getImageUrl(imagePath: string): string {
   
   const finalUrl = `${baseUrl}${cleanPath}`;
   
-  // Debug logging for mobile troubleshooting
-  console.log('🖼️ Image URL Debug:', {
-    input: imagePath,
-    cleanPath: cleanPath,
-    baseUrl: baseUrl,
-    finalUrl: finalUrl,
-    userAgent: navigator.userAgent.substring(0, 50)
-  });
+  // Debug logging for mobile troubleshooting (only if needed)
+  if (window.location.search.includes('debug')) {
+    console.log('🖼️ Image URL Debug:', {
+      input: imagePath,
+      cleanPath: cleanPath,
+      baseUrl: baseUrl,
+      finalUrl: finalUrl
+    });
+  }
   
   return finalUrl;
 }
