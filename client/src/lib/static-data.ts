@@ -526,7 +526,20 @@ export const places: Place[] = [
     coordinates: "48.8720, 2.3319",
     bestTime: "Après-midi",
     activities: ["Architecture", "Culture", "Visite guidée", "Photographie"],
-    gallery: null
+    gallery: [
+      "/images/paris/opera/facade_opera.jpg",
+      "/images/paris/opera/selfie_facade.jpg",
+      "/images/paris/opera/hall_principal.jpg",
+      "/images/paris/opera/sculpture.jpg",
+      "/images/paris/opera/selfie_masque.jpg",
+      "/images/paris/opera/escalier.jpg",
+      "/images/paris/opera/plafond.jpg",
+      "/images/paris/opera/escalier_detail.jpg",
+      "/images/paris/opera/balcon.jpg",
+      "/images/paris/opera/selfie_escalier.jpg",
+      "/images/paris/opera/selfie_theatre.jpg",
+      "/images/paris/opera/selfie_grand_foyer.jpg"
+    ]
   },
   {
     id: 53,
