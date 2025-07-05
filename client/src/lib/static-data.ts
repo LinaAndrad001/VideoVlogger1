@@ -1603,7 +1603,7 @@ export const adventures: Adventure[] = [
     placeId: 91,
     title: "Façade de l'Opéra Garnier",
     description: "La magnifique façade néo-baroque de l'Opéra Garnier avec ses dorures",
-    imageUrl: "/images/opera1.jpg",
+    imageUrl: "/images/IMG_20200721_133005.jpg",
     videoUrl: null,
     date: "2020-07-21"
   },
@@ -1612,7 +1612,7 @@ export const adventures: Adventure[] = [
     placeId: 91,
     title: "Selfie devant l'Opéra",
     description: "Moment de complicité devant ce monument parisien emblématique",
-    imageUrl: "/images/opera2.jpg",
+    imageUrl: "/images/IMG_20200721_133013.jpg",
     videoUrl: null,
     date: "2020-07-21"
   },
@@ -1621,7 +1621,7 @@ export const adventures: Adventure[] = [
     placeId: 91,
     title: "Grand hall d'entrée",
     description: "L'architecture impressionnante du hall principal avec ses colonnes de marbre",
-    imageUrl: "/images/opera3.jpg",
+    imageUrl: "/images/IMG_20200721_140130.jpg",
     videoUrl: null,
     date: "2020-07-21"
   },
@@ -1630,7 +1630,7 @@ export const adventures: Adventure[] = [
     placeId: 91,
     title: "Sculpture baroque",
     description: "Détail d'une sculpture ornant les intérieurs somptueux de l'Opéra",
-    imageUrl: "/images/opera4.jpg",
+    imageUrl: "/images/IMG_20200721_140731.jpg",
     videoUrl: null,
     date: "2020-07-21"
   },
@@ -1639,7 +1639,7 @@ export const adventures: Adventure[] = [
     placeId: 91,
     title: "Portrait avec masque",
     description: "Souvenir unique de cette visite pendant la période COVID-19",
-    imageUrl: "/images/opera5.jpg",
+    imageUrl: "/images/IMG_20200721_140739.jpg",
     videoUrl: null,
     date: "2020-07-21"
   },
@@ -1648,7 +1648,7 @@ export const adventures: Adventure[] = [
     placeId: 91,
     title: "Grand escalier d'honneur",
     description: "Le célèbre escalier de marbre avec ses lustres en cristal",
-    imageUrl: "/images/opera6.jpg",
+    imageUrl: "/images/IMG_20200721_140902.jpg",
     videoUrl: null,
     date: "2020-07-21"
   },
@@ -1657,7 +1657,7 @@ export const adventures: Adventure[] = [
     placeId: 91,
     title: "Plafond peint",
     description: "Plafond richement décoré avec fresques et ornements dorés",
-    imageUrl: "/images/opera7.jpg",
+    imageUrl: "/images/IMG_20200721_141130.jpg",
     videoUrl: null,
     date: "2020-07-21"
   },
@@ -1666,7 +1666,7 @@ export const adventures: Adventure[] = [
     placeId: 91,
     title: "Détail de l'escalier",
     description: "Architecture monumentale et détails sculptés de l'escalier",
-    imageUrl: "/images/opera8.jpg",
+    imageUrl: "/images/IMG_20200721_141211.jpg",
     videoUrl: null,
     date: "2020-07-21"
   },
@@ -1675,7 +1675,7 @@ export const adventures: Adventure[] = [
     placeId: 91,
     title: "Balcons dorés",
     description: "Les balcons ornés et colonnes corinthiennes du grand foyer",
-    imageUrl: "/images/opera9.jpg",
+    imageUrl: "/images/IMG_20200721_141506.jpg",
     videoUrl: null,
     date: "2020-07-21"
   },
@@ -1684,7 +1684,7 @@ export const adventures: Adventure[] = [
     placeId: 91,
     title: "Portrait dans le hall",
     description: "Élégance dans ce cadre architectural exceptionnel",
-    imageUrl: "/images/opera10.jpg",
+    imageUrl: "/images/IMG_20200721_141521.jpg",
     videoUrl: null,
     date: "2020-07-21"
   },
@@ -1693,7 +1693,7 @@ export const adventures: Adventure[] = [
     placeId: 91,
     title: "Dans la salle rouge",
     description: "Moment dans la salle de spectacle aux fauteuils rouge et or",
-    imageUrl: "/images/opera11.jpg",
+    imageUrl: "/images/IMG_20200721_142109.jpg",
     videoUrl: null,
     date: "2020-07-21"
   },
@@ -1702,7 +1702,7 @@ export const adventures: Adventure[] = [
     placeId: 91,
     title: "Selfie dans le Grand Foyer",
     description: "Souvenir dans les somptueux espaces de réception",
-    imageUrl: "/images/opera12.jpg",
+    imageUrl: "/images/IMG_20200721_143704.jpg",
     videoUrl: null,
     date: "2020-07-21"
   }
