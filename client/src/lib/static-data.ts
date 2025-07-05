@@ -1597,7 +1597,7 @@ export const adventures: Adventure[] = [
     videoUrl: null,
     date: "2023-12-19"
   },
-  // Nouvelles aventures Opera Garnier 2020
+  // Opera Garnier - Photos personnelles 2020
   {
     id: 91,
     placeId: 91,
@@ -1628,8 +1628,8 @@ export const adventures: Adventure[] = [
   {
     id: 94,
     placeId: 91,
-    title: "Sculpture décorative",
-    description: "Détail artistique d'une sculpture baroque ornant les intérieurs de l'Opéra",
+    title: "Sculpture décorative baroque",
+    description: "Détail artistique d'une sculpture ornant les intérieurs de l'Opéra",
     imageUrl: "/images/paris/opera/sculpture.jpg",
     videoUrl: null,
     date: "2020-07-21"
@@ -1637,8 +1637,8 @@ export const adventures: Adventure[] = [
   {
     id: 95,
     placeId: 91,
-    title: "Portrait avec masque sanitaire",
-    description: "Souvenir de cette visite particulière pendant la période COVID",
+    title: "Portrait avec masque pendant la COVID",
+    description: "Souvenir unique de cette visite particulière pendant la période sanitaire",
     imageUrl: "/images/paris/opera/selfie_masque.jpg",
     videoUrl: null,
     date: "2020-07-21"
@@ -1655,8 +1655,8 @@ export const adventures: Adventure[] = [
   {
     id: 97,
     placeId: 91,
-    title: "Plafond peint et sculptures",
-    description: "Plafond richement décoré avec fresques et ornements dorés du Second Empire",
+    title: "Plafond peint du Second Empire",
+    description: "Plafond richement décoré avec fresques et ornements dorés",
     imageUrl: "/images/paris/opera/plafond.jpg",
     videoUrl: null,
     date: "2020-07-21"
@@ -1664,8 +1664,8 @@ export const adventures: Adventure[] = [
   {
     id: 98,
     placeId: 91,
-    title: "Architecture du grand escalier",
-    description: "Perspective sur l'architecture monumentale de l'escalier d'honneur",
+    title: "Détail architectural de l'escalier",
+    description: "Perspective sur l'architecture monumentale et les détails sculptés",
     imageUrl: "/images/paris/opera/escalier_detail.jpg",
     videoUrl: null,
     date: "2020-07-21"
@@ -1700,7 +1700,7 @@ export const adventures: Adventure[] = [
   {
     id: 102,
     placeId: 91,
-    title: "Selfie dans le foyer",
+    title: "Selfie dans le Grand Foyer",
     description: "Souvenir lumineux dans les somptueux espaces de réception de l'Opéra",
     imageUrl: "/images/paris/opera/selfie_grand_foyer.jpg",
     videoUrl: null,
