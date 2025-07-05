@@ -521,7 +521,7 @@ export const places: Place[] = [
     cityId: 1,
     name: "Opera Garnier",
     slug: "opera-garnier",
-    description: "Palais de l'Opéra, joyau architectural du Second Empire parisien",
+    description: "Palais de l'Opéra, joyau architectural du Second Empire parisien avec mes photos personnelles de 2020",
     imageUrl: "/images/paris/opera/facade_opera.jpg",
     coordinates: "48.8720, 2.3319",
     bestTime: "Après-midi",
@@ -1610,12 +1610,12 @@ export const adventures: Adventure[] = [
     videoUrl: null,
     date: "2023-12-19"
   },
-  // Opera Garnier - Photos personnelles 2020
+  // Opera Garnier - Photos personnelles juillet 2020
   {
     id: 91,
     placeId: 91,
-    title: "Façade majestueuse de l'Opéra Garnier",
-    description: "Vue spectaculaire sur la façade néo-baroque avec les dorures dorées et les sculptures du Second Empire",
+    title: "Façade de l'Opéra Garnier",
+    description: "La magnifique façade néo-baroque de l'Opéra Garnier avec ses dorures",
     imageUrl: "/images/paris/opera/facade_opera.jpg",
     videoUrl: null,
     date: "2020-07-21"
@@ -1623,8 +1623,8 @@ export const adventures: Adventure[] = [
   {
     id: 92,
     placeId: 91,
-    title: "Selfie devant l'Opéra avec amie",
-    description: "Moment de complicité devant ce monument emblématique de Paris en plein été",
+    title: "Selfie devant l'Opéra",
+    description: "Moment de complicité devant ce monument parisien emblématique",
     imageUrl: "/images/paris/opera/selfie_facade.jpg",
     videoUrl: null,
     date: "2020-07-21"
@@ -1632,8 +1632,8 @@ export const adventures: Adventure[] = [
   {
     id: 93,
     placeId: 91,
-    title: "Hall principal aux colonnes de marbre",
-    description: "Architecture somptueuse du hall d'entrée avec ses colonnes et plafonds sculptés",
+    title: "Grand hall d'entrée",
+    description: "L'architecture impressionnante du hall principal avec ses colonnes de marbre",
     imageUrl: "/images/paris/opera/hall_principal.jpg",
     videoUrl: null,
     date: "2020-07-21"
@@ -1641,8 +1641,8 @@ export const adventures: Adventure[] = [
   {
     id: 94,
     placeId: 91,
-    title: "Sculpture décorative baroque",
-    description: "Détail artistique d'une sculpture ornant les intérieurs de l'Opéra",
+    title: "Sculpture baroque",
+    description: "Détail d'une sculpture ornant les intérieurs somptueux de l'Opéra",
     imageUrl: "/images/paris/opera/sculpture.jpg",
     videoUrl: null,
     date: "2020-07-21"
@@ -1650,8 +1650,8 @@ export const adventures: Adventure[] = [
   {
     id: 95,
     placeId: 91,
-    title: "Portrait avec masque pendant la COVID",
-    description: "Souvenir unique de cette visite particulière pendant la période sanitaire",
+    title: "Portrait avec masque",
+    description: "Souvenir unique de cette visite pendant la période COVID-19",
     imageUrl: "/images/paris/opera/selfie_masque.jpg",
     videoUrl: null,
     date: "2020-07-21"
@@ -1660,7 +1660,7 @@ export const adventures: Adventure[] = [
     id: 96,
     placeId: 91,
     title: "Grand escalier d'honneur",
-    description: "Vue impressionnante sur le célèbre escalier de marbre et ses lustres en cristal",
+    description: "Le célèbre escalier de marbre avec ses lustres en cristal",
     imageUrl: "/images/paris/opera/escalier.jpg",
     videoUrl: null,
     date: "2020-07-21"
@@ -1668,7 +1668,7 @@ export const adventures: Adventure[] = [
   {
     id: 97,
     placeId: 91,
-    title: "Plafond peint du Second Empire",
+    title: "Plafond peint",
     description: "Plafond richement décoré avec fresques et ornements dorés",
     imageUrl: "/images/paris/opera/plafond.jpg",
     videoUrl: null,
@@ -1677,8 +1677,8 @@ export const adventures: Adventure[] = [
   {
     id: 98,
     placeId: 91,
-    title: "Détail architectural de l'escalier",
-    description: "Perspective sur l'architecture monumentale et les détails sculptés",
+    title: "Détail de l'escalier",
+    description: "Architecture monumentale et détails sculptés de l'escalier",
     imageUrl: "/images/paris/opera/escalier_detail.jpg",
     videoUrl: null,
     date: "2020-07-21"
@@ -1686,8 +1686,8 @@ export const adventures: Adventure[] = [
   {
     id: 99,
     placeId: 91,
-    title: "Balcons dorés et colonnes",
-    description: "Richesse architecturale des balcons ornés et colonnes corinthiennes",
+    title: "Balcons dorés",
+    description: "Les balcons ornés et colonnes corinthiennes du grand foyer",
     imageUrl: "/images/paris/opera/balcon.jpg",
     videoUrl: null,
     date: "2020-07-21"
@@ -1696,7 +1696,7 @@ export const adventures: Adventure[] = [
     id: 100,
     placeId: 91,
     title: "Portrait dans le hall",
-    description: "Élégance personnelle dans ce cadre architectural exceptionnel",
+    description: "Élégance dans ce cadre architectural exceptionnel",
     imageUrl: "/images/paris/opera/selfie_escalier.jpg",
     videoUrl: null,
     date: "2020-07-21"
@@ -1705,7 +1705,7 @@ export const adventures: Adventure[] = [
     id: 101,
     placeId: 91,
     title: "Dans la salle rouge",
-    description: "Moment privilégié dans la salle de spectacle aux fauteuils rouge et or",
+    description: "Moment dans la salle de spectacle aux fauteuils rouge et or",
     imageUrl: "/images/paris/opera/selfie_theatre.jpg",
     videoUrl: null,
     date: "2020-07-21"
@@ -1714,7 +1714,7 @@ export const adventures: Adventure[] = [
     id: 102,
     placeId: 91,
     title: "Selfie dans le Grand Foyer",
-    description: "Souvenir lumineux dans les somptueux espaces de réception de l'Opéra",
+    description: "Souvenir dans les somptueux espaces de réception",
     imageUrl: "/images/paris/opera/selfie_grand_foyer.jpg",
     videoUrl: null,
     date: "2020-07-21"
