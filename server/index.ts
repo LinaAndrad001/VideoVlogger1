@@ -60,33 +60,43 @@ app.get('/test-image', (req, res) => {
   }
 });
 
-// Serve images from images directory with mobile-optimized headers
+// Serve images from images directory with security and mobile-optimized headers
 app.use('/images', (req, res, next) => {
-  // Log image requests to debug mobile issues
+  // Security: validate file path to prevent directory traversal
+  const decodedPath = decodeURIComponent(req.path);
+  if (decodedPath.includes('..') || decodedPath.includes('~')) {
+    return res.status(403).json({ error: 'Access denied' });
+  }
+  
+  // Log image requests for debugging
   console.log(`Image request: ${req.path} from ${req.get('User-Agent')?.substring(0, 50)}...`);
   
-  // Set mobile-friendly headers before serving
+  // Set security and mobile-friendly headers
   res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate'); // Disable cache for debugging
-  res.setHeader('Pragma', 'no-cache');
-  res.setHeader('Expires', '0');
+  res.setHeader('Cache-Control', 'public, max-age=31536000'); // 1 year cache for production
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('X-Frame-Options', 'DENY');
   
   next();
 }, express.static('images', {
-  maxAge: 0, // No cache for debugging
-  etag: false,
-  lastModified: false,
-  setHeaders: (res, path) => {
+  maxAge: 31536000000, // 1 year cache
+  etag: true,
+  lastModified: true,
+  setHeaders: (res, filePath) => {
     // Ensure proper MIME types
-    if (path.endsWith('.jpg') || path.endsWith('.jpeg')) {
+    if (filePath.endsWith('.jpg') || filePath.endsWith('.jpeg')) {
       res.setHeader('Content-Type', 'image/jpeg');
-    } else if (path.endsWith('.png')) {
+    } else if (filePath.endsWith('.png')) {
       res.setHeader('Content-Type', 'image/png');
+    } else if (filePath.endsWith('.gif')) {
+      res.setHeader('Content-Type', 'image/gif');
+    } else if (filePath.endsWith('.webp')) {
+      res.setHeader('Content-Type', 'image/webp');
     }
     
-    // Additional mobile headers
+    // Additional security headers
     res.setHeader('Accept-Ranges', 'bytes');
-    res.setHeader('X-Content-Type-Options', 'nosniff');
+    res.setHeader('Cross-Origin-Resource-Policy', 'cross-origin');
   }
 }));
 
